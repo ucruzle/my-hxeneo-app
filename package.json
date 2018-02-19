@@ -1,0 +1,23 @@
+{
+  "name": "my-hxeneo-app",
+  "version": "1.0.0",
+  "description": "HXENEO (HANA Express Edition, Node.js, Express.js e openUI5) stack sample APP",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ucruzle/my-hxeneo-app.git"
+  },
+  "author": "Leonardo Cruz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ucruzle/my-hxeneo-app/issues"
+  },
+  "homepage": "https://github.com/ucruzle/my-hxeneo-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}

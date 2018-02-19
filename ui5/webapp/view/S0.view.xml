@@ -1,0 +1,23 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" 
+          xmlns="sap.tnt" 
+          xmlns:m="sap.m" 
+          controllerName="ui5.fiscal.controller.S0" 
+          height="100%">
+	
+	<m:Button icon="sap-icon://menu2" press="onCollapseExpandPress"/>
+	
+	<NavigationList id="navigationList" width="320px">
+		<NavigationListItem text="{i18n>navListItemNfe}" icon="sap-icon://bar-code">
+			<NavigationListItem text="{i18n>navListaDocFinPorPeriodoTipoDoc}" />
+			<NavigationListItem text="{i18n>navListaDocFinPorChaneNFe}"/>
+			<NavigationListItem text="{i18n>navListaDocFinPorDocDestinatario}"/>
+			<NavigationListItem text="{i18n>navListaTotalMvtoPorPeriodoTipoDoc}"/>
+			<NavigationListItem text="{i18n>navListaDocFinPorStatus}"/>
+			<NavigationListItem text="{i18n>navListaDocFinETransacoes}"/>
+		</NavigationListItem>
+		<NavigationListItem text="{i18n>navListItemNfeTran}" icon="sap-icon://it-host">
+			<NavigationListItem text="{i18n>navListaTransacoesComSefaz}"/>
+		</NavigationListItem>
+	</NavigationList>
+	
+</mvc:View>
