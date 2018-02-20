@@ -40,18 +40,27 @@ my-hxeneo-app
 Para contemplar a funcionalidade do projeto, é necessário a execução de comandos no prompt de comandos do sistema operacional para a importação e instalações de alguns pacotes e bilbiotecas do Node.js e do middleware MVC express, são elas:
 
 - Comando: Init Node.js Exemplo: C:\workspaces\NodeJS\my-hxeneo-app> npm init
+
 ![01-npm-init](https://user-images.githubusercontent.com/22205133/36427572-594e5590-162c-11e8-8a86-03fea0c11343.JPG)
+
 
 ![02-dir-command](https://user-images.githubusercontent.com/22205133/36427595-6b610e44-162c-11e8-8114-1f5c9f0642d6.JPG)
 
+
 - Comando: Install Node.js - Instalação do express middleware de MVC da aplicação Exemplo: C:\workspaces\NodeJS\my-hxeneo-app> npm install express --save
+
 ![03-npm-install-express](https://user-images.githubusercontent.com/22205133/36427612-791de372-162c-11e8-96e0-e72ee0de9131.JPG)
 
+
 - Comando: Install Node.js - Instalação o pacote de formatação dos dados para JSON Exemplo: C:\workspaces\NodeJS\my-hxeneo-app> npm install body-parser --save
+
 ![04-npm-install-body-parser](https://user-images.githubusercontent.com/22205133/36427637-856992de-162c-11e8-9ae3-dfc04053d047.JPG)
 
+
 - Comando: Install Node.js - Serviço local e global na máquina de desenvolvimento que roda a aplicação Exemplo: C:\workspaces\NodeJS\my-hxeneo-app> npm install -g nodemon
+
 ![05-npm-install-nodemon](https://user-images.githubusercontent.com/22205133/36427659-913f7966-162c-11e8-8de6-4e2ffaa171f9.JPG)
+
 
 # Testes
 
@@ -59,6 +68,7 @@ Para contemplar a funcionalidade do projeto, é necessário a execução de coma
   para inciar a aplicação local C:\workspaces\NodeJS\my-hxeneo-app> nodemon
 
 ![08-nodemon-inicializacao-do-projeto](https://user-images.githubusercontent.com/22205133/36430616-5b9ed1be-1634-11e8-90ac-8379577bb836.JPG)  
+
 
 - Teste Inicial do APP
 
