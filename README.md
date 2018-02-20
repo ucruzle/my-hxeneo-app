@@ -2,10 +2,10 @@
 HXENEO (HANA Express Edition, Node.js, Express.js e openUI5) stack sample APP
 
 # Objetivo
-Desenvolver uma API em Node.js, acessando uma base de dados SAP HANA, Express Edition na nuvem (Google Cloud Plantform) que seja consumida por um aplicativo Web,utilizando o SAP openUI5 como framework de desenvolvimento do APP, contemplando toda a ação CRUD (Create, Retriave, Update and Delete) sobre o modelo de dados exposto mediante serviços criados sobre rotas, utilizando o Node.js.
+Desenvolver uma API em Node.js, acessando uma base de dados SAP HANA, Express Edition na nuvem (Google Cloud Plantform) que seja consumida por um aplicativo Web, utilizando o SAP openUI5 como framework de desenvolvimento do APP, contemplando toda a ação CRUD (Create, Retrieve, Update and Delete) sobre o modelo de dados exposto mediante serviços criados sobre rotas, utilizando o Node.js.
 
 # Estrutura do Projeto
-O projeto está estruturado em uma única solução que contempla duas aplicações. A primeira aplicação refere-se ao Back-End, ou seja, a API que disponibiliza dos dados que serão consumidos por um aplicativo. A segunda aplicação refere-se ao Front-End, oud seja, a interface de interação com o usuário, onde os métodos implementados na API serão requisitados para consumo.
+O projeto está estruturado em uma única solução que contempla duas aplicações. A primeira aplicação refere-se ao Back-End, ou seja, a API que disponibiliza dos dados que serão consumidos por um aplicativo. A segunda aplicação refere-se ao Front-End, ou seja, a interface de interação com o usuário, onde os métodos implementados na API serão requisitados para consumo.
 
 my-hxeneo-app
 
