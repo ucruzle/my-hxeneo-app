@@ -55,9 +55,11 @@ Para contemplar a funcionalidade do projeto, é necessário a execução de coma
 
 # Testes
 
-- Conforme demostrado no exemplo, execute o seguinte comando no prompt de comando do sistema operacional, para inciar a aplicação local
-  - C:\workspaces\NodeJS\my-hxeneo-app> nodemon
+- Conforme demostrado no exemplo, execute o seguinte comando no prompt de comando do sistema operacional, 
+  para inciar a aplicação local C:\workspaces\NodeJS\my-hxeneo-app> nodemon
+
 ![08-nodemon-inicializacao-do-projeto](https://user-images.githubusercontent.com/22205133/36430616-5b9ed1be-1634-11e8-90ac-8379577bb836.JPG)  
 
 - Teste Inicial do APP
+
 ![07-testeinicialport7000](https://user-images.githubusercontent.com/22205133/36430603-4fef7274-1634-11e8-9329-8c69d85911b2.JPG)
