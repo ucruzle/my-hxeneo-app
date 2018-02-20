@@ -1,7 +1,7 @@
 <mvc:View xmlns:core="sap.ui.core" 
 	      xmlns:mvc="sap.ui.core.mvc" 
 	      xmlns="sap.m" 
-	      controllerName="ui5.fiscal.controller.S1"
+	      controllerName="demo.hxeneo.controller.S1"
 	      xmlns:html="http://www.w3.org/1999/xhtml">
 	
 	<App>

@@ -1,17 +1,12 @@
 sap.ui.define([
-	'sap/ui/core/UIComponent',
-	"sap/ui/Device",
-	"ui5/fiscal/model/models"
-], function(UIComponent, Device, models) {
+	"sap/ui/core/UIComponent",
+	"sap/ui/model/json/JSONModel",
+	"demo/hxeneo/model/models"
+	
+], function(UIComponent, JSONModel, models) {
 	"use strict";
 
-	var Component = UIComponent.extend("ui5.fiscal.Component", {
-		// metadata : {
-		// 	rootView : "ui5.fiscal.view.S0",
-		// 	dependencies : {
-		// 		libs : ["sap.m"]
-		// 	}
-		// }
+	var Component = UIComponent.extend("demo.hxeneo.Component", {
 		
 		metadata: {
 			manifest: "json"
@@ -25,6 +20,9 @@ sap.ui.define([
 		init: function() {
 			// call the base component's init function
 			UIComponent.prototype.init.apply(this, arguments);
+			
+			// var oModel = new JSONModel(oData);
+			this.setModel(models.createODataModel());
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");

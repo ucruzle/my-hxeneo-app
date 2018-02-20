@@ -10,7 +10,18 @@ sap.ui.define([
 			var oModel = new JSONModel(Device);
 			oModel.setDefaultBindingMode("OneWay");
 			return oModel;
-		}
+		},
 
+		createODataModel: function() {
+			
+			var oData = {
+				recipient: {
+					name: "World"
+				}
+			};
+
+			var oModel = new JSONModel(oData);
+			return oModel;
+		}
 	};
 });

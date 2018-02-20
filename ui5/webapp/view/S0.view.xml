@@ -1,7 +1,7 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" 
           xmlns="sap.tnt" 
           xmlns:m="sap.m" 
-          controllerName="ui5.fiscal.controller.S0" 
+          controllerName="demo.hxeneo.controller.S0" 
           height="100%">
 	
 	<m:Button icon="sap-icon://menu2" press="onCollapseExpandPress"/>
