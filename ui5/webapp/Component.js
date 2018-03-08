@@ -1,32 +1,26 @@
 sap.ui.define([
-	"sap/ui/core/UIComponent",
-	"sap/ui/model/json/JSONModel",
-	"demo/hxeneo/model/models"
-	
-], function(UIComponent, JSONModel, models) {
+	"sap/ui/core/UIComponent"
+
+], function(UIComponent) {
+
 	"use strict";
 
-	var Component = UIComponent.extend("demo.hxeneo.Component", {
-		
+	return UIComponent.extend("hxeneo.Component", {
+
 		metadata: {
 			manifest: "json"
 		},
 
-		/**
-		 * The component is initialized by UI5 automatically during the startup of the app and calls the init method once.
-		 * @public
-		 * @override
-		 */
-		init: function() {
-			// call the base component's init function
-			UIComponent.prototype.init.apply(this, arguments);
-			
-			// var oModel = new JSONModel(oData);
-			this.setModel(models.createODataModel());
+        init: function () {
+            
+            // call the init function of the parent
+            UIComponent.prototype.init.apply(this, arguments);
 
-			// set the device model
-			this.setModel(models.createDeviceModel(), "device");
-		}
+            // create the views based on the url/hash
+            this.getRouter().initialize();
+            
+        }
+
 	});
-	return Component;
+
 });
