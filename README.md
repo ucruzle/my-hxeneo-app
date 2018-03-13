@@ -101,7 +101,7 @@ Nota: É recomendado que se o ambiente virtual na nuvem não esteja em utilizaç
 
 5-) Em Host Name, entre com HXEHOST
 
-![11-eclipse-acesso-hxe-enter-system-data](https://user-images.githubusercontent.com/22205133/37315571-1a2fc2f0-2639-11e8-80af-be462cc158a1.JPG)
+![12-eclipse-acesso-hxe-enter-hxe-data](https://user-images.githubusercontent.com/22205133/37316846-36ae4102-2640-11e8-8c57-c1a1af65f34f.JPG)
 
 
 
