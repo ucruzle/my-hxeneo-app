@@ -21,7 +21,7 @@ exports.adicionaFornecedor = function(CodigoDoFornecedor,
                                       Fax,
                                       HomePage,
                                       callback) {
-    
+
     fornecedoresRepository.adicionaFornecedor(CodigoDoFornecedor, 
                                               NomeDaEmpresa, 
                                               NomeDoContato, 

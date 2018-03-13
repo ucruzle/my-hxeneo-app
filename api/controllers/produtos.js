@@ -43,16 +43,16 @@ exports.alteraProduto = function(CodigoDoProduto,
                                  NivelDeReposicao,    
                                  Descontinuado) {
 
-produtosRepository.alteraProduto(CodigoDoProduto,     
-                                 NomeDoProduto,       
-                                 CodigoDoFornecedor,  
-                                 CodigoDaCategoria,   
-                                 QuantidadePorUnidade,
-                                 PrecoUnitario,       
-                                 UnidadesEmEstoque,   
-                                 UnidadesPedidas,     
-                                 NivelDeReposicao,    
-                                 Descontinuado);
+    produtosRepository.alteraProduto(CodigoDoProduto,     
+                                    NomeDoProduto,       
+                                    CodigoDoFornecedor,  
+                                    CodigoDaCategoria,   
+                                    QuantidadePorUnidade,
+                                    PrecoUnitario,       
+                                    UnidadesEmEstoque,   
+                                    UnidadesPedidas,     
+                                    NivelDeReposicao,    
+                                    Descontinuado);
 
 }
 

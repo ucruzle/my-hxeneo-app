@@ -1,22 +1,22 @@
 
-var express              = require('express');
-var router               = express.Router();
-var categoriasController = require('../controllers/fornecedores');
+var express                = require('express');
+var router                 = express.Router();
+var fornecedoresController = require('../controllers/fornecedores');
 
 router.get('/retornaFornecedores', function(req, res) {
 
-    categoriasController.retornaFornecedores(function(resp) {
-        res.json(resp);
+    fornecedoresController.retornaFornecedores(function(dataResult) {
+        res.json(dataResult);
     });
 
 });
 
-router.get('/retornaFornecedore/:CodigoDoFornecedor', function(req, res) {
+router.get('/retornaFornecedor/:CodigoDoFornecedor', function(req, res) {
 
     var CodigoDoFornecedor = req.params.CodigoDoFornecedor;
 
-    categoriasController.retornaFornecedor(CodigoDoFornecedor, function(resp) {
-        res.json(resp);
+    fornecedoresController.retornaFornecedor(CodigoDoFornecedor, function(dataResult) {
+        res.json(dataResult);
     });
 
 });
@@ -24,8 +24,8 @@ router.get('/retornaFornecedore/:CodigoDoFornecedor', function(req, res) {
 router.post('/adicionaFornecedor', function(req, res) {
 
     var CodigoDoFornecedor = req.body.CodigoDoFornecedor;
-    var NomeDaEmpresa      = req.body.NomeDaCategoria;
-    var NomeDoContato      = req.body.Descricao;
+    var NomeDaEmpresa      = req.body.NomeDaEmpresa;
+    var NomeDoContato      = req.body.NomeDoContato;
     var CargoDoContato     = req.body.CargoDoContato;
     var Endereco           = req.body.Endereco;
     var Cidade             = req.body.Cidade;
@@ -36,7 +36,7 @@ router.post('/adicionaFornecedor', function(req, res) {
     var Fax                = req.body.Fax;
     var HomePage           = req.body.HomePage;
 
-    categoriasController.adicionaFornecedor(
+    fornecedoresController.adicionaFornecedor(
         CodigoDoFornecedor, 
         NomeDaEmpresa, 
         NomeDoContato, 
@@ -49,9 +49,9 @@ router.post('/adicionaFornecedor', function(req, res) {
         Telefone,
         Fax,
         HomePage, 
-        function(resp) {
-            res.status(resp.status);
-            res.json(resp);
+        function(dataResult, statusResult) {
+            res.status(statusResult);
+            res.json(dataResult);
         }
     );
 
@@ -60,8 +60,8 @@ router.post('/adicionaFornecedor', function(req, res) {
 router.put('/alteraFornecedor', function(req, res) {
 
     var CodigoDoFornecedor = req.body.CodigoDoFornecedor;
-    var NomeDaEmpresa      = req.body.NomeDaCategoria;
-    var NomeDoContato      = req.body.Descricao;
+    var NomeDaEmpresa      = req.body.NomeDaEmpresa;
+    var NomeDoContato      = req.body.NomeDoContato;
     var CargoDoContato     = req.body.CargoDoContato;
     var Endereco           = req.body.Endereco;
     var Cidade             = req.body.Cidade;
@@ -72,7 +72,7 @@ router.put('/alteraFornecedor', function(req, res) {
     var Fax                = req.body.Fax;
     var HomePage           = req.body.HomePage;
 
-    categoriasController.alteraFornecedor(
+    fornecedoresController.alteraFornecedor(
         CodigoDoFornecedor, 
         NomeDaEmpresa, 
         NomeDoContato, 
@@ -85,8 +85,8 @@ router.put('/alteraFornecedor', function(req, res) {
         Telefone,
         Fax,
         HomePage, 
-        function(resp) {
-            res.status(resp.status);
+        function(statusResult) {
+            res.status(statusResult);
         }
     );
 
@@ -96,8 +96,8 @@ router.delete('/eliminaFornecedor/:CodigoDoFornecedor', function(req, res) {
 
     var CodigoDoFornecedor = req.params.CodigoDoFornecedor;
 
-    categoriasController.eliminaFornecedor(CodigoDoFornecedor, function(resp) {
-        res.status(resp.status);
+    fornecedoresController.eliminaFornecedor(CodigoDoFornecedor, function(statusResult) {
+        res.status(statusResult);
     });
 
 });

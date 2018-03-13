@@ -1,12 +1,12 @@
 
-var express              = require('express');
-var router               = express.Router();
-var categoriasController = require('../controllers/categorias');
+var express            = require('express');
+var router             = express.Router();
+var produtosController = require('../controllers/produtos');
 
 router.get('/retornaProdutos', function(req, res) {
 
-    categoriasController.retornaProdutos(function(resp) {
-        res.json(resp);
+    produtosController.retornaProdutos(function(dataResult) {
+        res.json(dataResult);
     });
 
 });
@@ -15,8 +15,8 @@ router.get('/retornaProduto/:CodigoDoProduto', function(req, res) {
 
     var CodigoDoProduto = req.params.CodigoDoProduto;
 
-    categoriasController.retornaProduto(CodigoDoProduto, function(resp) {
-        res.json(resp);
+    produtosController.retornaProduto(CodigoDoProduto, function(dataResult) {
+        res.json(dataResult);
     });
 
 });
@@ -34,7 +34,7 @@ router.post('/adicionarProduto', function(req, res) {
     var NivelDeReposicao     = req.body.NivelDeReposicao;
     var Descontinuado        = req.body.Descontinuado;
 
-    categoriasController.adicionaCategoria(
+    produtosController.adicionarProduto(
         CodigoDoProduto, 
         NomeDoProduto, 
         CodigoDoFornecedor,
@@ -45,9 +45,9 @@ router.post('/adicionarProduto', function(req, res) {
         UnidadesPedidas,
         NivelDeReposicao, 
         Descontinuado, 
-        function(resp) {
-            res.status(resp.status);
-            res.json(resp);
+        function(dataResult, statusResult) {
+            res.status(statusResult);
+            res.json(dataResult);
         }
     );
 
@@ -66,7 +66,7 @@ router.put('/alteraProduto', function(req, res) {
     var NivelDeReposicao     = req.body.NivelDeReposicao;
     var Descontinuado        = req.body.Descontinuado;
 
-    categoriasController.alteraProduto(
+    produtosController.alteraProduto(
         CodigoDoProduto, 
         NomeDoProduto, 
         CodigoDoFornecedor,
@@ -77,8 +77,8 @@ router.put('/alteraProduto', function(req, res) {
         UnidadesPedidas,
         NivelDeReposicao, 
         Descontinuado, 
-        function(resp) {
-            res.status(resp.status);
+        function(statusResult) {
+            res.status(statusResult);
         }
     );
 
@@ -88,8 +88,8 @@ router.delete('/eliminaProduto/:CodigoDoProduto', function(req, res) {
 
     var CodigoDoProduto = req.params.CodigoDoProduto;
 
-    categoriasController.eliminaProduto(CodigoDoProduto, function(resp) {
-        res.status(resp.status);
+    produtosController.eliminaProduto(CodigoDoProduto, function(statusResult) {
+        res.status(statusResult);
     });
 
 });

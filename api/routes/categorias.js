@@ -5,8 +5,8 @@ var categoriasController = require('../controllers/categorias');
 
 router.get('/retornaCategorias', function(req, res) {
 
-    categoriasController.retornaCategorias(function(resp) {
-        res.json(resp);
+    categoriasController.retornaCategorias(function(dataResult) {
+        res.json(dataResult);
     });
 
 });
@@ -15,8 +15,8 @@ router.get('/retornaCategoria/:CodigoDaCategoria', function(req, res) {
 
     var CodigoDaCategoria = req.params.CodigoDaCategoria;
 
-    categoriasController.retornaCategoria(CodigoDaCategoria, function(resp) {
-        res.json(resp);
+    categoriasController.retornaCategoria(CodigoDaCategoria, function(dataResult) {
+        res.json(dataResult);
     });
 
 });
@@ -27,9 +27,9 @@ router.post('/adicionaCategoria', function(req, res) {
     var NomeDaCategoria   = req.body.NomeDaCategoria;
     var Descricao         = req.body.Descricao;
 
-    categoriasController.adicionaCategoria(CodigoDaCategoria, NomeDaCategoria, Descricao, function(resp) {
-        res.status(resp.status);
-        res.json(resp);
+    categoriasController.adicionaCategoria(CodigoDaCategoria, NomeDaCategoria, Descricao, function(dataResult, statusResult) {
+        res.status(statusResult);
+        res.json(dataResult);
     });
 
 });
@@ -40,8 +40,8 @@ router.put('/alteraCategoria', function(req, res) {
     var NomeDaCategoria   = req.body.NomeDaCategoria;
     var Descricao         = req.body.Descricao;
 
-    categoriasController.alteraCategoria(CodigoDaCategoria, NomeDaCategoria, Descricao, function(resp) {
-        res.status(resp.status);
+    categoriasController.alteraCategoria(CodigoDaCategoria, NomeDaCategoria, Descricao, function(statusResult) {
+        res.status(statusResult);
     });
 
 });
@@ -50,8 +50,8 @@ router.delete('/eliminaCategoria/:CodigoDaCategoria', function(req, res) {
 
     var CodigoDaCategoria = req.params.CodigoDaCategoria;
 
-    categoriasController.eliminaCategoria(CodigoDaCategoria, function(resp) {
-        res.status(resp.status);
+    categoriasController.eliminaCategoria(CodigoDaCategoria, function(statusResult) {
+        res.status(statusResult);
     });
 
 });

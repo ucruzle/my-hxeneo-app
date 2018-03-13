@@ -16,6 +16,10 @@ my-hxeneo-app
   - apiRouter.js
 - config
   - app_config.js
+- db
+  - client
+  - inserts
+  - tables
 - ui5
   - webapp
   - ui5Router.js
@@ -30,13 +34,167 @@ my-hxeneo-app
 - apiRouter.js: Arquivo de retorno de Rotas Definidas na API
 - config: Arquivos de configurações globais do APP (Solução)
 - app_config.js: Arquivo global de configuração do APP (Solução)
+- db: Arquivos referentes a criaçao de objetos e manipulação de dados do SAP HANA, Express Edition
+- client: Arquivo de conexão com a base de dados e execução de comandos SQL do SAP HANA, Express Edition
+- inserts: Arquivos de carga de dados das tabelas da solução para SAP HANA, Express Edition
+- tables: Arquivos de criação de objetos de dados (tabelas) referentes ao SAP HANA, Express Edition
 - ui5: Arquivos do framework openUI5 referentes APP Web (View/Dispositivo)
 - webapp: Arquivos do APP Web (View/Dispositivo)
 - ui5Router.js: Arquivo de retorno de Rotas Definidas no APP Web (View/Dispositivo)
 - app.js: Arquivo principal do APP (Solução)
 - package.json: Arquivo inicial de configuração do APP (Solução)
 
-# Instalações e Importações de bibliotecas
+# Criação, configurações e acessos ao ambiente SAP HANA, Expres Edition na Nuvem
+Dando início na criação da solução proposta, este tópico, tem como principal objetivo, disponibilizar links fundamentais para a criação e configuração do ambiente na nuvem do SAP HANA, Express Edition. Assim como a demostração de acesso ao ambiente recem implementado virtualmente na nuvem pelo Google Cloud Platform, em uma licença SUSE Linux. Este acesso é possibilitado mediante a criação de um usuário de desenvolvimento, para manipulação dados e criação de novos objetos do banco de dados SAP HANA, Express Edition. 
+Alguns passos apenas serão apontados para links que contém uma documentação passo a passo oficial, que por si só, garante a execução com sucesso pela ótima qualidade apresentada.
+
+- Criação do ambiente SAP HANA, Express Edition na nuvem no Google Cloud Platform
+
+https://www.sap.com/developer/tutorials/hxe-gcp-getting-started-launcher-xsa.html
+
+https://www.sap.com/developer/tutorials/hxe-gcp-getting-started-launcher.html
+
+- Preparação do ambiente SAP HANA, Express Edition na nuvem no Google Cloud Platform
+
+https://www.sap.com/developer/tutorials/hxe-howto-tutorialprep.html
+
+- Ferramenta de acesso remoto a base de dados na nuvem - Eclipse plugin
+
+https://tools.hana.ondemand.com/#hanatools
+
+https://www.sap.com/developer/tutorials/hxe-howto-eclipse.html
+
+- Execução da máquina virtual na nuvem no Google Cloud Platform
+
+Se a máquina virtual não estiver inicializada após a criação do ambiente na nuvem, inicialize-a e deixe ativa para a configuração de acesso. 
+Nota: É recomendado que se o ambiente virtual na nuvem não esteja em utilização deixe-o pausado ou inativo para que não consuma os créditos gratuítos do ambiente por estar ativo sem utilização. Ao utilizá-lo basta ativá-lo novamente em inicializar.
+
+![16-instance-google-cloud-platform-access-by-eclipse](https://user-images.githubusercontent.com/22205133/37316094-e8d9664a-263b-11e8-852a-cb5d6213ae9b.JPG)
+
+
+
+- Configurações de acesso remoto a base de dados na nuvem - Eclipse plugin
+
+1-) Execute o Eclipse
+
+![09-eclipse-acesso-hxe-cloud](https://user-images.githubusercontent.com/22205133/37315341-f046f6d0-2637-11e8-913e-70dbfd29596c.JPG)
+
+
+
+2-) Visualize a perspectiva SAP HANA Administrative Console
+
+![sap hana administrative console](https://user-images.githubusercontent.com/22205133/37315451-9025b592-2638-11e8-9983-bcf988763ce6.png)
+
+
+
+3-) Em System, click em Add System...
+
+![10-eclipse-acesso-hxe-add-system](https://user-images.githubusercontent.com/22205133/37315490-c511a20c-2638-11e8-8de3-ddfd82eead06.JPG)
+
+
+
+4-) A janela Specify System com os dados de acesso a serem solicitados será apresentada
+
+![11-eclipse-acesso-hxe-enter-system-data](https://user-images.githubusercontent.com/22205133/37315535-f4c531ee-2638-11e8-9e1f-370f6c55df24.JPG)
+
+
+
+5-) Em Host Name, entre com HXEHOST
+
+![11-eclipse-acesso-hxe-enter-system-data](https://user-images.githubusercontent.com/22205133/37315571-1a2fc2f0-2639-11e8-80af-be462cc158a1.JPG)
+
+
+
+6-) Em Instance Number, entre com 90. Mode: Selecione as opções Multiple containers e System database. Em Description informe "SAP HANA, Express Edition"
+
+![13-eclipse-acesso-hxe-enter-hxe-data](https://user-images.githubusercontent.com/22205133/37315698-bf927364-2639-11e8-9812-e0385daf763f.JPG)
+
+
+
+7-) Na tela seguinte, Connection Properties é apresentada. Na opção pré-selecionada Authentication by database current operating system user, informe em User Name o usuário de desenvolvimeto criado e em Password a senha atribuída na criação do usuário desenvolvedor. Deixe a opção Enable SAP start service connection checada.
+
+![14-eclipse-acesso-hxe-enter-user-data](https://user-images.githubusercontent.com/22205133/37315852-88800e6c-263a-11e8-99a8-f87570b2352a.JPG)
+
+
+
+8-) Se os passos anteriores estiverem corretos a seguinte tela com a conexão com sucesso será apresentada.
+
+![15-eclipse-acesso-hxe-conneted](https://user-images.githubusercontent.com/22205133/37315878-b424c7c4-263a-11e8-94cb-cf74bc7296d0.JPG)
+
+
+
+![17-eclipse-ddl-hxe-create-object](https://user-images.githubusercontent.com/22205133/37316111-024142ba-263c-11e8-9249-d0189badb830.JPG)
+
+
+
+- Criações de objetos (tabelas) a base de dados na nuvem e carga de dados- Eclipse plugin
+
+Após ter acesso ao ambiente HANA, crie os objetos e estruturas necessárias para a manipulação dos dados.
+Execute os scripts contidos nos seguintes repositorios do projeto na seguinte ordem:
+
+1-) https://github.com/ucruzle/my-hxeneo-app/tree/master/db/tables
+
+Criação da Tabela de Categorias:
+
+![18-eclipse-ddl-hxe-create-categorias](https://user-images.githubusercontent.com/22205133/37316257-cbb09b3c-263c-11e8-986b-a7fc8e15048f.JPG)
+
+
+
+Criação da Tabela de Fornecedores:
+
+![20-eclipse-ddl-hxe-create-fornecedores](https://user-images.githubusercontent.com/22205133/37316320-1551b0fa-263d-11e8-9e37-c8c8e439beab.JPG)
+
+
+
+Criação da Tabela de Produtos:
+
+![22-eclipse-ddl-hxe-create-produtos](https://user-images.githubusercontent.com/22205133/37316345-3b86e0e2-263d-11e8-808b-c27ada383fe1.JPG)
+
+
+
+Objetos Criados:
+
+![24-eclipse-hxe-refresh-objects](https://user-images.githubusercontent.com/22205133/37316451-eaa8b71c-263d-11e8-8ebc-a0df5c31779c.JPG)
+
+
+
+![25-eclipse-hxe-treeview-objects](https://user-images.githubusercontent.com/22205133/37316456-f38936b8-263d-11e8-810b-bc40d5a8bffa.JPG)
+
+
+
+2-) https://github.com/ucruzle/my-hxeneo-app/tree/master/db/inserts
+
+Carga de dados na Tabela de Categorias:
+
+![19-eclipse-ddl-hxe-insert-categorias](https://user-images.githubusercontent.com/22205133/37316404-a0798252-263d-11e8-9ac0-2afb778ae0eb.JPG)
+
+
+
+![26-eclipse-hxe-view-content-table-categorias](https://user-images.githubusercontent.com/22205133/37316475-1ca51c42-263e-11e8-939a-5a5ac2bd02e8.JPG)
+
+
+
+Carga de dados na Tabela de Fornecedores:
+
+![21-eclipse-ddl-hxe-insert-fornecedores](https://user-images.githubusercontent.com/22205133/37316409-ad741864-263d-11e8-97e9-45de6a7310c9.JPG)
+
+
+
+![27-eclipse-hxe-view-content-table-fornecedores](https://user-images.githubusercontent.com/22205133/37316480-2a08dff4-263e-11e8-94fb-f56f465d224e.JPG)
+
+
+
+Carga de dados na Tabela de Produtos:
+
+![23-eclipse-ddl-hxe-insert-produtos](https://user-images.githubusercontent.com/22205133/37316423-c4164a1a-263d-11e8-95c7-f1e61dbe2c27.JPG)
+
+
+
+![27-eclipse-hxe-view-content-table-produtos](https://user-images.githubusercontent.com/22205133/37316496-39bed89a-263e-11e8-8384-5c01798603f4.JPG)
+
+
+
+# Instalações e Importações de bibliotecas do App
 Para contemplar a funcionalidade do projeto, é necessário a execução de comandos no prompt de comandos do sistema operacional para a importação e instalações de alguns pacotes e bilbiotecas do Node.js e do middleware MVC express, são elas:
 
 - Comando: Init Node.js Exemplo: C:\workspaces\NodeJS\my-hxeneo-app> npm init
@@ -60,6 +218,12 @@ Para contemplar a funcionalidade do projeto, é necessário a execução de coma
 - Comando: Install Node.js - Serviço local e global na máquina de desenvolvimento que roda a aplicação Exemplo: C:\workspaces\NodeJS\my-hxeneo-app> npm install -g nodemon
 
 ![05-npm-install-nodemon](https://user-images.githubusercontent.com/22205133/36427659-913f7966-162c-11e8-8de6-4e2ffaa171f9.JPG)
+
+
+- Comando: Install Node.js - Instalação o pacote de componentes do SAP HANA para acesso e atualização dos dados no ambiente SAP HANA: C:\workspaces\NodeJS\my-hxeneo-app> npm install hdb
+
+![28-npm-install-hdb-command-prompt](https://user-images.githubusercontent.com/22205133/37316613-dc76082e-263e-11e8-8eb1-db302a1e2087.JPG)
+
 
 
 # Testes
