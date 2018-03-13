@@ -1,43 +1,46 @@
 {
-	"_version": "1.1.0",
+	"_version": "1.5.0",
 	"sap.app": {
-		"_version": "1.1.0",
 		"id": "hxeneo",
 		"type": "application",
-		"i18n": "i18n/i18n.properties",
-		"title": "{{appTitle}}",
-		"description": "{{appDescription}}",
 		"applicationVersion": {
 			"version": "1.0.0"
 		},
-		"ach": "CA-UI5-FST",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
 		"dataSources": {
-			"employeeRemote": {
-				"uri": "/here/goes/your/serviceUrl/",
+			"mainService": {
+				"uri": "/oData_Demos/V2/(S(o3xrfffc4fwdx31oomgzspnj))/OData/OData.svc/",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",
 					"localUri": "localService/metadata.xml"
 				}
 			}
+		},
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
 		}
 	},
 	"sap.ui": {
-		"_version": "1.1.0",
 		"technology": "UI5",
 		"deviceTypes": {
 			"desktop": true,
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": ["sap_belize"]
+		"supportedThemes": ["sap_hcb", "sap_belize", "sap_bluecrystal"]
 	},
 	"sap.ui5": {
-		"_version": "1.1.0",
-		"rootView": "hxeneo.view.App",
+		"rootView": {
+			"viewName": "hxeneo.view.S0",
+			"type": "XML"
+		},
 		"dependencies": {
-			"minUI5Version": "1.30",
+			"minUI5Version": "1.30.0",
 			"libs": {
+				"sap.ui.core": {},
 				"sap.m": {}
 			}
 		},
@@ -46,107 +49,65 @@
 			"cozy": true
 		},
 		"models": {
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "mainService",
+				"preload": true
+			},
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
-				"settings": {
-					"bundleName": "hxeneo.i18n.i18n"
-				}
-			},
-			"": {
-				"dataSource": "employeeRemote"
+				"settings": {},
+				"preload": false,
+				"async": true,
+				"uri": "i18n/i18n.properties"
 			}
+		},
+		"resources": {
+			"css": []
 		},
 		"routing": {
 			"config": {
 				"routerClass": "sap.m.routing.Router",
-				"viewType": "XML",
 				"viewPath": "hxeneo.view",
-				"controlId": "app",
-				"controlAggregation": "pages",
-				"transition": "slide",
+				"controlId": "root",
+				"controlAggregation": "masterPages",
+				"clearAggregation": true,
+				"viewType": "XML",
 				"bypassed": {
-					"target": "notFound"
+					"target": ["categories"]
+				}
+			},
+			"targets": {
+				"categories": {
+					"viewName": "S1"
+				},
+				"products": {
+					"viewName": "S2",
+					"controlAggregation": "detailPages"
+				},
+				"create":{
+					"viewName": "S3",
+					"controlAggregation": "detailPages"
 				}
 			},
 			"routes": [{
+				"name": "default",
 				"pattern": "",
-				"name": "appHome",
-				"target": "home"
+				"target": ["categories"]
 			}, {
-				"pattern": "employees",
-				"name": "employeeList",
-				"target": "employees"
-			}, {
-				"pattern": "employees/overview:?query:",
-				"name": "employeeOverview",
-				"target": ["employeeOverviewTop", "employeeOverviewContent"]
-			}, {
-				"pattern": "employees/{employeeId}",
-				"name": "employee",
-				"target": "employee"
-			}, {
-				"pattern": "employees/{employeeId}/resume:?query:",
-				"name": "employeeResume",
-				"target": "employeeResume"
-			}],
-			"targets": {
-				"home": {
-					"viewName": "Home",
-					"viewLevel": 1
-				},
-				"notFound": {
-					"viewName": "NotFound",
-					"transition": "show"
-				},
-				"employees": {
-					"viewPath": "hxeneo.view.employee",
-					"viewName": "EmployeeList",
-					"viewLevel": 2
-				},
-				"employee": {
-					"viewName": "employee.Employee",
-					"viewLevel": 3
-				},
-				"employeeResume": {
-					"viewName": "employee.Resume",
-					"viewLevel": 4,
-					"transition": "flip"
-				},
-				"resumeTabHobbies": {
-					"parent": "employeeResume",
-					"viewPath": "hxeneo.view.employee",
-					"viewName": "ResumeHobbies",
-					"viewId": "thisIsMyCustomIdToBeUsedForResumeHobbies",
-					"controlId": "hobbiesTab",
-					"controlAggregation": "content"
-				},
-				"resumeTabNotes": {
-					"parent": "employeeResume",
-					"viewPath": "hxeneo.view.employee",
-					"viewName": "ResumeNotes",
-					"controlId": "notesTab",
-					"controlAggregation": "content"
-				},
-				"employeeOverview": {
-					"viewPath": "hxeneo.view.employee.overview",
-					"viewName": "EmployeeOverview",
-					"viewLevel": 2
-				},
-				"employeeOverviewTop": {
-					"parent": "employeeOverview",
-					"viewPath": "hxeneo.view.employee.overview",
-					"viewName": "EmployeeOverviewTop",
-					"controlId": "EmployeeOverviewParent",
-					"controlAggregation": "content"
-				},
-				"employeeOverviewContent": {
-					"parent": "employeeOverview",
-					"viewPath": "hxeneo.view.employee.overview",
-					"viewName": "EmployeeOverviewContent",
-					"controlId": "EmployeeOverviewParent",
-					"controlAggregation": "content"
-				}
-			}
+				"name": "products",
+				"pattern": "category/{category_id}",
+				"target": ["products", "categories"]
+			},{
+				"name": "create",
+				"pattern": "registerCatalog",
+				"target": ["create"]
+			}]
 		}
 	}
 }

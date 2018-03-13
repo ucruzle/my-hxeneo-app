@@ -1,0 +1,28 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:form="sap.ui.layout.form" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="hxeneo.controller.S3">
+	
+	<Page title="Title" layout="ResponsiveGridLayout">
+		<content>
+			
+			<form:SimpleForm>
+				<form:content>
+					<Label text="ID"/>
+					<Input id="input_id"/>
+					<Label text="Name"/>
+					<Input id="input_name"/>
+				</form:content>
+			</form:SimpleForm>
+			
+		</content>
+		
+		<footer>
+			<Toolbar>
+				<content>
+					<ToolbarSpacer/>
+					<Button type="Emphasized" text="Salvar" icon="sap-icon://save" press="onSaveCatalog"/>
+				</content>
+			</Toolbar>
+		</footer>
+		
+	</Page>
+	
+</mvc:View>

@@ -27,15 +27,15 @@ exports.exec = function(query, params, done) {
                 return done(err, null)
             }
 
-            statement.exec(params, function(err, rows) {
+            statement.exec(params, function(err, result) {
                 
                 if (err) {
                     return done(err, null)
                 }
 
-                return done(null, rows)
-            })
-        })
+                return done(null, result)
+            });
+        });
     });
 
 }

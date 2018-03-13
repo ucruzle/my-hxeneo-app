@@ -1,0 +1,27 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	controllerName="hxeneo.controller.S1">
+	
+	<Page title="{i18n>categories}">
+		
+		<List items="{/Categories}">
+			<items>
+				<StandardListItem title="{Name}" type="Navigation" press="onListItemCategoryPress"/>
+			</items>
+		</List>
+		
+		<footer>
+			<Toolbar>
+				<content>
+					<ToolbarSpacer/>
+					<Button icon="sap-icon://add" press="onAddCategory"/>
+				</content>
+			</Toolbar>
+		</footer>
+		
+	</Page>
+	
+</mvc:View>

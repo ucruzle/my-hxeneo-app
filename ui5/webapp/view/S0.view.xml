@@ -1,0 +1,13 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	controllerName="hxeneo.controller.S0"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<SplitApp id="root">
+		<masterPages></masterPages>
+		<detailPages></detailPages>
+	</SplitApp>
+	
+</mvc:View>

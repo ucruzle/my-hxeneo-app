@@ -13,9 +13,10 @@ router.get('/retornaCategorias', function(req, res) {
 
 router.get('/retornaCategoria/:CodigoDaCategoria', function(req, res) {
 
-    var CodigoDaCategoria = req.params.CodigoDaCategoria;
+    var categoriaTransfer = new Object();
+    categoriaTransfer.CodigoDaCategoria = req.params.CodigoDaCategoria;
 
-    categoriasController.retornaCategoria(CodigoDaCategoria, function(dataResult) {
+    categoriasController.retornaCategoria(categoriaTransfer, function(dataResult) {
         res.json(dataResult);
     });
 
@@ -23,11 +24,12 @@ router.get('/retornaCategoria/:CodigoDaCategoria', function(req, res) {
 
 router.post('/adicionaCategoria', function(req, res) {
 
-    var CodigoDaCategoria = req.body.CodigoDaCategoria;
-    var NomeDaCategoria   = req.body.NomeDaCategoria;
-    var Descricao         = req.body.Descricao;
+    var categoriaTransfer = new Object();
+    categoriaTransfer.CodigoDaCategoria = req.body.CodigoDaCategoria;
+    categoriaTransfer.NomeDaCategoria   = req.body.NomeDaCategoria;
+    categoriaTransfer.Descricao         = req.body.Descricao;
 
-    categoriasController.adicionaCategoria(CodigoDaCategoria, NomeDaCategoria, Descricao, function(dataResult, statusResult) {
+    categoriasController.adicionaCategoria(categoriaTransfer, function(dataResult, statusResult) {
         res.status(statusResult);
         res.json(dataResult);
     });
@@ -36,11 +38,12 @@ router.post('/adicionaCategoria', function(req, res) {
 
 router.put('/alteraCategoria', function(req, res) {
 
-    var CodigoDaCategoria = req.body.CodigoDaCategoria;
-    var NomeDaCategoria   = req.body.NomeDaCategoria;
-    var Descricao         = req.body.Descricao;
+    var categoriaTransfer = new Object();
+    categoriaTransfer.CodigoDaCategoria = req.body.CodigoDaCategoria;
+    categoriaTransfer.NomeDaCategoria   = req.body.NomeDaCategoria;
+    categoriaTransfer.Descricao         = req.body.Descricao;
 
-    categoriasController.alteraCategoria(CodigoDaCategoria, NomeDaCategoria, Descricao, function(statusResult) {
+    categoriasController.alteraCategoria(categoriaTransfer, function(statusResult) {
         res.status(statusResult);
     });
 
@@ -48,9 +51,10 @@ router.put('/alteraCategoria', function(req, res) {
 
 router.delete('/eliminaCategoria/:CodigoDaCategoria', function(req, res) {
 
-    var CodigoDaCategoria = req.params.CodigoDaCategoria;
+    var categoriaTransfer = new Object();
+    categoriaTransfer.CodigoDaCategoria = req.params.CodigoDaCategoria;
 
-    categoriasController.eliminaCategoria(CodigoDaCategoria, function(statusResult) {
+    categoriasController.eliminaCategoria(categoriaTransfer, function(statusResult) {
         res.status(statusResult);
     });
 

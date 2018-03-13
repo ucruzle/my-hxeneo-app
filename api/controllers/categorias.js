@@ -4,18 +4,38 @@ exports.retornaCategorias = function(callback) {
     categoriasRepository.retornaCategorias(callback);
 }
 
-exports.retornaCategoria = function(CodigoDaCategoria, callback) {
-    categoriasRepository.retornaCategoria(CodigoDaCategoria, callback);
+exports.retornaCategoria = function(categoriaTransfer, callback) {
+
+    var categoriaEntity = new Object();
+    categoriaEntity.CodigoDaCategoria = categoriaTransfer.CodigoDaCategoria;
+
+    categoriasRepository.retornaCategoria(categoriaEntity, callback);
 }
 
-exports.adicionaCategoria = function(CodigoDaCategoria, NomeDaCategoria, Descricao, callback) {
-    categoriasRepository.adicionaCategoria(CodigoDaCategoria, NomeDaCategoria, Descricao, callback);
+exports.adicionaCategoria = function(categoriaTransfer, callback) {
+
+    var categoriaEntity = new Object();
+    categoriaEntity.CodigoDaCategoria = categoriaTransfer.CodigoDaCategoria;
+    categoriaEntity.NomeDaCategoria   = categoriaTransfer.NomeDaCategoria;
+    categoriaEntity.Descricao         = categoriaTransfer.Descricao;
+
+    categoriasRepository.adicionaCategoria(categoriaEntity, callback);
 }
 
-exports.alteraCategoria = function(CodigoDaCategoria, NomeDaCategoria, Descricao, callback) {
-    categoriasRepository.alteraCategoria(CodigoDaCategoria, NomeDaCategoria, Descricao, callback);
+exports.alteraCategoria = function(categoriaTransfer, callback) {
+    
+    var categoriaEntity = new Object();
+    categoriaEntity.CodigoDaCategoria = categoriaTransfer.CodigoDaCategoria;
+    categoriaEntity.NomeDaCategoria   = categoriaTransfer.NomeDaCategoria;
+    categoriaEntity.Descricao         = categoriaTransfer.Descricao;
+    
+    categoriasRepository.alteraCategoria(categoriaEntity, callback);
 }
 
-exports.eliminaCategoria = function(CodigoDaCategoria, callback) {
-    categoriasRepository.eliminaCategoria(CodigoDaCategoria, callback);
+exports.eliminaCategoria = function(categoriaTransfer, callback) {
+    
+    var categoriaEntity = new Object();
+    categoriaEntity.CodigoDaCategoria = categoriaTransfer.CodigoDaCategoria;
+    
+    categoriasRepository.eliminaCategoria(categoriaEntity, callback);
 }

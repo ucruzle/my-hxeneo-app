@@ -1,0 +1,20 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	controllerName="hxeneo.controller.S2"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<Page title="{i18n>products}">
+			
+		<ObjectHeader intro="Categoria" title="{Name}" />
+		
+		<List id="list_products" items="{Products}"> 
+			<items>
+				<StandardListItem title="{Name}" />
+			</items>
+		</List>
+		
+	</Page>
+	
+</mvc:View>

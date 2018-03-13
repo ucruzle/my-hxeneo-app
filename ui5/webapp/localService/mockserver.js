@@ -15,7 +15,7 @@ sap.ui.define([
 			var sManifestUrl	= jQuery.sap.getModulePath(_sAppModulePath + "manifest", ".json"),
 				sJsonFilesUrl	= jQuery.sap.getModulePath(_sJsonFilesModulePath),
 				oManifest		= jQuery.sap.syncGetJSON(sManifestUrl).data,
-				oMainDataSource = oManifest["sap.app"].dataSources.employeeRemote,
+				oMainDataSource = oManifest["sap.app"].dataSources.mainService,
 				sMetadataUrl	= jQuery.sap.getModulePath(_sAppModulePath + oMainDataSource.settings.localUri.replace(".xml", ""), ".xml");
 
 			// create

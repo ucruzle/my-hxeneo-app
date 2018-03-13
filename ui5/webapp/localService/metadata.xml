@@ -1,61 +1,74 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
-	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
-		<Schema Namespace="S1" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-
-			<EntityType Name="Employee">
-				<Key>
-					<PropertyRef Name="EmployeeID" />
-				</Key>
-				<Property Name="EmployeeID" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
-				<Property Name="LastName" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-				<Property Name="FirstName" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
-				<Property Name="Address" Type="Edm.String" Nullable="true" MaxLength="60" Unicode="true" FixedLength="false" />
-				<Property Name="City" Type="Edm.String" Nullable="true" MaxLength="15" Unicode="true" FixedLength="false" />
-				<Property Name="Region" Type="Edm.String" Nullable="true" MaxLength="15" Unicode="true" FixedLength="false" />
-				<Property Name="PostalCode" Type="Edm.String" Nullable="true" MaxLength="10" Unicode="true" FixedLength="false" />
-				<Property Name="Country" Type="Edm.String" Nullable="true" MaxLength="15" Unicode="true" FixedLength="false" />
-				<Property Name="HomePhone" Type="Edm.String" Nullable="true" MaxLength="24" Unicode="true" FixedLength="false" />
-				<Property Name="ResumeID" Type="Edm.Int32" Nullable="true"/>
-				<NavigationProperty Name="Resume" Relationship="S1.FK_Employees_Resumes" FromRole="Employees" ToRole="Resumes"/>
-			</EntityType>
-
-			<EntityType Name="Resume">
-				<Key>
-					<PropertyRef Name="ResumeID"/>
-				</Key>
-				<Property Name="ResumeID" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation"/>
-				<Property Name="Information" Type="Edm.String" Nullable="true" Unicode="true"/>
-				<Property Name="Projects" Type="Edm.String" Nullable="true" Unicode="true"/>
-				<Property Name="Hobbies" Type="Edm.String" Nullable="true" Unicode="true"/>
-				<Property Name="Notes" Type="Edm.String" Nullable="true" Unicode="true"/>
-			</EntityType>
-
-			<Association Name="S1.FK_Employees_Resumes">
-				<End Role="Resumes" Type="S1.Resume" Multiplicity="0..1"/>
-				<End Role="Employees" Type="S1.Employee" Multiplicity="1"/>
-				<ReferentialConstraint>
-					<Dependent Role="Resumes">
-						<PropertyRef Name="ResumeID"/>
-					</Dependent>
-					<Principal Role="Employees">
-						<PropertyRef Name="ResumeID"/>
-					</Principal>
-				</ReferentialConstraint>
-			</Association>
-
-			<EntityContainer Name="EC1" p7:LazyLoadingEnabled="true" m:IsDefaultEntityContainer="true" xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
-
-				<EntitySet Name="Employees" EntityType="S1.Employee" />
-				<EntitySet Name="Resumes" EntityType="S1.Resume" />
-
-				<AssociationSet Name="FK_Employees_Resumes" Association="S1.FK_Employees_Resumes">
-					<End EntitySet="Employees" Role="Employees"/>
-					<End EntitySet="Resumes" Role="Resumes"/>
-				</AssociationSet>
-
-			</EntityContainer>
-
-		</Schema>
-	</edmx:DataServices>
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+        <Schema
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2007/05/edm" Namespace="ODataDemo">
+            <EntityType Name="Product">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="false"/>
+                <Property Name="Description" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationSummary" m:FC_ContentKind="text" m:FC_KeepInContent="false"/>
+                <Property Name="ReleaseDate" Type="Edm.DateTime" Nullable="false"/>
+                <Property Name="DiscontinuedDate" Type="Edm.DateTime" Nullable="true"/>
+                <Property Name="Rating" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="Price" Type="Edm.Decimal" Nullable="false"/>
+                <NavigationProperty Name="Category" Relationship="ODataDemo.Product_Category_Category_Products" FromRole="Product_Category" ToRole="Category_Products"/>
+                <NavigationProperty Name="Supplier" Relationship="ODataDemo.Product_Supplier_Supplier_Products" FromRole="Product_Supplier" ToRole="Supplier_Products"/>
+            </EntityType>
+            <EntityType Name="Category">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true"/>
+                <NavigationProperty Name="Products" Relationship="ODataDemo.Product_Category_Category_Products" FromRole="Category_Products" ToRole="Product_Category"/>
+            </EntityType>
+            <EntityType Name="Supplier">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="true" m:FC_TargetPath="SyndicationTitle" m:FC_ContentKind="text" m:FC_KeepInContent="true"/>
+                <Property Name="Address" Type="ODataDemo.Address" Nullable="false"/>
+                <Property Name="Concurrency" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed"/>
+                <NavigationProperty Name="Products" Relationship="ODataDemo.Product_Supplier_Supplier_Products" FromRole="Supplier_Products" ToRole="Product_Supplier"/>
+            </EntityType>
+            <ComplexType Name="Address">
+                <Property Name="Street" Type="Edm.String" Nullable="true"/>
+                <Property Name="City" Type="Edm.String" Nullable="true"/>
+                <Property Name="State" Type="Edm.String" Nullable="true"/>
+                <Property Name="ZipCode" Type="Edm.String" Nullable="true"/>
+                <Property Name="Country" Type="Edm.String" Nullable="true"/>
+            </ComplexType>
+            <Association Name="Product_Category_Category_Products">
+                <End Role="Product_Category" Type="ODataDemo.Product" Multiplicity="*"/>
+                <End Role="Category_Products" Type="ODataDemo.Category" Multiplicity="0..1"/>
+            </Association>
+            <Association Name="Product_Supplier_Supplier_Products">
+                <End Role="Product_Supplier" Type="ODataDemo.Product" Multiplicity="*"/>
+                <End Role="Supplier_Products" Type="ODataDemo.Supplier" Multiplicity="0..1"/>
+            </Association>
+            <EntityContainer Name="DemoService" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="Products" EntityType="ODataDemo.Product"/>
+                <EntitySet Name="Categories" EntityType="ODataDemo.Category"/>
+                <EntitySet Name="Suppliers" EntityType="ODataDemo.Supplier"/>
+                <AssociationSet Name="Products_Category_Categories" Association="ODataDemo.Product_Category_Category_Products">
+                    <End Role="Product_Category" EntitySet="Products"/>
+                    <End Role="Category_Products" EntitySet="Categories"/>
+                </AssociationSet>
+                <AssociationSet Name="Products_Supplier_Suppliers" Association="ODataDemo.Product_Supplier_Supplier_Products">
+                    <End Role="Product_Supplier" EntitySet="Products"/>
+                    <End Role="Supplier_Products" EntitySet="Suppliers"/>
+                </AssociationSet>
+                <FunctionImport Name="GetProductsByRating" EntitySet="Products" ReturnType="Collection(ODataDemo.Product)" m:HttpMethod="GET">
+                    <Parameter Name="rating" Type="Edm.Int32" Mode="In"/>
+                </FunctionImport>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
 </edmx:Edmx>

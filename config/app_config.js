@@ -1,13 +1,12 @@
 "use strict"
 
-var express = require('express');
+var express    = require('express');
 var bodyParser = require('body-parser');
-var port = '7000';
-
-var app = module.exports = express();
+var port       = '7000';
+var app        = module.exports = express();
 
 app.listen(port);
-app.use(bodyParser.urlencoded({ extended:true }));
+app.use(bodyParser.urlencoded({ extended : false }));
 app.use(bodyParser.json());
 
 app.use(function(req, res, next){
