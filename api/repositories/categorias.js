@@ -10,11 +10,13 @@ exports.retornaCategorias = function(callback) {
              ' ORDER BY CODIGODACATEGORIA';
 
     hdb.exec(query, [], function(err, rows) {
+        
         if (err) {
             callback(err);
         } else {
             callback({ categorias : rows });
         }
+
     });
 
 }

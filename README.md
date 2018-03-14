@@ -45,7 +45,7 @@ my-hxeneo-app
 - package.json: Arquivo inicial de configuração do APP (Solução)
 
 # Criação, configurações e acessos ao ambiente SAP HANA, Expres Edition na Nuvem
-Dando início na criação da solução proposta, este tópico, tem como principal objetivo, disponibilizar links fundamentais para a criação e configuração do ambiente na nuvem do SAP HANA, Express Edition. Assim como a demostração de acesso ao ambiente recem implementado virtualmente na nuvem pelo Google Cloud Platform, em uma licença SUSE Linux. Este acesso é possibilitado mediante a criação de um usuário de desenvolvimento, para manipulação dados e criação de novos objetos do banco de dados SAP HANA, Express Edition. 
+Dando início na criação da solução proposta, este tópico, tem como principal objetivo, disponibilizar links fundamentais para a criação e configuração do ambiente na nuvem do SAP HANA, Express Edition. Assim como a demostração de acesso ao ambiente recem implementado virtualmente na nuvem pelo Google Cloud Platform, em uma licença SUSE Linux. Este acesso é possibilitado mediante a criação de um usuário de desenvolvimento, para manipulação dos dados e criação de novos objetos do banco de dados SAP HANA, Express Edition. 
 Alguns passos apenas serão apontados para links que contém uma documentação passo a passo oficial, que por si só, garante a execução com sucesso pela ótima qualidade apresentada.
 
 - Criação do ambiente SAP HANA, Express Edition na nuvem no Google Cloud Platform

@@ -3,7 +3,7 @@ var hdb = require('hdb');
 var client = hdb.createClient({
 
     host     : 'HXEHOST',
-    port     : 39015, // HANA Express Version = 2.0 SP00; Default Instance ID 90
+    port     : 39013, // 90 = HANA instance
     user     : 'DBWORK',
     password : 'DBWdesenv1'
 
@@ -28,6 +28,17 @@ exports.exec = function(query, params, done) {
             }
 
             statement.exec(params, function(err, result) {
+                
+                /*
+                * Após a coxão com o banco de dados bem sucedida e
+                * a execução do comando com o retorna dos dados no
+                * objeto result, deve-se fechar a conexão para execução
+                * de uma novo comando, ou seja, uma nova chamado de outro
+                * serviço da API, para isso utilizar o comando end()
+                * do client. Exemplo: client.end()
+                */
+
+                client.end();
                 
                 if (err) {
                     return done(err, null)
