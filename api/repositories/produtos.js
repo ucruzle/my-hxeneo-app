@@ -54,10 +54,10 @@ exports.retornaProduto = function(produtoEntity, callback) {
 exports.adicionarProduto = function(produtoEntity, callback) {
 
     var query = `INSERT INTO PRODUTOS VALUES (CODIGODOPRODUTO.NEXTVAL
-                                            , ${produtoEntity.NomeDoProduto}
+                                            , '${produtoEntity.NomeDoProduto}'
                                             , ${produtoEntity.CodigoDoFornecedor}
                                             , ${produtoEntity.CodigoDaCategoria}
-                                            , ${produtoEntity.QuantidadePorUnidade}
+                                            , '${produtoEntity.QuantidadePorUnidade}'
                                             , ${produtoEntity.PrecoUnitario}
                                             , ${produtoEntity.UnidadesEmEstoque}
                                             , ${produtoEntity.UnidadesPedidas}
@@ -83,10 +83,10 @@ exports.adicionarProduto = function(produtoEntity, callback) {
 
 exports.alteraProduto = function(produtoEntity, callback) {
 
-    var query = `UPDATE PRODUTOS SET NOMEDOPRODUTO = ${produtoEntity.NomeDoProduto}
+    var query = `UPDATE PRODUTOS SET NOMEDOPRODUTO = '${produtoEntity.NomeDoProduto}'
                                    , CODIGODOFORNECEDOR = ${produtoEntity.CodigoDoFornecedor}
                                    , CODIGODACATEGORIA = ${produtoEntity.CodigoDaCategoria}
-                                   , QUANTIDADEPORUNIDADE = ${produtoEntity.QuantidadePorUnidade}
+                                   , QUANTIDADEPORUNIDADE = '${produtoEntity.QuantidadePorUnidade}'
                                    , PRECOUNITARIO = ${produtoEntity.PrecoUnitario}
                                    , UNIDADESEMESTOQUE = ${produtoEntity.UnidadesEmEstoque}
                                    , UNIDADESPEDIDAS = ${produtoEntity.UnidadesPedidas}
@@ -101,9 +101,9 @@ exports.alteraProduto = function(produtoEntity, callback) {
         } else {
 
             if (affectedRows > 0) {
-                callback(httpStatus.CREATED);
+                callback({ AffectedRows : affectedRows }, httpStatus.CREATED);
             } else {
-                callback(httpStatus.NO_CONTENT);
+                callback({}, httpStatus.NO_CONTENT);
             }
         }
 
@@ -122,9 +122,9 @@ exports.eliminaProduto = function(produtoEntity, callback) {
         } else {
 
             if (affectedRows > 0) {
-                callback(httpStatus.OK);
+                callback({ AffectedRows : affectedRows }, httpStatus.OK);
             } else {
-                callback(httpStatus.NO_CONTENT);
+                callback({}, httpStatus.NO_CONTENT);
             }
         }
         

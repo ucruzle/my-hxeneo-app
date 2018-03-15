@@ -61,8 +61,9 @@ router.put('/alteraFornecedor', function(req, res) {
     fornecedorTransfer.Fax                = req.body.Fax;
     fornecedorTransfer.HomePage           = req.body.HomePage;
 
-    fornecedoresController.alteraFornecedor(fornecedorTransfer, function(statusResult) {
+    fornecedoresController.alteraFornecedor(fornecedorTransfer, function(dataResult, statusResult) {
         res.status(statusResult);
+        res.json(dataResult);
     });
 
 });
@@ -72,8 +73,9 @@ router.delete('/eliminaFornecedor/:CodigoDoFornecedor', function(req, res) {
     var fornecedorTransfer = new Object();
     fornecedorTransfer.CodigoDoFornecedor = req.params.CodigoDoFornecedor;
 
-    fornecedoresController.eliminaFornecedor(fornecedorTransfer, function(statusResult) {
+    fornecedoresController.eliminaFornecedor(fornecedorTransfer, function(dataResult, statusResult) {
         res.status(statusResult);
+        res.json(dataResult);
     });
 
 });

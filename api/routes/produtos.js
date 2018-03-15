@@ -57,8 +57,9 @@ router.put('/alteraProduto', function(req, res) {
     produtoTransfer.NivelDeReposicao     = req.body.NivelDeReposicao;
     produtoTransfer.Descontinuado        = req.body.Descontinuado;
 
-    produtosController.alteraProduto(produtoTransfer, function(statusResult) {
+    produtosController.alteraProduto(produtoTransfer, function(dataResult, statusResult) {
         res.status(statusResult);
+        res.json(dataResult);
     });
 
 });
@@ -68,8 +69,9 @@ router.delete('/eliminaProduto/:CodigoDoProduto', function(req, res) {
     var produtoTransfer = new Object();
     produtoTransfer.CodigoDoProduto = req.params.CodigoDoProduto;
 
-    produtosController.eliminaProduto(produtoTransfer, function(statusResult) {
+    produtosController.eliminaProduto(produtoTransfer, function(dataResult, statusResult) {
         res.status(statusResult);
+        res.json(dataResult);
     });
 
 });

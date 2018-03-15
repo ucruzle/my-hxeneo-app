@@ -60,17 +60,17 @@ exports.retornaFornecedor = function(fornecedorEntity, callback) {
 exports.adicionaFornecedor = function(fornecedorEntity, callback) {
 
     var query = `INSERT INTO FORNECEDORES VALUES (CODIGODOFORNECEDOR.NEXTVAL
-                                                , ${fornecedorEntity.NomeDaEmpresa}
-                                                , ${fornecedorEntity.NomeDoContato}
-                                                , ${fornecedorEntity.CargoDoContato}
-                                                , ${fornecedorEntity.Endereco}
-                                                , ${fornecedorEntity.Cidade}
-                                                , ${fornecedorEntity.Regiao}
-                                                , ${fornecedorEntity.CEP}
-                                                , ${fornecedorEntity.Pais}
-                                                , ${fornecedorEntity.Telefone}
-                                                , ${fornecedorEntity.Fax}
-                                                , ${fornecedorEntity.HomePage})`;
+                                                , '${fornecedorEntity.NomeDaEmpresa}'
+                                                , '${fornecedorEntity.NomeDoContato}'
+                                                , '${fornecedorEntity.CargoDoContato}'
+                                                , '${fornecedorEntity.Endereco}'
+                                                , '${fornecedorEntity.Cidade}'
+                                                , '${fornecedorEntity.Regiao}'
+                                                , '${fornecedorEntity.CEP}'
+                                                , '${fornecedorEntity.Pais}'
+                                                , '${fornecedorEntity.Telefone}'
+                                                , '${fornecedorEntity.Fax}'
+                                                , '${fornecedorEntity.HomePage}')`;
     
     hdb.exec(query, [], function(err, affectedRows) {
         
@@ -91,17 +91,17 @@ exports.adicionaFornecedor = function(fornecedorEntity, callback) {
 
 exports.alteraFornecedor = function(fornecedorEntity, callback) {
 
-    var query = `UPDATE FORNECEDORES SET NOMEDAEMPRESA = ${fornecedorEntity.NomeDaEmpresa}
-                                       , NOMEDOCONTATO = ${fornecedorEntity.NomeDoContato}
-                                       , CARGODOCONTATO = ${fornecedorEntity.CargoDoContato}
-                                       , ENDERECO = ${fornecedorEntity.Endereco}
-                                       , CIDADE = ${fornecedorEntity.Cidade}
-                                       , REGIAO = ${fornecedorEntity.Regiao}
-                                       , CEP = ${fornecedorEntity.CEP}
-                                       , PAIS = ${fornecedorEntity.Pais}
-                                       , TELEFONE = ${fornecedorEntity.Telefone}
-                                       , FAX = ${fornecedorEntity.Fax}
-                                       , HOMEPAGE = ${fornecedorEntity.HomePage}
+    var query = `UPDATE FORNECEDORES SET NOMEDAEMPRESA = '${fornecedorEntity.NomeDaEmpresa}'
+                                       , NOMEDOCONTATO = '${fornecedorEntity.NomeDoContato}'
+                                       , CARGODOCONTATO = '${fornecedorEntity.CargoDoContato}'
+                                       , ENDERECO = '${fornecedorEntity.Endereco}'
+                                       , CIDADE = '${fornecedorEntity.Cidade}'
+                                       , REGIAO = '${fornecedorEntity.Regiao}'
+                                       , CEP = '${fornecedorEntity.CEP}'
+                                       , PAIS = '${fornecedorEntity.Pais}'
+                                       , TELEFONE = '${fornecedorEntity.Telefone}'
+                                       , FAX = '${fornecedorEntity.Fax}'
+                                       , HOMEPAGE = '${fornecedorEntity.HomePage}'
                                    WHERE CODIGODOFORNECEDOR = ${fornecedorEntity.CodigoDoFornecedor}`;
     
     hdb.exec(query, [], function(err, affectedRows) {
@@ -111,9 +111,9 @@ exports.alteraFornecedor = function(fornecedorEntity, callback) {
         } else {
 
             if (affectedRows > 0) {
-                callback(httpStatus.CREATED);
+                callback({ affectedRows : affectedRows }, httpStatus.CREATED);
             } else {
-                callback(httpStatus.NO_CONTENT);
+                callback({}, httpStatus.NO_CONTENT);
             }
         }
 
@@ -132,9 +132,9 @@ exports.eliminaFornecedor = function(fornecedorEntity, callback) {
         } else {
 
             if (affectedRows > 0) {
-                callback(httpStatus.OK);
+                callback({ affectedRows : affectedRows }, httpStatus.OK);
             } else {
-                callback(httpStatus.NO_CONTENT);
+                callback({}, httpStatus.NO_CONTENT);
             }
         }
         

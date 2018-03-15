@@ -43,8 +43,9 @@ router.put('/alteraCategoria', function(req, res) {
     categoriaTransfer.NomeDaCategoria   = req.body.NomeDaCategoria;
     categoriaTransfer.Descricao         = req.body.Descricao;
 
-    categoriasController.alteraCategoria(categoriaTransfer, function(statusResult) {
+    categoriasController.alteraCategoria(categoriaTransfer, function(dataResult, statusResult) {
         res.status(statusResult);
+        res.json(dataResult);
     });
 
 });
@@ -54,8 +55,9 @@ router.delete('/eliminaCategoria/:CodigoDaCategoria', function(req, res) {
     var categoriaTransfer = new Object();
     categoriaTransfer.CodigoDaCategoria = req.params.CodigoDaCategoria;
 
-    categoriasController.eliminaCategoria(categoriaTransfer, function(statusResult) {
+    categoriasController.eliminaCategoria(categoriaTransfer, function(dataResult, statusResult) {
         res.status(statusResult);
+        res.json(dataResult);
     });
 
 });

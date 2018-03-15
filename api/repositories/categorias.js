@@ -45,8 +45,8 @@ exports.retornaCategoria = function(categoriaEntity, callback) {
 exports.adicionaCategoria = function(categoriaEntity, callback) {
 
     var query = `INSERT INTO CATEGORIAS VALUES (CODIGODACATEGORIA.NEXTVAL
-                                              , ${categoriaEntity.NomeDaCategoria}
-                                              , ${categoriaEntity.Descricao})`;
+                                              , '${categoriaEntity.NomeDaCategoria}'
+                                              , '${categoriaEntity.Descricao}')`;
 
     hdb.exec(query, [], function(err, affectedRows) {
         
@@ -67,8 +67,8 @@ exports.adicionaCategoria = function(categoriaEntity, callback) {
 
 exports.alteraCategoria = function(categoriaEntity, callback) {
 
-    var query = `UPDATE CATEGORIAS SET NOMEDACATEGORIA = ${categoriaEntity.NomeDaCategoria}
-                                     , DESCRICAO = ${categoriaEntity.Descricao}
+    var query = `UPDATE CATEGORIAS SET NOMEDACATEGORIA = '${categoriaEntity.NomeDaCategoria}'
+                                     , DESCRICAO = '${categoriaEntity.Descricao}'
                                  WHERE CODIGODACATEGORIA = ${categoriaEntity.CodigoDaCategoria}`;
     
     hdb.exec(query, [], function(err, affectedRows) {
@@ -78,7 +78,7 @@ exports.alteraCategoria = function(categoriaEntity, callback) {
         } else {
 
             if (affectedRows > 0) {
-                callback(httpStatus.CREATED);
+                callback({ AffectedRows : affectedRows }, httpStatus.CREATED);
             } else {
                 callback(httpStatus.NO_CONTENT);
             }
@@ -99,7 +99,7 @@ exports.eliminaCategoria = function(categoriaEntity, callback) {
         } else {
 
             if (affectedRows > 0) {
-                callback(httpStatus.OK);
+                callback({ AffectedRows : affectedRows }, httpStatus.OK);
             } else {
                 callback(httpStatus.NO_CONTENT);
             }

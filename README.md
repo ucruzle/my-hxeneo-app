@@ -210,7 +210,7 @@ Para contemplar a funcionalidade do projeto, é necessário a execução de coma
 ![03-npm-install-express](https://user-images.githubusercontent.com/22205133/36427612-791de372-162c-11e8-96e0-e72ee0de9131.JPG)
 
 
-- Comando: Install Node.js - Instalação o pacote de formatação dos dados para JSON Exemplo: C:\workspaces\NodeJS\my-hxeneo-app> npm install body-parser --save
+- Comando: Install Node.js - Instalação do pacote de formatação dos dados para JSON Exemplo: C:\workspaces\NodeJS\my-hxeneo-app> npm install body-parser --save
 
 ![04-npm-install-body-parser](https://user-images.githubusercontent.com/22205133/36427637-856992de-162c-11e8-9ae3-dfc04053d047.JPG)
 
@@ -220,10 +220,14 @@ Para contemplar a funcionalidade do projeto, é necessário a execução de coma
 ![05-npm-install-nodemon](https://user-images.githubusercontent.com/22205133/36427659-913f7966-162c-11e8-8de6-4e2ffaa171f9.JPG)
 
 
-- Comando: Install Node.js - Instalação o pacote de componentes do SAP HANA para acesso e atualização dos dados no ambiente SAP HANA: C:\workspaces\NodeJS\my-hxeneo-app> npm install hdb
+- Comando: Install Node.js - Instalação do pacote de componentes do SAP HANA para acesso e atualização dos dados no ambiente SAP HANA: C:\workspaces\NodeJS\my-hxeneo-app> npm install hdb
 
 ![28-npm-install-hdb-command-prompt](https://user-images.githubusercontent.com/22205133/37316613-dc76082e-263e-11e8-8eb1-db302a1e2087.JPG)
 
+
+- Comando: Install Node.js - Instalação do pacote de componentes do HTTP Status CODE, para retorno de status com sucesso, erro dentre outros na execução dos serviços da API: C:\workspaces\NodeJS\my-hxeneo-app> npm install http-status-codes --save
+
+![29-npm-install-http-status-codes-command-prompt](https://user-images.githubusercontent.com/22205133/37443331-2ed5825a-27ea-11e8-8e34-7b9e80d103f3.JPG)
 
 
 # Testes
@@ -237,3 +241,101 @@ Para contemplar a funcionalidade do projeto, é necessário a execução de coma
 - Teste Inicial do APP
 
 ![07-testeinicialport7000](https://user-images.githubusercontent.com/22205133/36430603-4fef7274-1634-11e8-9329-8c69d85911b2.JPG)
+
+- Testes dos serviços da API: Execução pela ferramenta postman, para chamada dos produtos a serem consumidos pela API, garantindo a consistência da funcionalidade da API com os teste integrados entre os componentes (Rotas, Controle e Repositórios).
+
+Serviços referentes aos dados da Categoria de Produtos
+
+GET - http://localhost:7000/api/categorias/retornaCategorias
+
+![30-teste-api-retorna-categorias](https://user-images.githubusercontent.com/22205133/37443610-ec9b5656-27eb-11e8-82ee-670f9fae1bb4.JPG)
+
+
+
+GET - http://localhost:7000/api/categorias/retornaCategoria/1
+
+![31-teste-api-retorna-categoria](https://user-images.githubusercontent.com/22205133/37443619-fd53ec6a-27eb-11e8-8566-25916cf31a9d.JPG)
+
+
+
+POST - http://localhost:7000/api/categorias/adicionaCategoria
+
+![36-teste-api-adiciona-categoria](https://user-images.githubusercontent.com/22205133/37443633-0cc391aa-27ec-11e8-88c9-6c77508f9d78.JPG)
+
+
+
+PUT - http://localhost:7000/api/categorias/alteraCategoria
+
+![37-teste-api-altera-categoria](https://user-images.githubusercontent.com/22205133/37443645-183b57de-27ec-11e8-9652-7b014aefd5dc.JPG)
+
+
+
+DELETE - http://localhost:7000/api/categorias/eliminaCategoria
+
+![38-teste-api-elimina-categoria](https://user-images.githubusercontent.com/22205133/37443650-22db7c46-27ec-11e8-9556-9517318dbc42.JPG)
+
+
+
+Serviços referentes aos dados dos Fornecedores de Produtos
+
+GET - http://localhost:7000/api/fornecedores/retornaFornecedores
+
+![32-teste-api-retorna-fornecedores](https://user-images.githubusercontent.com/22205133/37443672-387ecd6e-27ec-11e8-9f73-95e79f848625.JPG)
+
+
+
+GET - http://localhost:7000/api/fornecedores/retornaFornecedor/1
+
+![33-teste-api-retorna-fornecedor](https://user-images.githubusercontent.com/22205133/37443676-42b38932-27ec-11e8-82ed-431253bd902d.JPG)
+
+
+
+POST - http://localhost:7000/api/fornecedores/adicionaFornecedor
+
+![39-teste-api-adiciona-fornecedor](https://user-images.githubusercontent.com/22205133/37443684-4e5a82cc-27ec-11e8-8086-d8cd5a6aaa57.JPG)
+
+
+
+PUT - http://localhost:7000/api/fornecedores/alteraFornecedor
+
+![39-teste-api-altera-fornecedor](https://user-images.githubusercontent.com/22205133/37443688-58c1ce32-27ec-11e8-802a-c48fca8a2ae3.JPG)
+
+
+
+DELETE - http://localhost:7000/api/fornecedores/eliminaFornecedor
+
+![40-teste-api-elimina-fornecedor](https://user-images.githubusercontent.com/22205133/37443693-6557c160-27ec-11e8-9aec-0e988c8a605d.JPG)
+
+
+
+Serviços referentes aos dados dos Produtos
+
+GET - http://localhost:7000/api/produtos/retornaProdutos
+
+![34-teste-api-retorna-produtos](https://user-images.githubusercontent.com/22205133/37443711-80f9edb2-27ec-11e8-8078-5fc33f211944.JPG)
+
+
+
+GET - http://localhost:7000/api/produtos/retornaProduto/1
+
+![35-teste-api-retorna-produto](https://user-images.githubusercontent.com/22205133/37443721-8e7ec7f0-27ec-11e8-8214-8e57772fb8a9.JPG)
+
+
+
+POST - http://localhost:7000/api/produtos/adicionarProduto
+
+![41-teste-api-adiciona-produto](https://user-images.githubusercontent.com/22205133/37443730-9c7b0a58-27ec-11e8-8bde-26b84a39042a.JPG)
+
+
+
+PUT - http://localhost:7000/api/produtos/alteraProduto
+
+![42-teste-api-altera-produto](https://user-images.githubusercontent.com/22205133/37443736-a6936472-27ec-11e8-86b2-5f17ea7f9508.JPG)
+
+
+
+DELETE - http://localhost:7000/api/produtos/eliminaProduto
+
+![43-teste-api-elimina-produto](https://user-images.githubusercontent.com/22205133/37443743-b2b259ac-27ec-11e8-978f-5518ff84cd6d.JPG)
+
+
