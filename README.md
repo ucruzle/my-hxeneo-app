@@ -242,7 +242,13 @@ Para contemplar a funcionalidade do projeto, é necessário a execução de coma
 
 ![07-testeinicialport7000](https://user-images.githubusercontent.com/22205133/36430603-4fef7274-1634-11e8-9329-8c69d85911b2.JPG)
 
-- Testes dos serviços da API: Execução pela ferramenta postman, para chamada dos produtos a serem consumidos pela API, garantindo a consistência da funcionalidade da API com os teste integrados entre os componentes (Rotas, Controle e Repositórios).
+- Testes referentes aos serviços da API: Execução pela ferramenta postman, para chamada dos serviços a serem consumidos pela API, garantindo a consistência da funcionalidade com os testes integrados entre os componentes (Rotas, Controle e Repositórios).
+
+Postman
+
+https://www.getpostman.com/
+
+
 
 Serviços referentes aos dados da Categoria de Produtos
 
