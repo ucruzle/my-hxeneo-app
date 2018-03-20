@@ -22,6 +22,17 @@ router.get('/retornaFornecedor/:CodigoDoFornecedor', function(req, res) {
 
 });
 
+router.get('/retornaFornecedoresPorCodigoDoProduto/:CodigoDoProduto', function(req, res) {
+
+    var produtoTransfer = new Object();
+    produtoTransfer.CodigoDoProduto = req.params.CodigoDoProduto;
+
+    fornecedoresController.retornaFornecedoresPorCodigoDoProduto(produtoTransfer, function(dataResult) {
+        res.json(dataResult);
+    });
+
+});
+
 router.post('/adicionaFornecedor', function(req, res) {
 
     var fornecedorTransfer = new Object();

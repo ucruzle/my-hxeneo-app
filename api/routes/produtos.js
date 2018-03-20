@@ -22,6 +22,17 @@ router.get('/retornaProduto/:CodigoDoProduto', function(req, res) {
 
 });
 
+router.get('/retornaProdutosPorCodigoDaCategoria/:CodigoDaCategoria', function(req, res) {
+
+    var produtoTransfer = new Object();
+    produtoTransfer.CodigoDaCategoria = req.params.CodigoDaCategoria;
+
+    produtosController.retornaProdutosPorCodigoDaCategoria(produtoTransfer, function(dataResult) {
+        res.json(dataResult);
+    });
+
+});
+
 router.post('/adicionarProduto', function(req, res) {
 
     var produtoTransfer = new Object();

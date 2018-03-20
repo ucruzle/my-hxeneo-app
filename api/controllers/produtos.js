@@ -12,6 +12,14 @@ exports.retornaProduto = function(produtoTransfer, callback) {
     produtosRepository.retornaProduto(produtoEntity, callback);
 }
 
+exports.retornaProdutosPorCodigoDaCategoria = function(produtoTransfer, callback) {
+
+    var produtoEntity = new Object();
+    produtoEntity.CodigoDaCategoria = produtoTransfer.CodigoDaCategoria;
+
+    produtosRepository.retornaProdutosPorCodigoDaCategoria(produtoEntity, callback);
+}
+
 exports.adicionarProduto = function(produtoTransfer, callback) {
 
     var produtoEntity = new Object();

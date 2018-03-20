@@ -51,6 +51,31 @@ exports.retornaProduto = function(produtoEntity, callback) {
 
 }
 
+exports.retornaProdutosPorCodigoDaCategoria = function(produtoEntity, callback) {
+
+    var query = `SELECT CODIGODOPRODUTO
+                      , NOMEDOPRODUTO
+                      , CODIGODOFORNECEDOR
+                      , CODIGODACATEGORIA
+                      , QUANTIDADEPORUNIDADE
+                      , PRECOUNITARIO
+                      , UNIDADESEMESTOQUE
+                      , UNIDADESPEDIDAS
+                      , NIVELDEREPOSICAO
+                      , DESCONTINUADO
+                   FROM PRODUTOS
+                  WHERE CODIGODACATEGORIA = ${produtoEntity.CodigoDaCategoria}`;
+    
+    hdb.exec(query, [], function(err, rows) {
+        if (err) {
+            callback(err);
+        } else {
+            callback({ produto : rows });
+        }
+    });
+
+}
+
 exports.adicionarProduto = function(produtoEntity, callback) {
 
     var query = `INSERT INTO PRODUTOS VALUES (CODIGODOPRODUTO.NEXTVAL

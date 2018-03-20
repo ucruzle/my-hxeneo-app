@@ -1,113 +1,91 @@
 {
-	"_version": "1.5.0",
+	"_version": "1.8.0",
 	"sap.app": {
-		"id": "hxeneo",
-		"type": "application",
-		"applicationVersion": {
-			"version": "1.0.0"
-		},
-		"title": "{{appTitle}}",
-		"description": "{{appDescription}}",
-		"dataSources": {
-			"mainService": {
-				"uri": "/oData_Demos/V2/(S(o3xrfffc4fwdx31oomgzspnj))/OData/OData.svc/",
-				"type": "OData",
-				"settings": {
-					"odataVersion": "2.0",
-					"localUri": "localService/metadata.xml"
-				}
-			}
-		},
-		"sourceTemplate": {
-			"id": "servicecatalog.connectivityComponent",
-			"version": "0.0.0"
-		}
+	  "id": "hxeneo",
+	  "type": "application",
+	  "i18n": "i18n/i18n.properties",
+	  "title": "{{appTitle}}",
+	  "description": "{{appDescription}}",
+	  "applicationVersion": {
+		"version": "1.0.0"
+	  }
 	},
 	"sap.ui": {
-		"technology": "UI5",
-		"deviceTypes": {
-			"desktop": true,
-			"tablet": true,
-			"phone": true
-		},
-		"supportedThemes": ["sap_hcb", "sap_belize", "sap_bluecrystal"]
+	  "technology": "UI5",
+	  "deviceTypes": {
+		  "desktop": true,
+		  "tablet": true,
+		  "phone": true
+	  }
 	},
 	"sap.ui5": {
-		"rootView": {
-			"viewName": "hxeneo.view.S0",
-			"type": "XML"
-		},
-		"dependencies": {
-			"minUI5Version": "1.30.0",
-			"libs": {
-				"sap.ui.core": {},
-				"sap.m": {}
-			}
-		},
-		"contentDensities": {
-			"compact": true,
-			"cozy": true
-		},
-		"models": {
-			"": {
-				"type": "sap.ui.model.odata.v2.ODataModel",
-				"settings": {
-					"defaultOperationMode": "Server",
-					"defaultBindingMode": "TwoWay",
-					"defaultCountMode": "Request"
-				},
-				"dataSource": "mainService",
-				"preload": true
-			},
-			"i18n": {
-				"type": "sap.ui.model.resource.ResourceModel",
-				"settings": {},
-				"preload": false,
-				"async": true,
-				"uri": "i18n/i18n.properties"
-			}
-		},
-		"resources": {
-			"css": []
-		},
-		"routing": {
-			"config": {
-				"routerClass": "sap.m.routing.Router",
-				"viewPath": "hxeneo.view",
-				"controlId": "root",
-				"controlAggregation": "masterPages",
-				"clearAggregation": true,
-				"viewType": "XML",
-				"bypassed": {
-					"target": ["categories"]
-				}
-			},
-			"targets": {
-				"categories": {
-					"viewName": "S1"
-				},
-				"products": {
-					"viewName": "S2",
-					"controlAggregation": "detailPages"
-				},
-				"create":{
-					"viewName": "S3",
-					"controlAggregation": "detailPages"
-				}
-			},
-			"routes": [{
-				"name": "default",
-				"pattern": "",
-				"target": ["categories"]
-			}, {
-				"name": "products",
-				"pattern": "category/{category_id}",
-				"target": ["products", "categories"]
-			},{
-				"name": "create",
-				"pattern": "registerCatalog",
-				"target": ["create"]
-			}]
+	  "rootView": {
+		  "viewName": "hxeneo.view.S0",
+		  "type": "XML"
+	  },
+	  "dependencies": {
+		"minUI5Version": "1.30",
+		"libs": {
+		  "sap.m": {}
 		}
+	  },
+	  "models": {
+		"i18n": {
+		  "type": "sap.ui.model.resource.ResourceModel",
+		  "settings": {
+			"bundleName": "hxeneo.i18n.i18n"
+		  }
+		}
+	  },
+	  "resources": {
+		  "css": []
+	  },
+	  "routing": {
+		  "config": {
+			  "routerClass": "sap.m.routing.Router",
+			  "viewPath": "hxeneo.view",
+			  "controlId": "root",
+			  "controlAggregation": "masterPages",
+			  "clearAggregation": true,
+			  "viewType": "XML",
+			  "bypassed": {
+				  "target": ["categories"]
+			  }
+		  },
+		  "targets": {
+		       "categories": {
+			   "viewName": "S1"
+			},
+			"products": {
+			   "viewName": "S2",
+			   "controlAggregation": "detailPages"
+			},
+			"create":{
+			   "viewName": "S3",
+			   "controlAggregation": "detailPages"
+			},
+			"supplier": {
+			   "viewName": "S4",
+			   "controlAggregation": "detailPages"
+			}
+		  },
+		  "routes": [{
+			  "name": "default",
+			  "pattern": "",
+			  "target": ["categories"]
+		  }, {
+			  "name": "products",
+			  "pattern": "category/{category_id}",
+			  "target": ["products", "categories"]
+		  },{
+			  "name": "create",
+			  "pattern": "registerCatalog",
+			  "target": ["create"]
+		  },{
+			  "name": "supplier",
+			  "pattern": "supplier/{product_id}",
+			  "target": ["supplier", "categories"]
+		  }]
+	  }
 	}
-}
+  }

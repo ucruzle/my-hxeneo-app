@@ -57,6 +57,37 @@ exports.retornaFornecedor = function(fornecedorEntity, callback) {
 
 }
 
+exports.retornaFornecedoresPorCodigoDoProduto = function(produtoEntity, callback) {
+
+    var query = `SELECT CODIGODOFORNECEDOR
+                      , NOMEDAEMPRESA
+                      , NOMEDOCONTATO
+                      , CARGODOCONTATO
+                      , ENDERECO
+                      , CIDADE
+                      , REGIAO
+                      , CEP
+                      , PAIS
+                      , TELEFONE
+                      , FAX
+                      , HOMEPAGE
+                   FROM FORNECEDORES
+                  WHERE CODIGODOFORNECEDOR = (SELECT CODIGODOFORNECEDOR 
+                                                FROM PRODUTOS 
+                                               WHERE CODIGODOPRODUTO = ${produtoEntity.CodigoDoProduto})`;
+    
+    hdb.exec(query, [], function(err, rows) {
+        
+        if (err) {
+            callback(err);
+        } else {
+            callback({ fornecedor : rows });
+        }
+
+    });
+
+}
+
 exports.adicionaFornecedor = function(fornecedorEntity, callback) {
 
     var query = `INSERT INTO FORNECEDORES VALUES (CODIGODOFORNECEDOR.NEXTVAL
@@ -111,7 +142,7 @@ exports.alteraFornecedor = function(fornecedorEntity, callback) {
         } else {
 
             if (affectedRows > 0) {
-                callback({ affectedRows : affectedRows }, httpStatus.CREATED);
+                callback({ AffectedRows : affectedRows }, httpStatus.CREATED);
             } else {
                 callback({}, httpStatus.NO_CONTENT);
             }
@@ -132,7 +163,7 @@ exports.eliminaFornecedor = function(fornecedorEntity, callback) {
         } else {
 
             if (affectedRows > 0) {
-                callback({ affectedRows : affectedRows }, httpStatus.OK);
+                callback({ AffectedRows : affectedRows }, httpStatus.OK);
             } else {
                 callback({}, httpStatus.NO_CONTENT);
             }

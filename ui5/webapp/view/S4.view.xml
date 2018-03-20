@@ -1,16 +1,34 @@
 <mvc:View 
 	xmlns:core="sap.ui.core" 
-	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:form="sap.ui.layout.form" 
 	xmlns="sap.m" 
 	controllerName="hxeneo.controller.S4"
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	
-	<App>
-		<pages>
-			<Page title="Title">
-				<content></content>
-			</Page>
-		</pages>
-	</App>
+	<Page title="Title" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
+		<content>
+			
+			<form:SimpleForm layout="ResponsiveGridLayout">
+				<form:content>
+					<Label text="ID"/>
+					<Input id="input_id"/>
+					<Label text="Name"/>
+					<Input id="input_name"/>
+				</form:content>
+			</form:SimpleForm>
+			
+		</content>
+		
+		<footer>
+			<Toolbar>
+				<content>
+					<ToolbarSpacer/>
+					<Button type="Emphasized" text="Salvar" icon="sap-icon://save" press="onUpdateSupplier"/>
+				</content>
+			</Toolbar>
+		</footer>
+		
+	</Page>
 	
 </mvc:View>

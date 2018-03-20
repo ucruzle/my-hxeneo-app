@@ -9,9 +9,9 @@
 			
 		<ObjectHeader intro="Categoria" title="{Name}" />
 		
-		<List id="list_products" items="{Products}"> 
+		<List id="list_products" items="{Products}">
 			<items>
-				<StandardListItem title="{Name}" />
+				<StandardListItem title="{Name}" type="Navigation" press="onListItemProductPress" />
 			</items>
 		</List>
 		

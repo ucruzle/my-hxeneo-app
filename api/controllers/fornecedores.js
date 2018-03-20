@@ -12,6 +12,14 @@ exports.retornaFornecedor = function(fornecedorTransfer, callback) {
     fornecedoresRepository.retornaFornecedor(fornecedorEntity, callback);
 }
 
+exports.retornaFornecedoresPorCodigoDoProduto = function(produtoTransfer, callback) {
+
+    var produtoEntity = new Object();
+    produtoEntity.CodigoDoProduto = produtoTransfer.CodigoDoProduto;
+
+    fornecedoresRepository.retornaFornecedoresPorCodigoDoProduto(produtoEntity, callback);
+}
+
 exports.adicionaFornecedor = function(fornecedorTransfer, callback) {
 
     var fornecedorEntity = new Object();

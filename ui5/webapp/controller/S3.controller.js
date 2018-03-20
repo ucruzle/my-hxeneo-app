@@ -1,8 +1,9 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"sap/m/MessageBox"
+	"sap/m/MessageBox",
+	"sap/ui/core/routing/History"
 	
-], function(Controller, MessageBox) {
+], function(Controller, MessageBox, History) {
 	"use strict";
 	
 	return Controller.extend("hxeneo.controller.S3", {
@@ -60,6 +61,21 @@ sap.ui.define([
 			};
 			
 			oModel.create('/Categories', oNewCategory, oSettings);
-		}
+		},
+
+		onBack : function() {
+
+			var oHistory = History.getInstance();
+			var sPreviousHash = oHistory.getPreviousHash();
+			  
+			  if (sPreviousHash !== undefined) {
+				window.history.go(-1);
+			  } else {
+				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+				oRouter.navTo("products", true);
+			  }
+
+		} 
+		
 	});
 });

@@ -1,6 +1,9 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function(Controller) {
+	"sap/ui/core/mvc/Controller",
+	"sap/m/MessageBox",
+	"sap/ui/core/routing/History"
+
+], function(Controller, MessageBox, History) {
 	"use strict";
 
 	return Controller.extend("hxeneo.controller.S4", {
@@ -10,9 +13,27 @@ sap.ui.define([
 		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 		 * @memberOf hxeneo.view.S4
 		 */
-		//	onInit: function() {
-		//
-		//	},
+			onInit: function() {
+		
+			},
+
+			onUpdateSupplier: function() {
+
+			}, 
+
+			onBack: function() {
+
+				var oHistory = History.getInstance();
+				var sPreviousHash = oHistory.getPreviousHash();
+				
+				if (sPreviousHash !== undefined) {
+					window.history.go(-1);
+				} else {
+					var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+					oRouter.navTo("products", true);
+				}
+
+			}
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

@@ -7,9 +7,9 @@
 	
 	<Page title="{i18n>categories}">
 		
-		<List items="{/Categories}">
+		<List items="{categories>/}">
 			<items>
-				<StandardListItem title="{Name}" type="Navigation" press="onListItemCategoryPress"/>
+				<StandardListItem title="{categories>Name}" type="Navigation" press="onListItemCategoryPress"/>
 			</items>
 		</List>
 		

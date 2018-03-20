@@ -17,25 +17,42 @@ sap.ui.define([
 				this._oList = this.byId("list_products");
 			
 				// @typeof sap.ui.core.routing.Router
-				this._ORouter = UIComponent.getRouterFor(this);
+				this._oRouter = UIComponent.getRouterFor(this);
 				
 				// Faz isso quando se faz uma chamada em Callback
 				// Passando o objeto this para o attachRoutePatternMatched
 				// o objeto this que contém a rota corrente em this._ORouter
-				this._ORouter.attachRoutePatternMatched(this._ORouteMatched, this); 
+				this._oRouter.attachRoutePatternMatched(this._oRouteMatched, this); 
 				
 			},
 			
-			_ORouteMatched: function(oEvent) {
+			_oRouteMatched: function(oEvent) {
 				
 				var oParameters = oEvent.getParameters();
 				var oAguments = oParameters.arguments;
 				var sCategoryId = oAguments.category_id;
 				
 				// para esta concatenação sempre usa (crase) e não (aspas simpres)
-				this.getView().bindElement(`/Categories(${sCategoryId})`, {
-				
+				console.log(this.getOwnerComponent().getModel("categories"));
+				this.getView().setModel(this.getOwnerComponent().getModel("categories"));
+				this.getView().bindElement({ path: "/"+sCategoryId});
+			
+			},
+
+			onListItemProductPress: function(oEvent) {
+
+				//Recuperar o link clicado na lista
+				// var oListItem = oEvent.getSource();
+				// var oContext = oListItem.getBindingContext("/Products");
+				// var oProduct = oContext.getObject();
+				// var sProductId = oAguments.ID;
+
+				var sProductId = 1;
+
+				this._oRouter.navTo('supplier', {
+					product_id: sProductId
 				});
+
 			}
 
 		/**
