@@ -9,7 +9,7 @@ router.get('/retornaProdutos', function(req, res) {
         if (err) {
             res.json(err);
         } else { 
-            res.json({ produtos : rows }); 
+            res.json({ Produtos : rows }); 
         }
     });
 
@@ -24,7 +24,7 @@ router.get('/retornaProduto/:CodigoDoProduto', function(req, res) {
         if (err) {
             res.json(err);
         } else {
-            res.json({ produto : rows });
+            res.json({ Produto : rows });
         }
     });
 

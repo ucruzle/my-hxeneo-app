@@ -9,7 +9,7 @@ router.get('/retornaCategorias', function(req, res) {
         if (err) {
             res.json(err);
         } else {    
-            res.json({ categorias : rows });
+            res.json({ Categorias : rows });
         }
     });
 
@@ -24,7 +24,7 @@ router.get('/retornaCategoria/:CodigoDaCategoria', function(req, res) {
         if (err) {
             res.json(err);
         } else {
-            res.json({ categoria : rows });
+            res.json({ Categoria : rows });
         }
     });
 

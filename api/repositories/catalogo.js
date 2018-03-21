@@ -1,7 +1,7 @@
 var categoriasRepository   = require('../repositories/categorias')
   , fornecedoresRepository = require('../repositories/fornecedores')
   , produtosRepository     = require('../repositories/produtos')
-  , Catalogo               = []
+  , catalogo               = []
   , categorias             = []
   , fornecedores           = []
   , produtos               = []
@@ -83,11 +83,11 @@ exports.retornaCatalogoDeProdutosPorCategorias = function(callback) {
 
                                 };
 
-                                Catalogo.push(Categoria); // Adiciona a nova Categoria ao Catálogo de Produtos
+                                catalogo.push(Categoria); // Adiciona a nova Categoria ao Catálogo de Produtos
 
                             };
 
-                            callback(null, Catalogo); // Retorna no callback o Catálogo de Produtos
+                            callback(null, catalogo); // Retorna no callback o Catálogo de Produtos
 
                         } // Fim IF..ELSE retorno de produtos
 

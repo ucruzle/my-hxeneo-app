@@ -9,7 +9,7 @@ router.get('/retornaFornecedores', function(req, res) {
         if (err) {
             res.json(err);
         } else {
-            res.json({ fornecedores : rows });
+            res.json({ Fornecedores : rows });
         }
     });
 
@@ -24,7 +24,7 @@ router.get('/retornaFornecedor/:CodigoDoFornecedor', function(req, res) {
         if (err) {
             res.json(err);
         } else {
-             res.json({ fornecedor : rows });
+             res.json({ Fornecedor : rows });
         }
     });
 
