@@ -50,10 +50,10 @@ exports.retornaCatalogoDeProdutosPorCategorias = function(callback) {
                                     Produto.CODIGODOFORNECEDOR   = produtosPorCategoria[j].CODIGODOFORNECEDOR;
                                     Produto.CODIGODACATEGORIA    = produtosPorCategoria[j].CODIGODACATEGORIA;
                                     Produto.QUANTIDADEPORUNIDADE = produtosPorCategoria[j].QUANTIDADEPORUNIDADE;
-                                    Produto.PRECOUNITARIO        = produtosPorCategoria[j].PRECOUNITARIO;
-                                    Produto.UNIDADESEMESTOQUE    = produtosPorCategoria[j].UNIDADESEMESTOQUE;
-                                    Produto.UNIDADESPEDIDAS      = produtosPorCategoria[j].UNIDADESPEDIDAS;
-                                    Produto.NIVELDEREPOSICAO     = produtosPorCategoria[j].NIVELDEREPOSICAO;
+                                    Produto.PRECOUNITARIO        = Number(produtosPorCategoria[j].PRECOUNITARIO);
+                                    Produto.UNIDADESEMESTOQUE    = Number(produtosPorCategoria[j].UNIDADESEMESTOQUE);
+                                    Produto.UNIDADESPEDIDAS      = Number(produtosPorCategoria[j].UNIDADESPEDIDAS);
+                                    Produto.NIVELDEREPOSICAO     = Number(produtosPorCategoria[j].NIVELDEREPOSICAO);
                                     Produto.DESCONTINUADO        = produtosPorCategoria[j].DESCONTINUADO;
                                     Produto.Fornecedor           = new Object(); // Para cada Produto é localizado o Fornecedor vinculado
 
