@@ -360,3 +360,34 @@ App HXENEO Demo Stack: http://localhost:7000/ui5/
 ![45-teste-app-retorna-catalogo-de-produtos-por-categorias](https://user-images.githubusercontent.com/22205133/37691517-51c07d0a-2c91-11e8-9764-f3aa383041c3.JPG)
 
 
+
+# Referências
+
+- Referências de artigos e posts alicados no desenvolvimento da solução, assim como links para registros e downloads das rerramentas utilizadas
+
+SAP HANA, Express Edition:
+https://www.sap.com/developer/topics/sap-hana-express.html
+
+Node JS:
+https://nodejs.org/en/
+
+Express JS:
+http://expressjs.com/
+
+openUI5:
+http://openui5.org/
+
+Visual Studio Code:
+https://code.visualstudio.com/
+
+Google Cloud Platform
+https://cloud.google.com/
+
+SAP Cloud Platform
+https://cloudplatform.sap.com/index.html
+
+SAP Community
+https://www.sap.com/community.html
+
+GitHub
+https://github.com/
