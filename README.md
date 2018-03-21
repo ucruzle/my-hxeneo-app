@@ -252,7 +252,7 @@ Serviço referente aos dados do Catálogo de Produtos por Categorias
 
 GET - http://localhost:7000/api/catalogo/retornaCatalogoDeProdutosPorCategorias
 
-![44-teste-api-retorna-catalogo-de-produtos-por-categorias](https://user-images.githubusercontent.com/22205133/37689070-ccb3150a-2c81-11e8-98bb-5bd836b131ef.JPG)
+![44-teste-api-retorna-catalogo-de-produtos-por-categorias](https://user-images.githubusercontent.com/22205133/37691785-fcf6e212-2c92-11e8-867a-7d07dc28f0b0.JPG)
 
 
 
@@ -354,6 +354,8 @@ DELETE - http://localhost:7000/api/produtos/eliminaProduto
 - Teste da solução proposta App HXENEO Demo Stack: Execução do Web Aplicativo proposto. Solução desenvolvida no framework JavaScript SAP openUI5, para interfaces com o usuário em Desktop, Tablets e Celulares.
 
 Tela Principal - Exibição de todos os produtos cadastrados por categorias na base de dados do HXE.
+
+App HXENEO Demo Stack: http://localhost:7000/ui5/
 
 ![45-teste-app-retorna-catalogo-de-produtos-por-categorias](https://user-images.githubusercontent.com/22205133/37691517-51c07d0a-2c91-11e8-9764-f3aa383041c3.JPG)
 
