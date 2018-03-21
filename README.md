@@ -363,7 +363,7 @@ App HXENEO Demo Stack: http://localhost:7000/ui5/
 
 # Referências
 
-- Referências de artigos e posts alicados no desenvolvimento da solução, assim como links para registros e downloads das rerramentas utilizadas
+- Referências de artigos e posts aplicados no desenvolvimento da solução, assim como links para registros e downloads das ferramentas utilizadas.
 
 SAP HANA, Express Edition:
 https://www.sap.com/developer/topics/sap-hana-express.html
