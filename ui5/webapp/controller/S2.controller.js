@@ -33,8 +33,8 @@ sap.ui.define([
 				var sCategoryId = oAguments.category_id;
 				
 				// para esta concatenação sempre usa (crase) e não (aspas simpres)
-				console.log(this.getOwnerComponent().getModel("categories"));
-				this.getView().setModel(this.getOwnerComponent().getModel("categories"));
+				console.log(this.getOwnerComponent().getModel("catalogo"));
+				this.getView().setModel(this.getOwnerComponent().getModel("catalogo"));
 				this.getView().bindElement({ path: "/"+sCategoryId});
 			
 			},

@@ -7,9 +7,9 @@
 	
 	<Page title="{i18n>products}">
 			
-		<ObjectHeader intro="Categoria" title="{Name}" />
+		<ObjectHeader intro="Categoria" title="{NOMEDACATEGORIA}" />
 		
-		<List id="list_products" items="{Products}">
+		<List id="list_products" items="{Produtos}">
 
 			<headerToolbar>
 				<Toolbar>
@@ -20,7 +20,7 @@
 			</headerToolbar>
 
 			<items>
-				<StandardListItem title="{Name}" type="Navigation" press="onListItemProductPress" />
+				<StandardListItem title="{QUANTIDADEPORUNIDADE}" type="Navigation" press="onListItemProductPress" />
 			</items>
 		</List>
 		

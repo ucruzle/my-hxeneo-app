@@ -15,11 +15,12 @@ sap.ui.define([
 		onInit: function() {
 
 			this._oRouter = UIComponent.getRouterFor(this);
+			var url = window.location.origin + "/api/catalogo/retornaCatalogoDeProdutosPorCategorias";
 			var that = this;
 			var settings = {
 				"async": true,
 				"crossDomain": true,
-				"url": "http://services.odata.org/V3/OData/OData.svc/Categories?$expand=Products&$format=json",
+				"url": url,
 				"method": "GET",
 				"headers": {
 					"Content-Type": "text/plain"
@@ -28,8 +29,8 @@ sap.ui.define([
 
 			$.ajax(settings).done(function(response) {
 				console.log(response);
-				var oModelCategories = new JSONModel(response.value);
-				that.getOwnerComponent().setModel(oModelCategories, "categories");
+				var oModelCategories = new JSONModel(response.Catalogo);
+				that.getOwnerComponent().setModel(oModelCategories, "catalogo");
 			});
 
 		},
@@ -63,9 +64,9 @@ sap.ui.define([
 
 			// Recuperar o link clicado na lista
 			var oListItem = oEvent.getSource();
-			var oContext = oListItem.getBindingContext("categories");
+			var oContext = oListItem.getBindingContext("catalogo");
 			var oCategory = oContext.getObject();
-			var sCategoryId = oCategory.ID;
+			var sCategoryId = oCategory.CODIGODACATEGORIA;
 
 			this._oRouter.navTo('products', {
 				category_id: sCategoryId
