@@ -248,6 +248,12 @@ Postman
 
 https://www.getpostman.com/
 
+Serviço referente aos dados do Catálogo de Produtos por Categorias
+
+GET - http://localhost:7000/api/catalogo/retornaCatalogoDeProdutosPorCategorias
+
+![44-teste-api-retorna-catalogo-de-produtos-por-categorias](https://user-images.githubusercontent.com/22205133/37689070-ccb3150a-2c81-11e8-98bb-5bd836b131ef.JPG)
+
 
 
 Serviços referentes aos dados da Categoria de Produtos

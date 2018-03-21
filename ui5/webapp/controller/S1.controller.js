@@ -77,7 +77,7 @@ sap.ui.define([
 		 */
 		onAddCategory: function(oEvent) {
 
-			this._oRouter.navTo('create');
+			this._oRouter.navTo('createCategory');
 
 		}
 	});

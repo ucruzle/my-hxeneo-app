@@ -53,21 +53,21 @@
 			  }
 		  },
 		  "targets": {
-		       "categories": {
-			   "viewName": "S1"
-			},
-			"products": {
-			   "viewName": "S2",
-			   "controlAggregation": "detailPages"
-			},
-			"create":{
-			   "viewName": "S3",
-			   "controlAggregation": "detailPages"
-			},
-			"supplier": {
-			   "viewName": "S4",
-			   "controlAggregation": "detailPages"
-			}
+		       	"categories": {
+						"viewName": "S1"
+					},
+					"products": {
+						"viewName": "S2",
+						"controlAggregation": "detailPages"
+					},
+					"createCategory":{
+						"viewName": "S3",
+						"controlAggregation": "detailPages"
+					},
+					"productDetail": {
+						"viewName": "S4",
+						"controlAggregation": "detailPages"
+					}
 		  },
 		  "routes": [{
 			  "name": "default",
@@ -78,13 +78,13 @@
 			  "pattern": "category/{category_id}",
 			  "target": ["products", "categories"]
 		  },{
-			  "name": "create",
+			  "name": "createCategory",
 			  "pattern": "registerCatalog",
-			  "target": ["create"]
+			  "target": ["createCategory"]
 		  },{
-			  "name": "supplier",
-			  "pattern": "supplier/{product_id}",
-			  "target": ["supplier", "categories"]
+			  "name": "productDetail",
+			  "pattern": "productDetail/{product_id}",
+			  "target": ["productDetail", "categories"]
 		  }]
 	  }
 	}

@@ -12,9 +12,9 @@ exports.retornaCategorias = function(callback) {
     hdb.exec(query, [], function(err, rows) {
         
         if (err) {
-            callback(err);
+            callback(err, null);
         } else {
-            callback({ categorias : rows });
+            callback(null, rows);
         }
 
     });
@@ -33,9 +33,9 @@ exports.retornaCategoria = function(categoriaEntity, callback) {
     hdb.exec(query, [], function(err, rows) {
         
         if (err) {
-            callback(err);
+            callback(err, null);
         } else {
-            callback({ categoria : rows });
+            callback(null, rows);
         }
 
     });

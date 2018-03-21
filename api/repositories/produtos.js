@@ -18,9 +18,9 @@ exports.retornaProdutos = function(callback) {
     
     hdb.exec(query, [], function(err, rows) {
         if (err) {
-            callback(err);
+            callback(err, null);
         } else {
-            callback({ produtos : rows });
+            callback(null, rows);
         }
     });
 
@@ -43,34 +43,9 @@ exports.retornaProduto = function(produtoEntity, callback) {
     
     hdb.exec(query, [], function(err, rows) {
         if (err) {
-            callback(err);
+            callback(err, null);
         } else {
-            callback({ produto : rows });
-        }
-    });
-
-}
-
-exports.retornaProdutosPorCodigoDaCategoria = function(produtoEntity, callback) {
-
-    var query = `SELECT CODIGODOPRODUTO
-                      , NOMEDOPRODUTO
-                      , CODIGODOFORNECEDOR
-                      , CODIGODACATEGORIA
-                      , QUANTIDADEPORUNIDADE
-                      , PRECOUNITARIO
-                      , UNIDADESEMESTOQUE
-                      , UNIDADESPEDIDAS
-                      , NIVELDEREPOSICAO
-                      , DESCONTINUADO
-                   FROM PRODUTOS
-                  WHERE CODIGODACATEGORIA = ${produtoEntity.CodigoDaCategoria}`;
-    
-    hdb.exec(query, [], function(err, rows) {
-        if (err) {
-            callback(err);
-        } else {
-            callback({ produto : rows });
+            callback(null, rows);
         }
     });
 

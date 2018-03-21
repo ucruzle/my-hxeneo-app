@@ -5,8 +5,12 @@ var produtosController = require('../controllers/produtos');
 
 router.get('/retornaProdutos', function(req, res) {
 
-    produtosController.retornaProdutos(function(dataResult) {
-        res.json(dataResult);
+    produtosController.retornaProdutos(function(err, rows) {
+        if (err) {
+            res.json(err);
+        } else { 
+            res.json({ produtos : rows }); 
+        }
     });
 
 });
@@ -16,19 +20,12 @@ router.get('/retornaProduto/:CodigoDoProduto', function(req, res) {
     var produtoTransfer = new Object();
     produtoTransfer.CodigoDoProduto = req.params.CodigoDoProduto;
 
-    produtosController.retornaProduto(produtoTransfer, function(dataResult) {
-        res.json(dataResult);
-    });
-
-});
-
-router.get('/retornaProdutosPorCodigoDaCategoria/:CodigoDaCategoria', function(req, res) {
-
-    var produtoTransfer = new Object();
-    produtoTransfer.CodigoDaCategoria = req.params.CodigoDaCategoria;
-
-    produtosController.retornaProdutosPorCodigoDaCategoria(produtoTransfer, function(dataResult) {
-        res.json(dataResult);
+    produtosController.retornaProduto(produtoTransfer, function(err, rows) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json({ produto : rows });
+        }
     });
 
 });

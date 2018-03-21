@@ -49,9 +49,27 @@ sap.ui.define([
 
 				var sProductId = 1;
 
-				this._oRouter.navTo('supplier', {
+				this._oRouter.navTo('productDetail', {
 					product_id: sProductId
 				});
+
+			},
+
+			onAddProduct: function() {
+
+				// TODO Adicionar um novo Produto
+				// this._oRouter.navTo('productDetail', {
+				// 	product_id: sProductId
+				// });
+
+			},
+
+			onAddSupplier: function() {
+
+				// TODO Adicionar um novo Fornecedor
+				// this._oRouter.navTo('productDetail', {
+				// 	product_id: sProductId
+				// });
 
 			}
 

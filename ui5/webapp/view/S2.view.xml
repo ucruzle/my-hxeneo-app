@@ -10,6 +10,15 @@
 		<ObjectHeader intro="Categoria" title="{Name}" />
 		
 		<List id="list_products" items="{Products}">
+
+			<headerToolbar>
+				<Toolbar>
+					<ToolbarSpacer />
+					<Button id="btnAddProduct" icon="sap-icon://add-product" press="onAddProduct" />
+					<Button id="btnAddSupplier" icon="sap-icon://supplier" press="onAddSupplier" />
+				</Toolbar>
+			</headerToolbar>
+
 			<items>
 				<StandardListItem title="{Name}" type="Navigation" press="onListItemProductPress" />
 			</items>

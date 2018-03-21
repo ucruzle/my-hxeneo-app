@@ -20,9 +20,9 @@ exports.retornaFornecedores = function(callback) {
 
     hdb.exec(query, [], function(err, rows) {
         if (err) {
-            callback(err);
+            callback(err, null);
         } else {
-            callback({ fornecedores : rows });
+            callback(null, rows);
         }
     });
 
@@ -48,40 +48,9 @@ exports.retornaFornecedor = function(fornecedorEntity, callback) {
     hdb.exec(query, [], function(err, rows) {
         
         if (err) {
-            callback(err);
+            callback(err, null);
         } else {
-            callback({ fornecedor : rows });
-        }
-
-    });
-
-}
-
-exports.retornaFornecedoresPorCodigoDoProduto = function(produtoEntity, callback) {
-
-    var query = `SELECT CODIGODOFORNECEDOR
-                      , NOMEDAEMPRESA
-                      , NOMEDOCONTATO
-                      , CARGODOCONTATO
-                      , ENDERECO
-                      , CIDADE
-                      , REGIAO
-                      , CEP
-                      , PAIS
-                      , TELEFONE
-                      , FAX
-                      , HOMEPAGE
-                   FROM FORNECEDORES
-                  WHERE CODIGODOFORNECEDOR = (SELECT CODIGODOFORNECEDOR 
-                                                FROM PRODUTOS 
-                                               WHERE CODIGODOPRODUTO = ${produtoEntity.CodigoDoProduto})`;
-    
-    hdb.exec(query, [], function(err, rows) {
-        
-        if (err) {
-            callback(err);
-        } else {
-            callback({ fornecedor : rows });
+            callback(null, rows);
         }
 
     });

@@ -5,8 +5,12 @@ var fornecedoresController = require('../controllers/fornecedores');
 
 router.get('/retornaFornecedores', function(req, res) {
 
-    fornecedoresController.retornaFornecedores(function(dataResult) {
-        res.json(dataResult);
+    fornecedoresController.retornaFornecedores(function(err, rows) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json({ fornecedores : rows });
+        }
     });
 
 });
@@ -16,19 +20,12 @@ router.get('/retornaFornecedor/:CodigoDoFornecedor', function(req, res) {
     var fornecedorTransfer = new Object();
     fornecedorTransfer.CodigoDoFornecedor = req.params.CodigoDoFornecedor;
 
-    fornecedoresController.retornaFornecedor(fornecedorTransfer, function(dataResult) {
-        res.json(dataResult);
-    });
-
-});
-
-router.get('/retornaFornecedoresPorCodigoDoProduto/:CodigoDoProduto', function(req, res) {
-
-    var produtoTransfer = new Object();
-    produtoTransfer.CodigoDoProduto = req.params.CodigoDoProduto;
-
-    fornecedoresController.retornaFornecedoresPorCodigoDoProduto(produtoTransfer, function(dataResult) {
-        res.json(dataResult);
+    fornecedoresController.retornaFornecedor(fornecedorTransfer, function(err, rows) {
+        if (err) {
+            res.json(err);
+        } else {
+             res.json({ fornecedor : rows });
+        }
     });
 
 });
