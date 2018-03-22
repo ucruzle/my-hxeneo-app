@@ -6,15 +6,17 @@
 	xmlns:html="http://www.w3.org/1999/xhtml" 
 	controllerName="hxeneo.controller.S3">
 	
-	<Page title="Title" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
+	<Page title="{i18n>novaCategoria}" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
 		<content>
 			
 			<form:SimpleForm layout="ResponsiveGridLayout">
 				<form:content>
-					<Label text="ID"/>
-					<Input id="input_id"/>
-					<Label text="Name"/>
-					<Input id="input_name"/>
+					<Label text="{i18n>codigoDaCategoria}"/>
+					<Input id="input_codigoDaCategoria"/>
+					<Label text="{i18n>nomeDaCategoria}"/>
+					<Input id="input_nomeDaCategoria"/>
+					<Label text="{i18n>descricao}"/>
+					<Input id="input_descricao"/>
 				</form:content>
 			</form:SimpleForm>
 			
@@ -24,7 +26,7 @@
 			<Toolbar>
 				<content>
 					<ToolbarSpacer/>
-					<Button type="Emphasized" text="Salvar" icon="sap-icon://save" press="onSaveCatalog"/>
+					<Button type="Emphasized" text="Salvar" icon="sap-icon://save" press="onAdicionaCategoria"/>
 				</content>
 			</Toolbar>
 		</footer>

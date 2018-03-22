@@ -37,30 +37,37 @@ sap.ui.define([
 		/**
 		 *@memberOf hxeneo.controller.S3
 		 */
-		onSaveCatalog: function() {
+		onAdicionaCategoria: function() {
 			
 			// @typeof sap.ui.model.odata.v2.ODataModel
 			var oModel = this.getView().getModel();
 			
-			var  oNewCategory = {
-				ID: this.byId("input_id").getValue(),
-				Name: this.byId("input_name").getValue()
+			var  oNovaCategoria = {
+				CodigoDaCategoria: this.byId("input_codigoDaCategoria").getValue(),
+				NomeDaCategoria: this.byId("input_nomeDaCategoria").getValue(),
+				Descricao: this.byId("input_descricao").getValue(),
 			};
 			
-			function onSuccess (oData, response) {
-				sap.m.MessageToast.show("Sucesso total!!!");
+			this._oRouter = UIComponent.getRouterFor(this);
+			var that = this;
+
+			var settings = {
+				"async": true,
+				"crossDomain": true,
+				"data": oNovaCategoria,
+				"method": "POST",
+				"headers": {
+					"Content-Type": "text/plain"
+				}
 			}
-			
-			function onError(oError) {
-				MessageBox.error("Erro...deu zica!!");
-			}
-			
-			var oSettings = {
-				success: onSuccess.bind(this),
-				error: onError.bind(this)
-			};
-			
-			oModel.create('/Categories', oNewCategory, oSettings);
+
+			$.ajax(settings).done(function(response) {
+				console.log(response);
+				var oModelCategories = new JSONModel(response.Catalogo);
+				that.getOwnerComponent().setModel(oModelCategories, "catalogo");
+			});
+
+			this.onBack();
 		},
 
 		onBack : function() {

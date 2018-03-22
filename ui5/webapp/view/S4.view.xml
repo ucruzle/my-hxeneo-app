@@ -6,15 +6,31 @@
 	controllerName="hxeneo.controller.S4"
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	
-	<Page title="Title" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
+	<Page title="{i18n>produto}" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
 		<content>
 			
 			<form:SimpleForm layout="ResponsiveGridLayout">
 				<form:content>
-					<Label text="ID"/>
-					<Input id="input_id"/>
-					<Label text="Name"/>
-					<Input id="input_name"/>
+					<Label text="{i18n>codigoDoProduto}"/>
+					<Input id="input_codigoDoProduto"/>
+					<Label text="{i18n>nomeDoProduto}"/>
+					<Input id="input_nomeDoProduto"/>
+					<Label text="{i18n>codigoDoFornecedor}"/>
+					<Input id="input_codigoDoFornecedor"/>
+					<Label text="{i18n>codigoDaCategoria}"/>
+					<Input id="input_codigoDaCategoria"/>
+					<Label text="{i18n>quantidadePorUnidade}"/>
+					<Input id="input_quantidadePorUnidade"/>
+					<Label text="{i18n>precoUnitario}"/>
+					<Input id="input_precoUnitario"/>
+					<Label text="{i18n>unidadeEmEstoque}"/>
+					<Input id="input_unidadeEmEstoque"/>
+					<Label text="{i18n>unidadesPedidas}"/>
+					<Input id="input_unidadesPedidas"/>
+					<Label text="{i18n>nivelDeReposicao}"/>
+					<Input id="input_nivelDeReposicao"/>
+					<Label text="{i18n>descontinuado}"/>
+					<Input id="input_descontinuado"/>
 				</form:content>
 			</form:SimpleForm>
 			
@@ -24,7 +40,8 @@
 			<Toolbar>
 				<content>
 					<ToolbarSpacer/>
-					<Button type="Emphasized" text="Salvar" icon="sap-icon://save" press="onUpdateSupplier"/>
+					<Button type="Emphasized" text="Salvar" icon="sap-icon://save" press="onAlterarProduto"/>
+					<Button type="Emphasized" text="Fornecedor" icon="sap-icon://supplier" press="onAlterarFornecedor"/>
 				</content>
 			</Toolbar>
 		</footer>

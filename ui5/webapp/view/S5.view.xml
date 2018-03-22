@@ -1,0 +1,54 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:form="sap.ui.layout.form" 
+	xmlns="sap.m" 
+	controllerName="hxeneo.controller.S5"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<Page title="{i18n>fornecedor}" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
+		<content>
+			
+			<form:SimpleForm layout="ResponsiveGridLayout">
+				<form:content>
+					<Label text="{i18n>codigoDoFornecedor}"/>
+					<Input id="input_codigoDoFornecedor"/>
+					<Label text="{i18n>nomeDaEmpresa}"/>
+					<Input id="input_nomeDaEmpresa"/>
+					<Label text="{i18n>nomeDoContato}"/>
+					<Input id="input_nomeDoContato"/>
+					<Label text="{i18n>cargoDoContato}"/>
+					<Input id="input_cargoDoContato"/>
+					<Label text="{i18n>endereco}"/>
+					<Input id="input_endereco"/>
+					<Label text="{i18n>cidade}"/>
+					<Input id="input_cidade"/>
+					<Label text="{i18n>regiao}"/>
+					<Input id="input_regiao"/>
+					<Label text="{i18n>cep}"/>
+					<Input id="input_cep"/>
+					<Label text="{i18n>pais}"/>
+					<Input id="input_pais"/>
+					<Label text="{i18n>telefone}"/>
+					<Input id="input_telefone"/>
+					<Label text="{i18n>fax}"/>
+					<Input id="input_fax"/>
+					<Label text="{i18n>homePage}"/>
+					<Input id="input_homePage"/>
+				</form:content>
+			</form:SimpleForm>
+			
+		</content>
+		
+		<footer>
+			<Toolbar>
+				<content>
+					<ToolbarSpacer/>
+					<Button type="Emphasized" text="Salvar" icon="sap-icon://save" press="oAlteraFornecedor"/>
+				</content>
+			</Toolbar>
+		</footer>
+		
+	</Page>
+	
+</mvc:View>

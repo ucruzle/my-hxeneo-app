@@ -80,6 +80,19 @@ sap.ui.define([
 
 			this._oRouter.navTo('createCategory');
 
+		},
+
+		onEditCategory: function(oEvent) {
+
+			// this._oRouter.navTo('createCategory');
+
+		},
+
+		onDelCategory: function(oEvent) {
+
+			// this._oRouter.navTo('createCategory');
+
 		}
+		
 	});
 });

@@ -46,7 +46,7 @@ exports.retornaCatalogoDeProdutosPorCategorias = function(callback) {
 
                                     Produto                      = new Object(); // Cria um novo Objeto Produto
                                     Produto.CODIGODOPRODUTO      = produtosPorCategoria[j].CODIGODOPRODUTO;
-                                    Produto.NOMEDOPRODUTO        = produtosPorCategoria[j].NOMEDACATEGORIA;
+                                    Produto.NOMEDOPRODUTO        = produtosPorCategoria[j].NOMEDOPRODUTO;
                                     Produto.CODIGODOFORNECEDOR   = produtosPorCategoria[j].CODIGODOFORNECEDOR;
                                     Produto.CODIGODACATEGORIA    = produtosPorCategoria[j].CODIGODACATEGORIA;
                                     Produto.QUANTIDADEPORUNIDADE = produtosPorCategoria[j].QUANTIDADEPORUNIDADE;
@@ -67,7 +67,7 @@ exports.retornaCatalogoDeProdutosPorCategorias = function(callback) {
                                         Produto.Fornecedor.CODIGODOFORNECEDOR = fornecedorDoProduto.CODIGODOFORNECEDOR;
                                         Produto.Fornecedor.NOMEDAEMPRESA      = fornecedorDoProduto.NOMEDAEMPRESA;
                                         Produto.Fornecedor.NOMEDOCONTATO      = fornecedorDoProduto.NOMEDOCONTATO;
-                                        Produto.Fornecedor.CargoDoContato     = fornecedorDoProduto.CargoDoContato;
+                                        Produto.Fornecedor.CARGODOCONTATO     = fornecedorDoProduto.CARGODOCONTATO;
                                         Produto.Fornecedor.ENDERECO           = fornecedorDoProduto.ENDERECO;
                                         Produto.Fornecedor.CIDADE             = fornecedorDoProduto.CIDADE;
                                         Produto.Fornecedor.REGIAO             = fornecedorDoProduto.REGIAO;

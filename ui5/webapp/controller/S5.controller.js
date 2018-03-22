@@ -1,13 +1,12 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"sap/ui/core/UIComponent",
 	"sap/m/MessageBox",
 	"sap/ui/core/routing/History"
 
-], function(Controller, UIComponent, MessageBox, History) {
+], function(Controller, MessageBox, History) {
 	"use strict";
 
-	return Controller.extend("hxeneo.controller.S4", {
+	return Controller.extend("hxeneo.controller.S5", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -15,7 +14,7 @@ sap.ui.define([
 		 * @memberOf hxeneo.view.S4
 		 */
 			onInit: function() {
-				this._oRouter = UIComponent.getRouterFor(this);
+				
 			},
 
 			onAlterarProduto: function() {
@@ -23,17 +22,19 @@ sap.ui.define([
 				// @typeof sap.ui.model.odata.v2.ODataModel
 				var oModel = this.getView().getModel();
 				
-				var oAlteraProduto = {
-					CodigoDoProduto: this.byId("input_codigoDoProduto").getValue(),
-					NomeDoProduto: this.byId("input_nomeDoProduto").getValue(),
+				var oAlteraFornecedor = {
 					CodigoDoFornecedor: this.byId("input_codigoDoFornecedor").getValue(),
-					CodigoDaCategoria: this.byId("input_codigoDaCategoria").getValue(),
-					QuantidadePorUnidade: this.byId("input_quantidadePorUnidade").getValue(),
-					PrecoUnitario: this.byId("input_precoUnitario").getValue(),
-					UnidadesEmEstoque: this.byId("input_unidadeEmEstoque").getValue(),
-					UnidadesPedidas: this.byId("input_unidadesPedidas").getValue(),
-					NivelDeReposicao: this.byId("input_nivelDeReposicao").getValue(),
-					Descontinuado: this.byId("input_descontinuado").getValue()
+					NomeDaEmpresa: this.byId("input_nomeDaEmpresa").getValue(),
+					NomeDoContato: this.byId("input_nomeDoContato").getValue(),
+					CargoDoContato: this.byId("input_cargoDoContato").getValue(),
+					Endereco: this.byId("input_endereco").getValue(),
+					Cidade: this.byId("input_cidade").getValue(),
+					Regiao: this.byId("input_regiao").getValue(),
+					CEP: this.byId("input_cep").getValue(),
+					Pais: this.byId("input_pais").getValue(),
+					Telefone: this.byId("input_telefone").getValue(),
+					Fax: this.byId("input_fax").getValue(),
+					HomePage: this.byId("input_homePage").getValue()
 				};
 				
 				this._oRouter = UIComponent.getRouterFor(this);
@@ -42,7 +43,7 @@ sap.ui.define([
 				var settings = {
 					"async": true,
 					"crossDomain": true,
-					"data": oAlteraProduto,
+					"data": oAlteraFornecedor,
 					"method": "PUT",
 					"headers": {
 						"Content-Type": "text/plain"
@@ -57,17 +58,7 @@ sap.ui.define([
 
 				this.onBack();
 
-			},
-			
-			onAlterarFornecedor: function() {
-
-				var sSupplierId = 1;
-
-				this._oRouter.navTo('supplierDetail', {
-					supplier_id: sSupplierId
-				});
-
-			},
+			}, 
 
 			onBack: function() {
 
@@ -78,7 +69,7 @@ sap.ui.define([
 					window.history.go(-1);
 				} else {
 					var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-					oRouter.navTo("products", true);
+					oRouter.navTo("productDetail", true);
 				}
 
 			}

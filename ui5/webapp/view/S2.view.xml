@@ -5,9 +5,9 @@
 	controllerName="hxeneo.controller.S2"
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	
-	<Page title="{i18n>products}">
+	<Page title="{i18n>produtos}">
 			
-		<ObjectHeader intro="Categoria" title="{NOMEDACATEGORIA}" />
+		<ObjectHeader intro="{i18n>categoria}" title="{NOMEDACATEGORIA}" />
 		
 		<List id="list_products" items="{Produtos}">
 
@@ -20,7 +20,7 @@
 			</headerToolbar>
 
 			<items>
-				<StandardListItem title="{QUANTIDADEPORUNIDADE}" type="Navigation" press="onListItemProductPress" />
+				<StandardListItem title="{NOMEDOPRODUTO}" type="Navigation" press="onListItemProductPress" />
 			</items>
 		</List>
 		

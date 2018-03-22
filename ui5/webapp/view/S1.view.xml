@@ -5,7 +5,7 @@
 	xmlns:html="http://www.w3.org/1999/xhtml" 
 	controllerName="hxeneo.controller.S1">
 	
-	<Page title="{i18n>categories}">
+	<Page title="{i18n>categorias}">
 		
 		<List items="{catalogo>/}">
 			<items>
@@ -17,6 +17,8 @@
 			<Toolbar>
 				<content>
 					<ToolbarSpacer/>
+					<Button icon="sap-icon://delete" press="onDelCategory"/>
+					<Button icon="sap-icon://edit" press="onEditCategory"/>
 					<Button icon="sap-icon://add" press="onAddCategory"/>
 				</content>
 			</Toolbar>

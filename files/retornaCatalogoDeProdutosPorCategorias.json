@@ -5,6 +5,7 @@
 		"DESCRICAO": "Refrigerantes, cafés, chás e cervejas",
 		"Produtos": [{
 			"CODIGODOPRODUTO": 1,
+			"NOMEDOPRODUTO": "Chai",
 			"CODIGODOFORNECEDOR": 1,
 			"CODIGODACATEGORIA": 1,
 			"QUANTIDADEPORUNIDADE": "10 caixas x 20 pacotes",
@@ -17,6 +18,7 @@
 				"CODIGODOFORNECEDOR": 1,
 				"NOMEDAEMPRESA": "Exotic Liquids",
 				"NOMEDOCONTATO": "Charlotte Cooper",
+				"CARGODOCONTATO": "Gerente de Encomendas",
 				"ENDERECO": "49 Gilbert St.",
 				"CIDADE": "Londo",
 				"REGIAO": "",
@@ -28,6 +30,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 2,
+			"NOMEDOPRODUTO": "Chang",
 			"CODIGODOFORNECEDOR": 1,
 			"CODIGODACATEGORIA": 1,
 			"QUANTIDADEPORUNIDADE": "24 garrafas de 12oz",
@@ -40,6 +43,7 @@
 				"CODIGODOFORNECEDOR": 1,
 				"NOMEDAEMPRESA": "Exotic Liquids",
 				"NOMEDOCONTATO": "Charlotte Cooper",
+				"CARGODOCONTATO": "Gerente de Encomendas",
 				"ENDERECO": "49 Gilbert St.",
 				"CIDADE": "Londo",
 				"REGIAO": "",
@@ -51,6 +55,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 24,
+			"NOMEDOPRODUTO": "Guaraná Fantástica",
 			"CODIGODOFORNECEDOR": 30,
 			"CODIGODACATEGORIA": 1,
 			"QUANTIDADEPORUNIDADE": "12 latas de 355ml",
@@ -63,6 +68,7 @@
 				"CODIGODOFORNECEDOR": 30,
 				"NOMEDAEMPRESA": "Teste Nome MOD",
 				"NOMEDOCONTATO": "Teste Contato",
+				"CARGODOCONTATO": "Teste Cargo",
 				"ENDERECO": "Teste Endereço MOD",
 				"CIDADE": "Teste Cidade",
 				"REGIAO": "Teste Região",
@@ -74,6 +80,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 34,
+			"NOMEDOPRODUTO": "Sasquatch Ale",
 			"CODIGODOFORNECEDOR": 16,
 			"CODIGODACATEGORIA": 1,
 			"QUANTIDADEPORUNIDADE": "24 garrafas de 12oz",
@@ -86,6 +93,7 @@
 				"CODIGODOFORNECEDOR": 16,
 				"NOMEDAEMPRESA": "Bigfoot Breweries",
 				"NOMEDOCONTATO": "Cheryl Saylor",
+				"CARGODOCONTATO": "Rep. Financeiro Local",
 				"ENDERECO": "3400 - 8th Avenue Suite 210",
 				"CIDADE": "Bend",
 				"REGIAO": "OR",
@@ -97,6 +105,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 35,
+			"NOMEDOPRODUTO": "Steeleye Stout",
 			"CODIGODOFORNECEDOR": 16,
 			"CODIGODACATEGORIA": 1,
 			"QUANTIDADEPORUNIDADE": "24 garrafas de 12oz",
@@ -109,6 +118,7 @@
 				"CODIGODOFORNECEDOR": 16,
 				"NOMEDAEMPRESA": "Bigfoot Breweries",
 				"NOMEDOCONTATO": "Cheryl Saylor",
+				"CARGODOCONTATO": "Rep. Financeiro Local",
 				"ENDERECO": "3400 - 8th Avenue Suite 210",
 				"CIDADE": "Bend",
 				"REGIAO": "OR",
@@ -120,6 +130,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 38,
+			"NOMEDOPRODUTO": "Côte de Blaye",
 			"CODIGODOFORNECEDOR": 18,
 			"CODIGODACATEGORIA": 1,
 			"QUANTIDADEPORUNIDADE": "12 garrafas de 75cl",
@@ -132,6 +143,7 @@
 				"CODIGODOFORNECEDOR": 18,
 				"NOMEDAEMPRESA": "Aux joyeux ecclésiastiques",
 				"NOMEDOCONTATO": "Guylène Nodier",
+				"CARGODOCONTATO": "Gerente de Vendas",
 				"ENDERECO": "203, Rue des Francs-Bourgeois",
 				"CIDADE": "Paris",
 				"REGIAO": "",
@@ -143,6 +155,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 39,
+			"NOMEDOPRODUTO": "Chartreuse verte",
 			"CODIGODOFORNECEDOR": 18,
 			"CODIGODACATEGORIA": 1,
 			"QUANTIDADEPORUNIDADE": "750cc por garrafa",
@@ -155,6 +168,7 @@
 				"CODIGODOFORNECEDOR": 18,
 				"NOMEDAEMPRESA": "Aux joyeux ecclésiastiques",
 				"NOMEDOCONTATO": "Guylène Nodier",
+				"CARGODOCONTATO": "Gerente de Vendas",
 				"ENDERECO": "203, Rue des Francs-Bourgeois",
 				"CIDADE": "Paris",
 				"REGIAO": "",
@@ -166,6 +180,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 43,
+			"NOMEDOPRODUTO": "Ipoh Coffee",
 			"CODIGODOFORNECEDOR": 20,
 			"CODIGODACATEGORIA": 1,
 			"QUANTIDADEPORUNIDADE": "16 latas de 500g",
@@ -178,6 +193,7 @@
 				"CODIGODOFORNECEDOR": 20,
 				"NOMEDAEMPRESA": "Leka Trading",
 				"NOMEDOCONTATO": "Chandra Leka",
+				"CARGODOCONTATO": "Proprietário",
 				"ENDERECO": "471 Serangoon Loop, Suite #402",
 				"CIDADE": "Singapore",
 				"REGIAO": "",
@@ -189,6 +205,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 67,
+			"NOMEDOPRODUTO": "Laughing Lumberjack Lager",
 			"CODIGODOFORNECEDOR": 16,
 			"CODIGODACATEGORIA": 1,
 			"QUANTIDADEPORUNIDADE": "24 garrafas de 12oz",
@@ -201,6 +218,7 @@
 				"CODIGODOFORNECEDOR": 16,
 				"NOMEDAEMPRESA": "Bigfoot Breweries",
 				"NOMEDOCONTATO": "Cheryl Saylor",
+				"CARGODOCONTATO": "Rep. Financeiro Local",
 				"ENDERECO": "3400 - 8th Avenue Suite 210",
 				"CIDADE": "Bend",
 				"REGIAO": "OR",
@@ -212,6 +230,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 70,
+			"NOMEDOPRODUTO": "Outback Lager",
 			"CODIGODOFORNECEDOR": 7,
 			"CODIGODACATEGORIA": 1,
 			"QUANTIDADEPORUNIDADE": "24 garrafas de 355ml",
@@ -224,6 +243,7 @@
 				"CODIGODOFORNECEDOR": 7,
 				"NOMEDAEMPRESA": "Pavlova, Ltd.",
 				"NOMEDOCONTATO": "Ian Devling",
+				"CARGODOCONTATO": "Gerente de Marketing",
 				"ENDERECO": "74 Rose St. Moonie Ponds",
 				"CIDADE": "Melbourne",
 				"REGIAO": "Victoria",
@@ -235,6 +255,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 75,
+			"NOMEDOPRODUTO": "Rhönbräu Klosterbier",
 			"CODIGODOFORNECEDOR": 12,
 			"CODIGODACATEGORIA": 1,
 			"QUANTIDADEPORUNIDADE": "24 garrafas de 500ml",
@@ -246,6 +267,7 @@
 			"Fornecedor": {}
 		}, {
 			"CODIGODOPRODUTO": 76,
+			"NOMEDOPRODUTO": "Lakkalikööri",
 			"CODIGODOFORNECEDOR": 23,
 			"CODIGODACATEGORIA": 1,
 			"QUANTIDADEPORUNIDADE": "500ml",
@@ -258,6 +280,7 @@
 				"CODIGODOFORNECEDOR": 23,
 				"NOMEDAEMPRESA": "Karkki Oy",
 				"NOMEDOCONTATO": "Anne Heikkone",
+				"CARGODOCONTATO": "Gerente do Produto",
 				"ENDERECO": "Valtakatu 12",
 				"CIDADE": "Lappeenranta",
 				"REGIAO": "",
@@ -274,6 +297,7 @@
 		"DESCRICAO": "Patês, temperos, picles e molhos doces e salgados",
 		"Produtos": [{
 			"CODIGODOPRODUTO": 3,
+			"NOMEDOPRODUTO": "Aniseed Syrup",
 			"CODIGODOFORNECEDOR": 1,
 			"CODIGODACATEGORIA": 2,
 			"QUANTIDADEPORUNIDADE": "12 garrafas de 550ml",
@@ -286,6 +310,7 @@
 				"CODIGODOFORNECEDOR": 1,
 				"NOMEDAEMPRESA": "Exotic Liquids",
 				"NOMEDOCONTATO": "Charlotte Cooper",
+				"CARGODOCONTATO": "Gerente de Encomendas",
 				"ENDERECO": "49 Gilbert St.",
 				"CIDADE": "Londo",
 				"REGIAO": "",
@@ -297,6 +322,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 4,
+			"NOMEDOPRODUTO": "Chef Anto's Cajun Seasoning",
 			"CODIGODOFORNECEDOR": 2,
 			"CODIGODACATEGORIA": 2,
 			"QUANTIDADEPORUNIDADE": "48 vidros de 6oz",
@@ -309,6 +335,7 @@
 				"CODIGODOFORNECEDOR": 2,
 				"NOMEDAEMPRESA": "New Orleans Cajun Delights",
 				"NOMEDOCONTATO": "Shelley Burke",
+				"CARGODOCONTATO": "Administrador de Pedidos",
 				"ENDERECO": "P.O. Box 78934",
 				"CIDADE": "New Orleans",
 				"REGIAO": "LA",
@@ -320,6 +347,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 5,
+			"NOMEDOPRODUTO": "Chef Anto's Gumbo Mix",
 			"CODIGODOFORNECEDOR": 2,
 			"CODIGODACATEGORIA": 2,
 			"QUANTIDADEPORUNIDADE": "36 caixas",
@@ -332,6 +360,7 @@
 				"CODIGODOFORNECEDOR": 2,
 				"NOMEDAEMPRESA": "New Orleans Cajun Delights",
 				"NOMEDOCONTATO": "Shelley Burke",
+				"CARGODOCONTATO": "Administrador de Pedidos",
 				"ENDERECO": "P.O. Box 78934",
 				"CIDADE": "New Orleans",
 				"REGIAO": "LA",
@@ -343,6 +372,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 6,
+			"NOMEDOPRODUTO": "Grandma's Boysenberry Spread",
 			"CODIGODOFORNECEDOR": 3,
 			"CODIGODACATEGORIA": 2,
 			"QUANTIDADEPORUNIDADE": "12 vidros de 8oz",
@@ -355,6 +385,7 @@
 				"CODIGODOFORNECEDOR": 3,
 				"NOMEDAEMPRESA": "Grandma Kelly's Homestead",
 				"NOMEDOCONTATO": "Regina Murphy",
+				"CARGODOCONTATO": "Representante de Vendas",
 				"ENDERECO": "707 Oxford Rd.",
 				"CIDADE": "Ann Arbor",
 				"REGIAO": "MI",
@@ -366,6 +397,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 8,
+			"NOMEDOPRODUTO": "Northwoods Cranberry Sauce",
 			"CODIGODOFORNECEDOR": 3,
 			"CODIGODACATEGORIA": 2,
 			"QUANTIDADEPORUNIDADE": "12 vidros de 12oz",
@@ -378,6 +410,7 @@
 				"CODIGODOFORNECEDOR": 3,
 				"NOMEDAEMPRESA": "Grandma Kelly's Homestead",
 				"NOMEDOCONTATO": "Regina Murphy",
+				"CARGODOCONTATO": "Representante de Vendas",
 				"ENDERECO": "707 Oxford Rd.",
 				"CIDADE": "Ann Arbor",
 				"REGIAO": "MI",
@@ -389,6 +422,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 15,
+			"NOMEDOPRODUTO": "Genen Shouyu",
 			"CODIGODOFORNECEDOR": 6,
 			"CODIGODACATEGORIA": 2,
 			"QUANTIDADEPORUNIDADE": "24 garrafas de 250ml",
@@ -400,6 +434,7 @@
 			"Fornecedor": {}
 		}, {
 			"CODIGODOPRODUTO": 44,
+			"NOMEDOPRODUTO": "Gula Malacca",
 			"CODIGODOFORNECEDOR": 20,
 			"CODIGODACATEGORIA": 2,
 			"QUANTIDADEPORUNIDADE": "20 sacos de 2kg",
@@ -412,6 +447,7 @@
 				"CODIGODOFORNECEDOR": 20,
 				"NOMEDAEMPRESA": "Leka Trading",
 				"NOMEDOCONTATO": "Chandra Leka",
+				"CARGODOCONTATO": "Proprietário",
 				"ENDERECO": "471 Serangoon Loop, Suite #402",
 				"CIDADE": "Singapore",
 				"REGIAO": "",
@@ -423,6 +459,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 61,
+			"NOMEDOPRODUTO": "Sirop d'érable",
 			"CODIGODOFORNECEDOR": 29,
 			"CODIGODACATEGORIA": 2,
 			"QUANTIDADEPORUNIDADE": "24 garrafas de 500ml",
@@ -435,6 +472,7 @@
 				"CODIGODOFORNECEDOR": 29,
 				"NOMEDAEMPRESA": "Forêts d'érables",
 				"NOMEDOCONTATO": "Chantal Goulet",
+				"CARGODOCONTATO": "Gerente Financeiro",
 				"ENDERECO": "148 rue Chasseur",
 				"CIDADE": "Ste-Hyacinthe",
 				"REGIAO": "Québec",
@@ -446,6 +484,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 63,
+			"NOMEDOPRODUTO": "Vegie-spread",
 			"CODIGODOFORNECEDOR": 7,
 			"CODIGODACATEGORIA": 2,
 			"QUANTIDADEPORUNIDADE": "15 vidros de 625g",
@@ -458,6 +497,7 @@
 				"CODIGODOFORNECEDOR": 7,
 				"NOMEDAEMPRESA": "Pavlova, Ltd.",
 				"NOMEDOCONTATO": "Ian Devling",
+				"CARGODOCONTATO": "Gerente de Marketing",
 				"ENDERECO": "74 Rose St. Moonie Ponds",
 				"CIDADE": "Melbourne",
 				"REGIAO": "Victoria",
@@ -469,6 +509,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 65,
+			"NOMEDOPRODUTO": "Louisiana Fiery Hot Pepper Sauce",
 			"CODIGODOFORNECEDOR": 2,
 			"CODIGODACATEGORIA": 2,
 			"QUANTIDADEPORUNIDADE": "32 garrafas de 8oz",
@@ -481,6 +522,7 @@
 				"CODIGODOFORNECEDOR": 2,
 				"NOMEDAEMPRESA": "New Orleans Cajun Delights",
 				"NOMEDOCONTATO": "Shelley Burke",
+				"CARGODOCONTATO": "Administrador de Pedidos",
 				"ENDERECO": "P.O. Box 78934",
 				"CIDADE": "New Orleans",
 				"REGIAO": "LA",
@@ -492,6 +534,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 66,
+			"NOMEDOPRODUTO": "Louisiana Hot Spiced Okra",
 			"CODIGODOFORNECEDOR": 2,
 			"CODIGODACATEGORIA": 2,
 			"QUANTIDADEPORUNIDADE": "24 vidros de 8oz",
@@ -504,6 +547,7 @@
 				"CODIGODOFORNECEDOR": 2,
 				"NOMEDAEMPRESA": "New Orleans Cajun Delights",
 				"NOMEDOCONTATO": "Shelley Burke",
+				"CARGODOCONTATO": "Administrador de Pedidos",
 				"ENDERECO": "P.O. Box 78934",
 				"CIDADE": "New Orleans",
 				"REGIAO": "LA",
@@ -515,6 +559,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 77,
+			"NOMEDOPRODUTO": "Original Frankfurter grüne Soße",
 			"CODIGODOFORNECEDOR": 12,
 			"CODIGODACATEGORIA": 2,
 			"QUANTIDADEPORUNIDADE": "12 caixas",
@@ -531,6 +576,7 @@
 		"DESCRICAO": "Sobremesas, doces, pães doces",
 		"Produtos": [{
 			"CODIGODOPRODUTO": 16,
+			"NOMEDOPRODUTO": "Pavlova",
 			"CODIGODOFORNECEDOR": 7,
 			"CODIGODACATEGORIA": 3,
 			"QUANTIDADEPORUNIDADE": "32 caixas de 500g",
@@ -543,6 +589,7 @@
 				"CODIGODOFORNECEDOR": 7,
 				"NOMEDAEMPRESA": "Pavlova, Ltd.",
 				"NOMEDOCONTATO": "Ian Devling",
+				"CARGODOCONTATO": "Gerente de Marketing",
 				"ENDERECO": "74 Rose St. Moonie Ponds",
 				"CIDADE": "Melbourne",
 				"REGIAO": "Victoria",
@@ -554,6 +601,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 19,
+			"NOMEDOPRODUTO": "Teatime Chocolate Biscuits",
 			"CODIGODOFORNECEDOR": 8,
 			"CODIGODACATEGORIA": 3,
 			"QUANTIDADEPORUNIDADE": "10 caixas x 12 unidades",
@@ -566,6 +614,7 @@
 				"CODIGODOFORNECEDOR": 8,
 				"NOMEDAEMPRESA": "Specialty Biscuits, Ltd.",
 				"NOMEDOCONTATO": "Peter Wilso",
+				"CARGODOCONTATO": "Representante de Vendas",
 				"ENDERECO": "29 King's Way",
 				"CIDADE": "Manchester",
 				"REGIAO": "",
@@ -577,6 +626,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 20,
+			"NOMEDOPRODUTO": "Sir Rodney's Marmalade",
 			"CODIGODOFORNECEDOR": 8,
 			"CODIGODACATEGORIA": 3,
 			"QUANTIDADEPORUNIDADE": "30 caixas para presente",
@@ -589,6 +639,7 @@
 				"CODIGODOFORNECEDOR": 8,
 				"NOMEDAEMPRESA": "Specialty Biscuits, Ltd.",
 				"NOMEDOCONTATO": "Peter Wilso",
+				"CARGODOCONTATO": "Representante de Vendas",
 				"ENDERECO": "29 King's Way",
 				"CIDADE": "Manchester",
 				"REGIAO": "",
@@ -600,6 +651,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 21,
+			"NOMEDOPRODUTO": "Sir Rodney's Scones",
 			"CODIGODOFORNECEDOR": 8,
 			"CODIGODACATEGORIA": 3,
 			"QUANTIDADEPORUNIDADE": "24 pacotes x 4 unidades",
@@ -612,6 +664,7 @@
 				"CODIGODOFORNECEDOR": 8,
 				"NOMEDAEMPRESA": "Specialty Biscuits, Ltd.",
 				"NOMEDOCONTATO": "Peter Wilso",
+				"CARGODOCONTATO": "Representante de Vendas",
 				"ENDERECO": "29 King's Way",
 				"CIDADE": "Manchester",
 				"REGIAO": "",
@@ -623,6 +676,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 25,
+			"NOMEDOPRODUTO": "NuNuCa Nuß-Nougat-Creme",
 			"CODIGODOFORNECEDOR": 11,
 			"CODIGODACATEGORIA": 3,
 			"QUANTIDADEPORUNIDADE": "20 vidros de 450g",
@@ -635,6 +689,7 @@
 				"CODIGODOFORNECEDOR": 11,
 				"NOMEDAEMPRESA": "Heli Süßwaren GmbH & Co. KG",
 				"NOMEDOCONTATO": "Petra Winkler",
+				"CARGODOCONTATO": "Gerente de Vendas",
 				"ENDERECO": "Tiergartenstraße 5",
 				"CIDADE": "Berli",
 				"REGIAO": "",
@@ -646,6 +701,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 26,
+			"NOMEDOPRODUTO": "Gumbär Gummibärche",
 			"CODIGODOFORNECEDOR": 11,
 			"CODIGODACATEGORIA": 3,
 			"QUANTIDADEPORUNIDADE": "100 sacos de 250g",
@@ -658,6 +714,7 @@
 				"CODIGODOFORNECEDOR": 11,
 				"NOMEDAEMPRESA": "Heli Süßwaren GmbH & Co. KG",
 				"NOMEDOCONTATO": "Petra Winkler",
+				"CARGODOCONTATO": "Gerente de Vendas",
 				"ENDERECO": "Tiergartenstraße 5",
 				"CIDADE": "Berli",
 				"REGIAO": "",
@@ -669,6 +726,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 27,
+			"NOMEDOPRODUTO": "Schoggi Schokolade",
 			"CODIGODOFORNECEDOR": 11,
 			"CODIGODACATEGORIA": 3,
 			"QUANTIDADEPORUNIDADE": "100 unidades de 100g",
@@ -681,6 +739,7 @@
 				"CODIGODOFORNECEDOR": 11,
 				"NOMEDAEMPRESA": "Heli Süßwaren GmbH & Co. KG",
 				"NOMEDOCONTATO": "Petra Winkler",
+				"CARGODOCONTATO": "Gerente de Vendas",
 				"ENDERECO": "Tiergartenstraße 5",
 				"CIDADE": "Berli",
 				"REGIAO": "",
@@ -692,6 +751,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 47,
+			"NOMEDOPRODUTO": "Zaanse koeke",
 			"CODIGODOFORNECEDOR": 22,
 			"CODIGODACATEGORIA": 3,
 			"QUANTIDADEPORUNIDADE": "10 caixas de 4oz",
@@ -704,6 +764,7 @@
 				"CODIGODOFORNECEDOR": 22,
 				"NOMEDAEMPRESA": "Zaanse Snoepfabriek",
 				"NOMEDOCONTATO": "Dirk Luchte",
+				"CARGODOCONTATO": "Gerente Financeiro",
 				"ENDERECO": "Verkoop Rijnweg 22",
 				"CIDADE": "Zaandam",
 				"REGIAO": "",
@@ -715,6 +776,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 48,
+			"NOMEDOPRODUTO": "Chocolade",
 			"CODIGODOFORNECEDOR": 22,
 			"CODIGODACATEGORIA": 3,
 			"QUANTIDADEPORUNIDADE": "10 pacotes",
@@ -727,6 +789,7 @@
 				"CODIGODOFORNECEDOR": 22,
 				"NOMEDAEMPRESA": "Zaanse Snoepfabriek",
 				"NOMEDOCONTATO": "Dirk Luchte",
+				"CARGODOCONTATO": "Gerente Financeiro",
 				"ENDERECO": "Verkoop Rijnweg 22",
 				"CIDADE": "Zaandam",
 				"REGIAO": "",
@@ -738,6 +801,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 49,
+			"NOMEDOPRODUTO": "Maxilaku",
 			"CODIGODOFORNECEDOR": 23,
 			"CODIGODACATEGORIA": 3,
 			"QUANTIDADEPORUNIDADE": "24 pacotes de 50g",
@@ -750,6 +814,7 @@
 				"CODIGODOFORNECEDOR": 23,
 				"NOMEDAEMPRESA": "Karkki Oy",
 				"NOMEDOCONTATO": "Anne Heikkone",
+				"CARGODOCONTATO": "Gerente do Produto",
 				"ENDERECO": "Valtakatu 12",
 				"CIDADE": "Lappeenranta",
 				"REGIAO": "",
@@ -761,6 +826,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 50,
+			"NOMEDOPRODUTO": "Valkoinen suklaa",
 			"CODIGODOFORNECEDOR": 23,
 			"CODIGODACATEGORIA": 3,
 			"QUANTIDADEPORUNIDADE": "12 barras de 100g",
@@ -773,6 +839,7 @@
 				"CODIGODOFORNECEDOR": 23,
 				"NOMEDAEMPRESA": "Karkki Oy",
 				"NOMEDOCONTATO": "Anne Heikkone",
+				"CARGODOCONTATO": "Gerente do Produto",
 				"ENDERECO": "Valtakatu 12",
 				"CIDADE": "Lappeenranta",
 				"REGIAO": "",
@@ -784,6 +851,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 62,
+			"NOMEDOPRODUTO": "Tarte au sucre",
 			"CODIGODOFORNECEDOR": 29,
 			"CODIGODACATEGORIA": 3,
 			"QUANTIDADEPORUNIDADE": "48 unidades",
@@ -796,6 +864,7 @@
 				"CODIGODOFORNECEDOR": 29,
 				"NOMEDAEMPRESA": "Forêts d'érables",
 				"NOMEDOCONTATO": "Chantal Goulet",
+				"CARGODOCONTATO": "Gerente Financeiro",
 				"ENDERECO": "148 rue Chasseur",
 				"CIDADE": "Ste-Hyacinthe",
 				"REGIAO": "Québec",
@@ -807,6 +876,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 68,
+			"NOMEDOPRODUTO": "Scottish Longbreads",
 			"CODIGODOFORNECEDOR": 8,
 			"CODIGODACATEGORIA": 3,
 			"QUANTIDADEPORUNIDADE": "10 caixas x 8 unidades",
@@ -819,6 +889,7 @@
 				"CODIGODOFORNECEDOR": 8,
 				"NOMEDAEMPRESA": "Specialty Biscuits, Ltd.",
 				"NOMEDOCONTATO": "Peter Wilso",
+				"CARGODOCONTATO": "Representante de Vendas",
 				"ENDERECO": "29 King's Way",
 				"CIDADE": "Manchester",
 				"REGIAO": "",
@@ -835,6 +906,7 @@
 		"DESCRICAO": "Queijos",
 		"Produtos": [{
 			"CODIGODOPRODUTO": 11,
+			"NOMEDOPRODUTO": "Queso Cabrales",
 			"CODIGODOFORNECEDOR": 5,
 			"CODIGODACATEGORIA": 4,
 			"QUANTIDADEPORUNIDADE": "pacote de 1kg",
@@ -847,6 +919,7 @@
 				"CODIGODOFORNECEDOR": 5,
 				"NOMEDAEMPRESA": "Cooperativa de Quesos 'Las Cabras'",
 				"NOMEDOCONTATO": "Antonio del Valle Saavedra ",
+				"CARGODOCONTATO": "Administrador de Exportação",
 				"ENDERECO": "Calle del Rosal 4",
 				"CIDADE": "Oviedo",
 				"REGIAO": "Asturias",
@@ -858,6 +931,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 12,
+			"NOMEDOPRODUTO": "Queso Manchego La Pastora",
 			"CODIGODOFORNECEDOR": 5,
 			"CODIGODACATEGORIA": 4,
 			"QUANTIDADEPORUNIDADE": "10 pacotes de 500g",
@@ -870,6 +944,7 @@
 				"CODIGODOFORNECEDOR": 5,
 				"NOMEDAEMPRESA": "Cooperativa de Quesos 'Las Cabras'",
 				"NOMEDOCONTATO": "Antonio del Valle Saavedra ",
+				"CARGODOCONTATO": "Administrador de Exportação",
 				"ENDERECO": "Calle del Rosal 4",
 				"CIDADE": "Oviedo",
 				"REGIAO": "Asturias",
@@ -881,6 +956,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 31,
+			"NOMEDOPRODUTO": "Gorgonzola Telino",
 			"CODIGODOFORNECEDOR": 14,
 			"CODIGODACATEGORIA": 4,
 			"QUANTIDADEPORUNIDADE": "12 pacotes de 100g",
@@ -893,6 +969,7 @@
 				"CODIGODOFORNECEDOR": 14,
 				"NOMEDAEMPRESA": "Formaggi Fortini s.r.l.",
 				"NOMEDOCONTATO": "Elio Rossi",
+				"CARGODOCONTATO": "Representante de Vendas",
 				"ENDERECO": "Viale Dante, 75",
 				"CIDADE": "Ravenna",
 				"REGIAO": "",
@@ -904,6 +981,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 32,
+			"NOMEDOPRODUTO": "Mascarpone Fabioli",
 			"CODIGODOFORNECEDOR": 14,
 			"CODIGODACATEGORIA": 4,
 			"QUANTIDADEPORUNIDADE": "24 pacotes de 200g",
@@ -916,6 +994,7 @@
 				"CODIGODOFORNECEDOR": 14,
 				"NOMEDAEMPRESA": "Formaggi Fortini s.r.l.",
 				"NOMEDOCONTATO": "Elio Rossi",
+				"CARGODOCONTATO": "Representante de Vendas",
 				"ENDERECO": "Viale Dante, 75",
 				"CIDADE": "Ravenna",
 				"REGIAO": "",
@@ -927,6 +1006,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 33,
+			"NOMEDOPRODUTO": "Geitost",
 			"CODIGODOFORNECEDOR": 15,
 			"CODIGODACATEGORIA": 4,
 			"QUANTIDADEPORUNIDADE": "500g",
@@ -939,6 +1019,7 @@
 				"CODIGODOFORNECEDOR": 15,
 				"NOMEDAEMPRESA": "Norske Meierier",
 				"NOMEDOCONTATO": "Beate Vileid",
+				"CARGODOCONTATO": "Gerente de Marketing",
 				"ENDERECO": "Hatlevegen 5",
 				"CIDADE": "Sandvika",
 				"REGIAO": "",
@@ -950,6 +1031,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 59,
+			"NOMEDOPRODUTO": "Raclette Courdavault",
 			"CODIGODOFORNECEDOR": 28,
 			"CODIGODACATEGORIA": 4,
 			"QUANTIDADEPORUNIDADE": "pacote de 5kg",
@@ -962,6 +1044,7 @@
 				"CODIGODOFORNECEDOR": 28,
 				"NOMEDAEMPRESA": "Gai pâturage",
 				"NOMEDOCONTATO": "Eliane Noz",
+				"CARGODOCONTATO": "Representante de Vendas",
 				"ENDERECO": "Bat. B 3, rue des Alpes",
 				"CIDADE": "Annecy",
 				"REGIAO": "",
@@ -973,6 +1056,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 60,
+			"NOMEDOPRODUTO": "Camembert Pierrot",
 			"CODIGODOFORNECEDOR": 28,
 			"CODIGODACATEGORIA": 4,
 			"QUANTIDADEPORUNIDADE": "15 unidades de 300g",
@@ -985,6 +1069,7 @@
 				"CODIGODOFORNECEDOR": 28,
 				"NOMEDAEMPRESA": "Gai pâturage",
 				"NOMEDOCONTATO": "Eliane Noz",
+				"CARGODOCONTATO": "Representante de Vendas",
 				"ENDERECO": "Bat. B 3, rue des Alpes",
 				"CIDADE": "Annecy",
 				"REGIAO": "",
@@ -996,6 +1081,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 69,
+			"NOMEDOPRODUTO": "Gudbrandsdalsost",
 			"CODIGODOFORNECEDOR": 15,
 			"CODIGODACATEGORIA": 4,
 			"QUANTIDADEPORUNIDADE": "pacote de 10kg",
@@ -1008,6 +1094,7 @@
 				"CODIGODOFORNECEDOR": 15,
 				"NOMEDAEMPRESA": "Norske Meierier",
 				"NOMEDOCONTATO": "Beate Vileid",
+				"CARGODOCONTATO": "Gerente de Marketing",
 				"ENDERECO": "Hatlevegen 5",
 				"CIDADE": "Sandvika",
 				"REGIAO": "",
@@ -1019,6 +1106,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 71,
+			"NOMEDOPRODUTO": "Fløtemysost",
 			"CODIGODOFORNECEDOR": 15,
 			"CODIGODACATEGORIA": 4,
 			"QUANTIDADEPORUNIDADE": "10 pacotes de 500g",
@@ -1031,6 +1119,7 @@
 				"CODIGODOFORNECEDOR": 15,
 				"NOMEDAEMPRESA": "Norske Meierier",
 				"NOMEDOCONTATO": "Beate Vileid",
+				"CARGODOCONTATO": "Gerente de Marketing",
 				"ENDERECO": "Hatlevegen 5",
 				"CIDADE": "Sandvika",
 				"REGIAO": "",
@@ -1042,6 +1131,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 72,
+			"NOMEDOPRODUTO": "Mozzarella di Giovanni",
 			"CODIGODOFORNECEDOR": 14,
 			"CODIGODACATEGORIA": 4,
 			"QUANTIDADEPORUNIDADE": "24 pacotes de 200g",
@@ -1054,6 +1144,7 @@
 				"CODIGODOFORNECEDOR": 14,
 				"NOMEDAEMPRESA": "Formaggi Fortini s.r.l.",
 				"NOMEDOCONTATO": "Elio Rossi",
+				"CARGODOCONTATO": "Representante de Vendas",
 				"ENDERECO": "Viale Dante, 75",
 				"CIDADE": "Ravenna",
 				"REGIAO": "",
@@ -1070,6 +1161,7 @@
 		"DESCRICAO": "Pães, biscoitos, massas e cereais",
 		"Produtos": [{
 			"CODIGODOPRODUTO": 22,
+			"NOMEDOPRODUTO": "Gustaf's Knäckebröd",
 			"CODIGODOFORNECEDOR": 9,
 			"CODIGODACATEGORIA": 5,
 			"QUANTIDADEPORUNIDADE": "24 pacotes de 500g",
@@ -1082,6 +1174,7 @@
 				"CODIGODOFORNECEDOR": 9,
 				"NOMEDAEMPRESA": "PB Knäckebröd AB",
 				"NOMEDOCONTATO": "Lars Peterso",
+				"CARGODOCONTATO": "Agente de Vendas",
 				"ENDERECO": "Kaloadagatan 13",
 				"CIDADE": "Göteborg",
 				"REGIAO": "",
@@ -1093,6 +1186,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 23,
+			"NOMEDOPRODUTO": "Tunnbröd",
 			"CODIGODOFORNECEDOR": 9,
 			"CODIGODACATEGORIA": 5,
 			"QUANTIDADEPORUNIDADE": "12 pacotes de 250g",
@@ -1105,6 +1199,7 @@
 				"CODIGODOFORNECEDOR": 9,
 				"NOMEDAEMPRESA": "PB Knäckebröd AB",
 				"NOMEDOCONTATO": "Lars Peterso",
+				"CARGODOCONTATO": "Agente de Vendas",
 				"ENDERECO": "Kaloadagatan 13",
 				"CIDADE": "Göteborg",
 				"REGIAO": "",
@@ -1116,6 +1211,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 42,
+			"NOMEDOPRODUTO": "Singaporean Hokkien Fried Mee",
 			"CODIGODOFORNECEDOR": 20,
 			"CODIGODACATEGORIA": 5,
 			"QUANTIDADEPORUNIDADE": "32 pacotes de 1kg",
@@ -1128,6 +1224,7 @@
 				"CODIGODOFORNECEDOR": 20,
 				"NOMEDAEMPRESA": "Leka Trading",
 				"NOMEDOCONTATO": "Chandra Leka",
+				"CARGODOCONTATO": "Proprietário",
 				"ENDERECO": "471 Serangoon Loop, Suite #402",
 				"CIDADE": "Singapore",
 				"REGIAO": "",
@@ -1139,6 +1236,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 52,
+			"NOMEDOPRODUTO": "Filo Mix",
 			"CODIGODOFORNECEDOR": 24,
 			"CODIGODACATEGORIA": 5,
 			"QUANTIDADEPORUNIDADE": "16 caixas de 2kg",
@@ -1150,6 +1248,7 @@
 			"Fornecedor": {}
 		}, {
 			"CODIGODOPRODUTO": 56,
+			"NOMEDOPRODUTO": "Gnocchi di nonna Alice",
 			"CODIGODOFORNECEDOR": 26,
 			"CODIGODACATEGORIA": 5,
 			"QUANTIDADEPORUNIDADE": "24 pacotes de 250g",
@@ -1162,6 +1261,7 @@
 				"CODIGODOFORNECEDOR": 26,
 				"NOMEDAEMPRESA": "Pasta Buttini s.r.l.",
 				"NOMEDOCONTATO": "Giovanni Giudici",
+				"CARGODOCONTATO": "Administrador de Pedidos",
 				"ENDERECO": "Via dei Gelsomini, 153",
 				"CIDADE": "Salerno",
 				"REGIAO": "",
@@ -1173,6 +1273,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 57,
+			"NOMEDOPRODUTO": "Ravioli Angelo",
 			"CODIGODOFORNECEDOR": 26,
 			"CODIGODACATEGORIA": 5,
 			"QUANTIDADEPORUNIDADE": "24 pacotes de 250g",
@@ -1185,6 +1286,7 @@
 				"CODIGODOFORNECEDOR": 26,
 				"NOMEDAEMPRESA": "Pasta Buttini s.r.l.",
 				"NOMEDOCONTATO": "Giovanni Giudici",
+				"CARGODOCONTATO": "Administrador de Pedidos",
 				"ENDERECO": "Via dei Gelsomini, 153",
 				"CIDADE": "Salerno",
 				"REGIAO": "",
@@ -1196,6 +1298,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 64,
+			"NOMEDOPRODUTO": "Wimmers gute Semmelknödel",
 			"CODIGODOFORNECEDOR": 12,
 			"CODIGODACATEGORIA": 5,
 			"QUANTIDADEPORUNIDADE": "20 sacos x 4 unidades",
@@ -1212,6 +1315,7 @@
 		"DESCRICAO": "Carnes preparadas",
 		"Produtos": [{
 			"CODIGODOPRODUTO": 9,
+			"NOMEDOPRODUTO": "Mishi Kobe Niku",
 			"CODIGODOFORNECEDOR": 4,
 			"CODIGODACATEGORIA": 6,
 			"QUANTIDADEPORUNIDADE": "18 pacotes de 500g",
@@ -1224,6 +1328,7 @@
 				"CODIGODOFORNECEDOR": 4,
 				"NOMEDAEMPRESA": "Tokyo Traders",
 				"NOMEDOCONTATO": "Yoshi Nagase",
+				"CARGODOCONTATO": "Gerente de Marketing",
 				"ENDERECO": "9-8 Sekimai Musashino-shi",
 				"CIDADE": "Tokyo",
 				"REGIAO": "",
@@ -1235,6 +1340,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 17,
+			"NOMEDOPRODUTO": "Alice Mutto",
 			"CODIGODOFORNECEDOR": 7,
 			"CODIGODACATEGORIA": 6,
 			"QUANTIDADEPORUNIDADE": "20 latas de 1kg",
@@ -1247,6 +1353,7 @@
 				"CODIGODOFORNECEDOR": 7,
 				"NOMEDAEMPRESA": "Pavlova, Ltd.",
 				"NOMEDOCONTATO": "Ian Devling",
+				"CARGODOCONTATO": "Gerente de Marketing",
 				"ENDERECO": "74 Rose St. Moonie Ponds",
 				"CIDADE": "Melbourne",
 				"REGIAO": "Victoria",
@@ -1258,6 +1365,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 29,
+			"NOMEDOPRODUTO": "Thüringer Rostbratwurst",
 			"CODIGODOFORNECEDOR": 12,
 			"CODIGODACATEGORIA": 6,
 			"QUANTIDADEPORUNIDADE": "50 pacotes x 30 salsichas",
@@ -1269,6 +1377,7 @@
 			"Fornecedor": {}
 		}, {
 			"CODIGODOPRODUTO": 53,
+			"NOMEDOPRODUTO": "Perth Pasties",
 			"CODIGODOFORNECEDOR": 24,
 			"CODIGODACATEGORIA": 6,
 			"QUANTIDADEPORUNIDADE": "48 unidades",
@@ -1280,6 +1389,7 @@
 			"Fornecedor": {}
 		}, {
 			"CODIGODOPRODUTO": 54,
+			"NOMEDOPRODUTO": "Tourtière",
 			"CODIGODOFORNECEDOR": 25,
 			"CODIGODACATEGORIA": 6,
 			"QUANTIDADEPORUNIDADE": "16 unidades",
@@ -1292,6 +1402,7 @@
 				"CODIGODOFORNECEDOR": 25,
 				"NOMEDAEMPRESA": "Ma Maiso",
 				"NOMEDOCONTATO": "Jean-Guy Lauzo",
+				"CARGODOCONTATO": "Gerente de Marketing",
 				"ENDERECO": "2960 Rue St. Laurent",
 				"CIDADE": "Montréal",
 				"REGIAO": "Québec",
@@ -1303,6 +1414,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 55,
+			"NOMEDOPRODUTO": "Pâté chinois",
 			"CODIGODOFORNECEDOR": 25,
 			"CODIGODACATEGORIA": 6,
 			"QUANTIDADEPORUNIDADE": "24 caixas x 2 unidades",
@@ -1315,6 +1427,7 @@
 				"CODIGODOFORNECEDOR": 25,
 				"NOMEDAEMPRESA": "Ma Maiso",
 				"NOMEDOCONTATO": "Jean-Guy Lauzo",
+				"CARGODOCONTATO": "Gerente de Marketing",
 				"ENDERECO": "2960 Rue St. Laurent",
 				"CIDADE": "Montréal",
 				"REGIAO": "Québec",
@@ -1331,6 +1444,7 @@
 		"DESCRICAO": "Frutas secas e pastas vegetais",
 		"Produtos": [{
 			"CODIGODOPRODUTO": 7,
+			"NOMEDOPRODUTO": "Uncle Bob's Organic Dried Pears",
 			"CODIGODOFORNECEDOR": 3,
 			"CODIGODACATEGORIA": 7,
 			"QUANTIDADEPORUNIDADE": "12 pacotes de 1lb",
@@ -1343,6 +1457,7 @@
 				"CODIGODOFORNECEDOR": 3,
 				"NOMEDAEMPRESA": "Grandma Kelly's Homestead",
 				"NOMEDOCONTATO": "Regina Murphy",
+				"CARGODOCONTATO": "Representante de Vendas",
 				"ENDERECO": "707 Oxford Rd.",
 				"CIDADE": "Ann Arbor",
 				"REGIAO": "MI",
@@ -1354,6 +1469,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 14,
+			"NOMEDOPRODUTO": "Tofu",
 			"CODIGODOFORNECEDOR": 6,
 			"CODIGODACATEGORIA": 7,
 			"QUANTIDADEPORUNIDADE": "40 pacotes de 100g",
@@ -1365,6 +1481,7 @@
 			"Fornecedor": {}
 		}, {
 			"CODIGODOPRODUTO": 28,
+			"NOMEDOPRODUTO": "Rössle Sauerkraut",
 			"CODIGODOFORNECEDOR": 12,
 			"CODIGODACATEGORIA": 7,
 			"QUANTIDADEPORUNIDADE": "25 latas de 825g",
@@ -1376,6 +1493,7 @@
 			"Fornecedor": {}
 		}, {
 			"CODIGODOPRODUTO": 51,
+			"NOMEDOPRODUTO": "Manjimup Dried Apples",
 			"CODIGODOFORNECEDOR": 24,
 			"CODIGODACATEGORIA": 7,
 			"QUANTIDADEPORUNIDADE": "50 pacotes de 300g",
@@ -1387,6 +1505,7 @@
 			"Fornecedor": {}
 		}, {
 			"CODIGODOPRODUTO": 74,
+			"NOMEDOPRODUTO": "Longlife Tofu",
 			"CODIGODOFORNECEDOR": 4,
 			"CODIGODACATEGORIA": 7,
 			"QUANTIDADEPORUNIDADE": "pacote de 5kg",
@@ -1399,6 +1518,7 @@
 				"CODIGODOFORNECEDOR": 4,
 				"NOMEDAEMPRESA": "Tokyo Traders",
 				"NOMEDOCONTATO": "Yoshi Nagase",
+				"CARGODOCONTATO": "Gerente de Marketing",
 				"ENDERECO": "9-8 Sekimai Musashino-shi",
 				"CIDADE": "Tokyo",
 				"REGIAO": "",
@@ -1415,6 +1535,7 @@
 		"DESCRICAO": "Peixes e algas marinhas",
 		"Produtos": [{
 			"CODIGODOPRODUTO": 10,
+			"NOMEDOPRODUTO": "Ikura",
 			"CODIGODOFORNECEDOR": 4,
 			"CODIGODACATEGORIA": 8,
 			"QUANTIDADEPORUNIDADE": "12 vidros de 200ml",
@@ -1427,6 +1548,7 @@
 				"CODIGODOFORNECEDOR": 4,
 				"NOMEDAEMPRESA": "Tokyo Traders",
 				"NOMEDOCONTATO": "Yoshi Nagase",
+				"CARGODOCONTATO": "Gerente de Marketing",
 				"ENDERECO": "9-8 Sekimai Musashino-shi",
 				"CIDADE": "Tokyo",
 				"REGIAO": "",
@@ -1438,6 +1560,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 13,
+			"NOMEDOPRODUTO": "Konbu",
 			"CODIGODOFORNECEDOR": 6,
 			"CODIGODACATEGORIA": 8,
 			"QUANTIDADEPORUNIDADE": "caixa de 2kg",
@@ -1449,6 +1572,7 @@
 			"Fornecedor": {}
 		}, {
 			"CODIGODOPRODUTO": 18,
+			"NOMEDOPRODUTO": "Carnarvon Tigers",
 			"CODIGODOFORNECEDOR": 7,
 			"CODIGODACATEGORIA": 8,
 			"QUANTIDADEPORUNIDADE": "pacote de 16kg",
@@ -1461,6 +1585,7 @@
 				"CODIGODOFORNECEDOR": 7,
 				"NOMEDAEMPRESA": "Pavlova, Ltd.",
 				"NOMEDOCONTATO": "Ian Devling",
+				"CARGODOCONTATO": "Gerente de Marketing",
 				"ENDERECO": "74 Rose St. Moonie Ponds",
 				"CIDADE": "Melbourne",
 				"REGIAO": "Victoria",
@@ -1472,6 +1597,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 30,
+			"NOMEDOPRODUTO": "Nord-Ost Matjeshering",
 			"CODIGODOFORNECEDOR": 13,
 			"CODIGODACATEGORIA": 8,
 			"QUANTIDADEPORUNIDADE": "10 vidros de 200g",
@@ -1484,6 +1610,7 @@
 				"CODIGODOFORNECEDOR": 13,
 				"NOMEDAEMPRESA": "Nord-Ost-Fisch Handelsgesellschaft mbH",
 				"NOMEDOCONTATO": "Sven Peterse",
+				"CARGODOCONTATO": "Coord. Mercados Estrangeiros",
 				"ENDERECO": "Frahmredder 112a",
 				"CIDADE": "Cuxhave",
 				"REGIAO": "",
@@ -1495,6 +1622,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 36,
+			"NOMEDOPRODUTO": "Inlagd Sill",
 			"CODIGODOFORNECEDOR": 17,
 			"CODIGODACATEGORIA": 8,
 			"QUANTIDADEPORUNIDADE": "24 vidros de 250g",
@@ -1507,6 +1635,7 @@
 				"CODIGODOFORNECEDOR": 17,
 				"NOMEDAEMPRESA": "Svensk Sjöföda AB",
 				"NOMEDOCONTATO": "Michael Björ",
+				"CARGODOCONTATO": "Representante de Vendas",
 				"ENDERECO": "Brovallavägen 231",
 				"CIDADE": "Stockholm",
 				"REGIAO": "",
@@ -1518,6 +1647,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 37,
+			"NOMEDOPRODUTO": "Gravad lax",
 			"CODIGODOFORNECEDOR": 17,
 			"CODIGODACATEGORIA": 8,
 			"QUANTIDADEPORUNIDADE": "12 pacotes de 500g",
@@ -1530,6 +1660,7 @@
 				"CODIGODOFORNECEDOR": 17,
 				"NOMEDAEMPRESA": "Svensk Sjöföda AB",
 				"NOMEDOCONTATO": "Michael Björ",
+				"CARGODOCONTATO": "Representante de Vendas",
 				"ENDERECO": "Brovallavägen 231",
 				"CIDADE": "Stockholm",
 				"REGIAO": "",
@@ -1541,6 +1672,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 40,
+			"NOMEDOPRODUTO": "Boston Crab Meat",
 			"CODIGODOFORNECEDOR": 19,
 			"CODIGODACATEGORIA": 8,
 			"QUANTIDADEPORUNIDADE": "24 latas de 4oz",
@@ -1553,6 +1685,7 @@
 				"CODIGODOFORNECEDOR": 19,
 				"NOMEDAEMPRESA": "New England Seafood Cannery",
 				"NOMEDOCONTATO": "Robb Merchant",
+				"CARGODOCONTATO": "Agente Financeiro de Atacado",
 				"ENDERECO": "Order Processing Dept. 2100 Paul Revere Blvd.",
 				"CIDADE": "Bosto",
 				"REGIAO": "MA",
@@ -1564,6 +1697,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 41,
+			"NOMEDOPRODUTO": "Jack's New England Clam Chowder",
 			"CODIGODOFORNECEDOR": 19,
 			"CODIGODACATEGORIA": 8,
 			"QUANTIDADEPORUNIDADE": "12 latas de 12oz",
@@ -1576,6 +1710,7 @@
 				"CODIGODOFORNECEDOR": 19,
 				"NOMEDAEMPRESA": "New England Seafood Cannery",
 				"NOMEDOCONTATO": "Robb Merchant",
+				"CARGODOCONTATO": "Agente Financeiro de Atacado",
 				"ENDERECO": "Order Processing Dept. 2100 Paul Revere Blvd.",
 				"CIDADE": "Bosto",
 				"REGIAO": "MA",
@@ -1587,6 +1722,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 45,
+			"NOMEDOPRODUTO": "Røgede sild",
 			"CODIGODOFORNECEDOR": 21,
 			"CODIGODACATEGORIA": 8,
 			"QUANTIDADEPORUNIDADE": "pacote de 1kg",
@@ -1599,6 +1735,7 @@
 				"CODIGODOFORNECEDOR": 21,
 				"NOMEDAEMPRESA": "Lyngbysild",
 				"NOMEDOCONTATO": "Niels Peterse",
+				"CARGODOCONTATO": "Gerente de Vendas",
 				"ENDERECO": "Lyngbysild Fiskebakken 10",
 				"CIDADE": "Lyngby",
 				"REGIAO": "",
@@ -1610,6 +1747,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 46,
+			"NOMEDOPRODUTO": "Spegesild",
 			"CODIGODOFORNECEDOR": 21,
 			"CODIGODACATEGORIA": 8,
 			"QUANTIDADEPORUNIDADE": "4 vidros de 450g",
@@ -1622,6 +1760,7 @@
 				"CODIGODOFORNECEDOR": 21,
 				"NOMEDAEMPRESA": "Lyngbysild",
 				"NOMEDOCONTATO": "Niels Peterse",
+				"CARGODOCONTATO": "Gerente de Vendas",
 				"ENDERECO": "Lyngbysild Fiskebakken 10",
 				"CIDADE": "Lyngby",
 				"REGIAO": "",
@@ -1633,6 +1772,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 58,
+			"NOMEDOPRODUTO": "Escargots de Bourgogne",
 			"CODIGODOFORNECEDOR": 27,
 			"CODIGODACATEGORIA": 8,
 			"QUANTIDADEPORUNIDADE": "24 unidades",
@@ -1645,6 +1785,7 @@
 				"CODIGODOFORNECEDOR": 27,
 				"NOMEDAEMPRESA": "Escargots Nouveaux",
 				"NOMEDOCONTATO": "Marie Delamare",
+				"CARGODOCONTATO": "Gerente de Vendas",
 				"ENDERECO": "22, rue H. Voiro",
 				"CIDADE": "Montceau",
 				"REGIAO": "",
@@ -1656,6 +1797,7 @@
 			}
 		}, {
 			"CODIGODOPRODUTO": 73,
+			"NOMEDOPRODUTO": "Röd Kaviar",
 			"CODIGODOFORNECEDOR": 17,
 			"CODIGODACATEGORIA": 8,
 			"QUANTIDADEPORUNIDADE": "24 vidros de 150g",
@@ -1668,6 +1810,7 @@
 				"CODIGODOFORNECEDOR": 17,
 				"NOMEDAEMPRESA": "Svensk Sjöföda AB",
 				"NOMEDOCONTATO": "Michael Björ",
+				"CARGODOCONTATO": "Representante de Vendas",
 				"ENDERECO": "Brovallavägen 231",
 				"CIDADE": "Stockholm",
 				"REGIAO": "",

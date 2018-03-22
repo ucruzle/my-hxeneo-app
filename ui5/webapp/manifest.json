@@ -67,6 +67,10 @@
 					"productDetail": {
 						"viewName": "S4",
 						"controlAggregation": "detailPages"
+					},
+					"supplierDetail": {
+						"viewName": "S5",
+						"controlAggregation": "detailPages"
 					}
 		  },
 		  "routes": [{
@@ -85,6 +89,10 @@
 			  "name": "productDetail",
 			  "pattern": "productDetail/{product_id}",
 			  "target": ["productDetail", "categories"]
+		  },{
+			  "name": "supplierDetail",
+			  "pattern": "supplierDetail/{supplier_id}",
+			  "target": ["supplierDetail", "categories"]
 		  }]
 	  }
 	}
