@@ -72,6 +72,27 @@ sap.ui.define([
 			},
 
 			onExluirProduto: function() {
+
+				// @typeof sap.ui.model.odata.v2.ODataModel
+				var oModel = this.getView().getModel();
+				var url    = window.location.origin + "/api/produtos/eliminaProduto/" + `${this.byId("input_codigoDoProduto").getValue()}`;
+				var that   = this;
+
+				var settings = {
+					"async": true,
+					"crossDomain": true,
+					"url": url,
+					"method": "DELETE",
+					"headers": {
+						"Content-Type": "text/plain"
+					}
+				}
+
+				$.ajax(settings).done(function (response) {
+					console.log(response);
+				});
+
+				this.onBack();
 								
 			},
 

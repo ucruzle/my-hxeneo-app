@@ -73,6 +73,27 @@ sap.ui.define([
 		},
 
 		onExcluiCategoria: function() {
+
+			// @typeof sap.ui.model.odata.v2.ODataModel
+			var oModel = this.getView().getModel();
+			var url    = window.location.origin + "/api/categorias/eliminaCategoria/" + `${this.byId("input_codigoDaCategoria").getValue()}`;
+			var that   = this;
+
+			var settings = {
+				"async": true,
+				"crossDomain": true,
+				"url": url,
+				"method": "DELETE",
+				"headers": {
+					"Content-Type": "text/plain"
+				}
+			}
+
+			$.ajax(settings).done(function(response) {
+				console.log(response);
+			});
+
+			this.onBack();
 			
 		},
 
