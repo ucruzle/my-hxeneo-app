@@ -20,8 +20,12 @@ sap.ui.define([
 
 			onAlterarProduto: function() {
 
+				this._oRouter = UIComponent.getRouterFor(this);
+
 				// @typeof sap.ui.model.odata.v2.ODataModel
 				var oModel = this.getView().getModel();
+				var url    = window.location.origin + "/api/produtos/alteraProduto";
+				var that   = this;
 				
 				var oAlteraProduto = {
 					CodigoDoProduto: this.byId("input_codigoDoProduto").getValue(),
@@ -35,14 +39,12 @@ sap.ui.define([
 					NivelDeReposicao: this.byId("input_nivelDeReposicao").getValue(),
 					Descontinuado: this.byId("input_descontinuado").getValue()
 				};
-				
-				this._oRouter = UIComponent.getRouterFor(this);
-				var that = this;
 
 				var settings = {
 					"async": true,
 					"crossDomain": true,
 					"data": oAlteraProduto,
+					"url": url,
 					"method": "PUT",
 					"headers": {
 						"Content-Type": "text/plain"
@@ -59,7 +61,7 @@ sap.ui.define([
 
 			},
 			
-			onAlterarFornecedor: function() {
+			onDetalheDoFornecedor: function() {
 
 				var sSupplierId = 1;
 
@@ -67,6 +69,10 @@ sap.ui.define([
 					supplier_id: sSupplierId
 				});
 
+			},
+
+			onExluirProduto: function() {
+								
 			},
 
 			onBack: function() {

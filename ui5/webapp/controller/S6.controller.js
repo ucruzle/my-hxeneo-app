@@ -7,7 +7,7 @@ sap.ui.define([
 ], function(Controller, UIComponent, MessageBox, History) {
 	"use strict";
 
-	return Controller.extend("hxeneo.controller.S5", {
+	return Controller.extend("hxeneo.controller.S6", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -18,34 +18,34 @@ sap.ui.define([
 				this._oRouter = UIComponent.getRouterFor(this);
 			},
 
-			onAlteraFornecedor: function() {
-				
+			onAdicionarProduto: function() {
+
+				this._oRouter = UIComponent.getRouterFor(this);
+
 				// @typeof sap.ui.model.odata.v2.ODataModel
 				var oModel = this.getView().getModel();
-				var url    = window.location.origin + "/api/fornecedores/alteraFornecedor";
+				var url    = window.location.origin + "/api/produtos/adicionarProduto";
 				var that   = this;
 				
-				var oAlteraFornecedor = {
+				var oAdicionaProduto = {
+					CodigoDoProduto: 0,
+					NomeDoProduto: this.byId("input_nomeDoProduto").getValue(),
 					CodigoDoFornecedor: this.byId("input_codigoDoFornecedor").getValue(),
-					NomeDaEmpresa: this.byId("input_nomeDaEmpresa").getValue(),
-					NomeDoContato: this.byId("input_nomeDoContato").getValue(),
-					CargoDoContato: this.byId("input_cargoDoContato").getValue(),
-					Endereco: this.byId("input_endereco").getValue(),
-					Cidade: this.byId("input_cidade").getValue(),
-					Regiao: this.byId("input_regiao").getValue(),
-					CEP: this.byId("input_cep").getValue(),
-					Pais: this.byId("input_pais").getValue(),
-					Telefone: this.byId("input_telefone").getValue(),
-					Fax: this.byId("input_fax").getValue(),
-					HomePage: this.byId("input_homePage").getValue()
+					CodigoDaCategoria: this.byId("input_codigoDaCategoria").getValue(),
+					QuantidadePorUnidade: this.byId("input_quantidadePorUnidade").getValue(),
+					PrecoUnitario: this.byId("input_precoUnitario").getValue(),
+					UnidadesEmEstoque: this.byId("input_unidadeEmEstoque").getValue(),
+					UnidadesPedidas: this.byId("input_unidadesPedidas").getValue(),
+					NivelDeReposicao: this.byId("input_nivelDeReposicao").getValue(),
+					Descontinuado: this.byId("input_descontinuado").getValue()
 				};
 
 				var settings = {
 					"async": true,
 					"crossDomain": true,
-					"data": oAlteraFornecedor,
+					"data": oAdicionaProduto,
 					"url": url,
-					"method": "PUT",
+					"method": "POST",
 					"headers": {
 						"Content-Type": "text/plain"
 					}
@@ -60,11 +60,7 @@ sap.ui.define([
 				this.onBack();
 
 			},
-
-			onExcluiFornecedor: function() {
-
-			},
-
+			
 			onBack: function() {
 
 				var oHistory = History.getInstance();
@@ -74,7 +70,7 @@ sap.ui.define([
 					window.history.go(-1);
 				} else {
 					var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-					oRouter.navTo("productDetail", true);
+					oRouter.navTo("products", true);
 				}
 
 			}

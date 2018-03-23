@@ -14,8 +14,8 @@
 			<headerToolbar>
 				<Toolbar>
 					<ToolbarSpacer />
-					<Button id="btnAddProduct" icon="sap-icon://add-product" press="onAddProduct" />
-					<Button id="btnAddSupplier" icon="sap-icon://supplier" press="onAddSupplier" />
+					<Button id="btnAddProduct" icon="sap-icon://add-product" text="{i18n>novoProduto}" press="onAddProduct" />
+					<Button id="btnAddSupplier" icon="sap-icon://supplier" text="{i18n>novoFornecedor}" press="onAddSupplier" />
 				</Toolbar>
 			</headerToolbar>
 

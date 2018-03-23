@@ -3,16 +3,14 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:form="sap.ui.layout.form" 
 	xmlns="sap.m" 
-	controllerName="hxeneo.controller.S4"
+	controllerName="hxeneo.controller.S6"
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	
-	<Page title="{i18n>produto}" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
+	<Page title="{i18n>novoProduto}" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
 		<content>
 			
 			<form:SimpleForm layout="ResponsiveGridLayout">
 				<form:content>
-					<Label text="{i18n>codigoDoProduto}"/>
-					<Input id="input_codigoDoProduto"/>
 					<Label text="{i18n>nomeDoProduto}"/>
 					<Input id="input_nomeDoProduto"/>
 					<Label text="{i18n>codigoDoFornecedor}"/>
@@ -40,9 +38,7 @@
 			<Toolbar>
 				<content>
 					<ToolbarSpacer/>
-					<Button type="Emphasized" text="{i18n>btnAlterar}" icon="sap-icon://edit" press="onAlterarProduto"/>
-					<Button type="Emphasized" text="{i18n>btnDelete}" icon="sap-icon://delete" press="onExluirProduto"/>
-					<Button type="Emphasized" text="{i18n>detalheDoFornecedor}" icon="sap-icon://supplier" press="onDetalheDoFornecedor"/>
+					<Button type="Emphasized" text="{i18n>btnSalvar}" icon="sap-icon://edit" press="onAdicionarProduto"/>
 				</content>
 			</Toolbar>
 		</footer>

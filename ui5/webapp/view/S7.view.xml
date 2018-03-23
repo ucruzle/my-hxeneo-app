@@ -3,16 +3,14 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:form="sap.ui.layout.form" 
 	xmlns="sap.m" 
-	controllerName="hxeneo.controller.S5"
+	controllerName="hxeneo.controller.S7"
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	
-	<Page title="{i18n>fornecedor}" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
+	<Page title="{i18n>novoFornecedor}" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
 		<content>
 			
 			<form:SimpleForm layout="ResponsiveGridLayout">
 				<form:content>
-					<Label text="{i18n>codigoDoFornecedor}"/>
-					<Input id="input_codigoDoFornecedor"/>
 					<Label text="{i18n>nomeDaEmpresa}"/>
 					<Input id="input_nomeDaEmpresa"/>
 					<Label text="{i18n>nomeDoContato}"/>
@@ -44,8 +42,7 @@
 			<Toolbar>
 				<content>
 					<ToolbarSpacer/>
-					<Button type="Emphasized" text="{i18n>btnAlterar}" icon="sap-icon://save" press="onAlteraFornecedor"/>
-					<Button type="Emphasized" text="{i18n>btnDelete}" icon="sap-icon://delete" press="onExcluiFornecedor"/>
+					<Button type="Emphasized" text="{i18n>btnSalvar}" icon="sap-icon://save" press="onAdicionarFornecedor"/>
 				</content>
 			</Toolbar>
 		</footer>

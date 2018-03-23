@@ -7,7 +7,7 @@ sap.ui.define([
 ], function(Controller, UIComponent, MessageBox, History) {
 	"use strict";
 	
-	return Controller.extend("hxeneo.controller.S3", {
+	return Controller.extend("hxeneo.controller.S8", {
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
 		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
@@ -39,14 +39,14 @@ sap.ui.define([
 		/**
 		 *@memberOf hxeneo.controller.S3
 		 */
-		onAdicionaCategoria: function() {
+		onAlteraCategoria: function() {
 			
 			// @typeof sap.ui.model.odata.v2.ODataModel
 			var oModel = this.getView().getModel();
-			var url    = window.location.origin + "/api/categorias/adicionaCategoria";
+			var url    = window.location.origin + "/api/categorias/alteraCategoria";
 			var that   = this;
 
-			var  oNovaCategoria = {
+			var  oAlteraCategoria = {
 				CodigoDaCategoria: 0,
 				NomeDaCategoria: this.byId("input_nomeDaCategoria").getValue(),
 				Descricao: this.byId("input_descricao").getValue(),
@@ -55,9 +55,9 @@ sap.ui.define([
 			var settings = {
 				"async": true,
 				"crossDomain": true,
-				"data": oNovaCategoria,
+				"data": oAlteraCategoria,
 				"url": url,
-				"method": "POST",
+				"method": "PUT",
 				"headers": {
 					"Content-Type": "text/plain"
 				}
@@ -70,6 +70,10 @@ sap.ui.define([
 			});
 
 			this.onBack();
+		},
+
+		onExcluiCategoria: function() {
+			
 		},
 
 		onBack : function() {

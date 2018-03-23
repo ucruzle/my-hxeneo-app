@@ -71,29 +71,53 @@
 					"supplierDetail": {
 						"viewName": "S5",
 						"controlAggregation": "detailPages"
+					},
+					"createProduct":{
+						"viewName": "S6",
+						"controlAggregation": "detailPages"
+					},
+					"createSupplier":{
+						"viewName": "S7",
+						"controlAggregation": "detailPages"
+					},
+					"categoryDetail":{
+						"viewName": "S8",
+						"controlAggregation": "detailPages"
 					}
 		  },
 		  "routes": [{
-			  "name": "default",
-			  "pattern": "",
-			  "target": ["categories"]
+					"name": "default",
+					"pattern": "",
+					"target": ["categories"]
 		  }, {
-			  "name": "products",
-			  "pattern": "category/{category_id}",
-			  "target": ["products", "categories"]
-		  },{
-			  "name": "createCategory",
-			  "pattern": "registerCatalog",
-			  "target": ["createCategory"]
-		  },{
-			  "name": "productDetail",
-			  "pattern": "productDetail/{product_id}",
-			  "target": ["productDetail", "categories"]
-		  },{
-			  "name": "supplierDetail",
-			  "pattern": "supplierDetail/{supplier_id}",
-			  "target": ["supplierDetail", "categories"]
-		  }]
+					"name": "products",
+					"pattern": "category/{category_id}",
+					"target": ["products", "categories"]
+		  }, {
+					"name": "createCategory",
+					"pattern": "registerCatalog",
+					"target": ["createCategory"]
+		  }, {
+					"name": "productDetail",
+					"pattern": "productDetail/{product_id}",
+					"target": ["productDetail", "categories"]
+		  }, {
+					"name": "supplierDetail",
+					"pattern": "supplierDetail/{supplier_id}",
+					"target": ["supplierDetail", "categories"]
+		  }, {
+				  "name": "createProduct",
+				  "pattern": "registerProduct",
+				  "target": ["createProduct"]
+			}, {
+					"name": "createSupplier",
+					"pattern": "registerSupplier",
+					"target": ["createSupplier"]
+		  }, {
+				"name": "categoryDetail",
+				"pattern": "categoryDetail/{category_id}",
+				"target": ["categoryDetail", "categories"]
+			}]
 	  }
 	}
   }

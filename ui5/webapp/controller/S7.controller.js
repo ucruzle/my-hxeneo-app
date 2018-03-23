@@ -1,13 +1,13 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller",
-	"sap/ui/core/UIComponent",
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/core/UIComponent",
 	"sap/m/MessageBox",
 	"sap/ui/core/routing/History"
 
 ], function(Controller, UIComponent, MessageBox, History) {
 	"use strict";
 
-	return Controller.extend("hxeneo.controller.S5", {
+	return Controller.extend("hxeneo.controller.S7", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -18,15 +18,15 @@ sap.ui.define([
 				this._oRouter = UIComponent.getRouterFor(this);
 			},
 
-			onAlteraFornecedor: function() {
+			onAdicionarFornecedor: function() {
 				
 				// @typeof sap.ui.model.odata.v2.ODataModel
 				var oModel = this.getView().getModel();
-				var url    = window.location.origin + "/api/fornecedores/alteraFornecedor";
+				var url    = window.location.origin + "/api/fornecedores/adicionaFornecedor";
 				var that   = this;
 				
 				var oAlteraFornecedor = {
-					CodigoDoFornecedor: this.byId("input_codigoDoFornecedor").getValue(),
+					CodigoDoFornecedor: 0,
 					NomeDaEmpresa: this.byId("input_nomeDaEmpresa").getValue(),
 					NomeDoContato: this.byId("input_nomeDoContato").getValue(),
 					CargoDoContato: this.byId("input_cargoDoContato").getValue(),
@@ -45,7 +45,7 @@ sap.ui.define([
 					"crossDomain": true,
 					"data": oAlteraFornecedor,
 					"url": url,
-					"method": "PUT",
+					"method": "POST",
 					"headers": {
 						"Content-Type": "text/plain"
 					}
@@ -59,11 +59,7 @@ sap.ui.define([
 
 				this.onBack();
 
-			},
-
-			onExcluiFornecedor: function() {
-
-			},
+			}, 
 
 			onBack: function() {
 
@@ -74,7 +70,7 @@ sap.ui.define([
 					window.history.go(-1);
 				} else {
 					var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-					oRouter.navTo("productDetail", true);
+					oRouter.navTo("products", true);
 				}
 
 			}

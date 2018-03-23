@@ -56,21 +56,11 @@ sap.ui.define([
 			},
 
 			onAddProduct: function() {
-
-				// TODO Adicionar um novo Produto
-				// this._oRouter.navTo('productDetail', {
-				// 	product_id: sProductId
-				// });
-
+				this._oRouter.navTo('createProduct');
 			},
 
 			onAddSupplier: function() {
-
-				// TODO Adicionar um novo Fornecedor
-				// this._oRouter.navTo('productDetail', {
-				// 	product_id: sProductId
-				// });
-
+				this._oRouter.navTo('createSupplier');
 			}
 
 		/**

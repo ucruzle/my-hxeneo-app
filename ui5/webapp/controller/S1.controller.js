@@ -17,6 +17,7 @@ sap.ui.define([
 			this._oRouter = UIComponent.getRouterFor(this);
 			var url = window.location.origin + "/api/catalogo/retornaCatalogoDeProdutosPorCategorias";
 			var that = this;
+			
 			var settings = {
 				"async": true,
 				"crossDomain": true,
@@ -84,13 +85,17 @@ sap.ui.define([
 
 		onEditCategory: function(oEvent) {
 
-			// this._oRouter.navTo('createCategory');
+			// Recuperar o link clicado na lista
+			// var oListItem = oEvent.getSource();
+			// var oContext = oListItem.getBindingContext("catalogo");
+			// var oCategory = oContext.getObject();
+			// var sCategoryId = oCategory.CODIGODACATEGORIA;
 
-		},
+			var sCategoryId = 1;
 
-		onDelCategory: function(oEvent) {
-
-			// this._oRouter.navTo('createCategory');
+			this._oRouter.navTo('categoryDetail', {
+				category_id: sCategoryId
+			});
 
 		}
 		

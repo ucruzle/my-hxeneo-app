@@ -357,7 +357,21 @@ Tela Principal - Exibição de todos os produtos cadastrados por categorias na b
 
 App HXENEO Demo Stack: http://localhost:7000/ui5/
 
-![45-teste-app-retorna-catalogo-de-produtos-por-categorias](https://user-images.githubusercontent.com/22205133/37691517-51c07d0a-2c91-11e8-9764-f3aa383041c3.JPG)
+Tela inicial: Lista de Produtos por Categorias
+
+![45-teste-app-retorna-catalogo-de-produtos-por-categorias](https://user-images.githubusercontent.com/22205133/37804501-54e61b10-2e13-11e8-8932-0b4921423a94.JPG)
+
+
+
+Tela para inclusão de uma nova Categoria de Produto
+
+![47-teste-app-nova-categoria](https://user-images.githubusercontent.com/22205133/37804623-d3eca1fe-2e13-11e8-8f60-17e1f214c9a2.JPG)
+
+
+
+Tela para inclusão de um novo Produto
+
+![46-teste-app-novo-produtos-por-categoria](https://user-images.githubusercontent.com/22205133/37804633-e71d395a-2e13-11e8-934f-d781cd9b223c.JPG)
 
 
 

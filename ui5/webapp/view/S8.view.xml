@@ -4,13 +4,15 @@
 	xmlns:form="sap.ui.layout.form" 
 	xmlns="sap.m" 
 	xmlns:html="http://www.w3.org/1999/xhtml" 
-	controllerName="hxeneo.controller.S3">
+	controllerName="hxeneo.controller.S8">
 	
-	<Page title="{i18n>novaCategoria}" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
+	<Page title="{i18n>categoria}" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
 		<content>
 			
 			<form:SimpleForm layout="ResponsiveGridLayout">
 				<form:content>
+					<Label text="{i18n>codigoDaCategoria}"/>
+					<Input id="input_codigoDaCategoria"/>
 					<Label text="{i18n>nomeDaCategoria}"/>
 					<Input id="input_nomeDaCategoria"/>
 					<Label text="{i18n>descricao}"/>
@@ -24,7 +26,8 @@
 			<Toolbar>
 				<content>
 					<ToolbarSpacer/>
-					<Button type="Emphasized" text="{i18n>btnSalvar}" icon="sap-icon://save" press="onAdicionaCategoria"/>
+					<Button type="Emphasized" text="{i18n>btnSalvar}" icon="sap-icon://save" press="onAlteraCategoria"/>
+					<Button type="Emphasized" text="{i18n>btnDelete}" icon="sap-icon://delete" press="onExcluiCategoria"/>
 				</content>
 			</Toolbar>
 		</footer>

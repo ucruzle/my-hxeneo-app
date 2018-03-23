@@ -17,7 +17,6 @@
 			<Toolbar>
 				<content>
 					<ToolbarSpacer/>
-					<Button icon="sap-icon://delete" press="onDelCategory"/>
 					<Button icon="sap-icon://edit" press="onEditCategory"/>
 					<Button icon="sap-icon://add" press="onAddCategory"/>
 				</content>
