@@ -9,26 +9,33 @@
 	<Page title="{i18n>novoProduto}" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
 		<content>
 			
-			<form:SimpleForm layout="ResponsiveGridLayout">
+			<form:SimpleForm layout="ResponsiveGridLayout" editable="true">
 				<form:content>
-					<Label text="{i18n>nomeDoProduto}"/>
+					<Label text="{i18n>nomeDoProduto}" />
 					<Input id="input_nomeDoProduto"/>
 					<Label text="{i18n>codigoDoFornecedor}"/>
-					<Input id="input_codigoDoFornecedor"/>
+					<Select  id="select_codigoDoFornecedor"
+						showSecondaryValues= "true"
+						items="{
+							path: 'fornecedores>/',
+							sorter: { path: 'NOMEDAEMPRESA' }
+						}">
+						<core:ListItem key="{fornecedores>CODIGODOFORNECEDOR}" text="{fornecedores>NOMEDAEMPRESA}" additionalText= "{fornecedores>CODIGODOFORNECEDOR}"/>
+					</Select>
 					<Label text="{i18n>codigoDaCategoria}"/>
-					<Input id="input_codigoDaCategoria"/>
+					<Input id="input_codigoDaCategoria" editable="false"/>
 					<Label text="{i18n>quantidadePorUnidade}"/>
 					<Input id="input_quantidadePorUnidade"/>
 					<Label text="{i18n>precoUnitario}"/>
 					<Input id="input_precoUnitario"/>
 					<Label text="{i18n>unidadeEmEstoque}"/>
-					<Input id="input_unidadeEmEstoque"/>
+					<StepInput id="input_unidadeEmEstoque"/>
 					<Label text="{i18n>unidadesPedidas}"/>
-					<Input id="input_unidadesPedidas"/>
+					<StepInput id="input_unidadesPedidas"/>
 					<Label text="{i18n>nivelDeReposicao}"/>
-					<Input id="input_nivelDeReposicao"/>
+					<StepInput id="input_nivelDeReposicao"/>
 					<Label text="{i18n>descontinuado}"/>
-					<Input id="input_descontinuado"/>
+					<Switch id="input_descontinuado"/>
 				</form:content>
 			</form:SimpleForm>
 			
@@ -38,7 +45,7 @@
 			<Toolbar>
 				<content>
 					<ToolbarSpacer/>
-					<Button type="Emphasized" text="{i18n>btnSalvar}" icon="sap-icon://edit" press="onAdicionarProduto"/>
+					<Button text="{i18n>btnSalvar}" icon="sap-icon://edit" press="onAdicionarProduto"/>
 				</content>
 			</Toolbar>
 		</footer>

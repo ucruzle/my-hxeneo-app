@@ -15,25 +15,8 @@ sap.ui.define([
 		onInit: function() {
 
 			this._oRouter = UIComponent.getRouterFor(this);
-			var url = window.location.origin + "/api/catalogo/retornaCatalogoDeProdutosPorCategorias";
-			var that = this;
 			
-			var settings = {
-				"async": true,
-				"crossDomain": true,
-				"url": url,
-				"method": "GET",
-				"headers": {
-					"Content-Type": "text/plain"
-				}
-			}
-
-			$.ajax(settings).done(function(response) {
-				console.log(response);
-				var oModelCategories = new JSONModel(response.Catalogo);
-				that.getOwnerComponent().setModel(oModelCategories, "catalogo");
-			});
-
+			this.getOwnerComponent().getCategorias();
 		},
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
@@ -67,10 +50,12 @@ sap.ui.define([
 			var oListItem = oEvent.getSource();
 			var oContext = oListItem.getBindingContext("catalogo");
 			var oCategory = oContext.getObject();
-			var sCategoryId = oCategory.CODIGODACATEGORIA;
+			// var sCategoryId = oCategory.CODIGODACATEGORIA;
+			this.getOwnerComponent().getModel("config").setProperty("/categoriaSelecionadaPath",oContext.getPath());
+			this.getOwnerComponent().getModel("config").setProperty("/categoriaSelecionadaId",oCategory.CODIGODACATEGORIA);
 
 			this._oRouter.navTo('products', {
-				category_id: sCategoryId
+				category_id: oCategory.CODIGODACATEGORIA
 			});
 
 		},
@@ -84,17 +69,8 @@ sap.ui.define([
 		},
 
 		onEditCategory: function(oEvent) {
-
-			// Recuperar o link clicado na lista
-			// var oListItem = oEvent.getSource();
-			// var oContext = oListItem.getBindingContext("catalogo");
-			// var oCategory = oContext.getObject();
-			// var sCategoryId = oCategory.CODIGODACATEGORIA;
-
-			var sCategoryId = 1;
-
 			this._oRouter.navTo('categoryDetail', {
-				category_id: sCategoryId
+				category_id: this.getOwnerComponent().getModel("config").getProperty("/categoriaSelecionadaId")
 			});
 
 		}

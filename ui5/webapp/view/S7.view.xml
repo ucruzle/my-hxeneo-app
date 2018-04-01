@@ -9,7 +9,7 @@
 	<Page title="{i18n>novoFornecedor}" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
 		<content>
 			
-			<form:SimpleForm layout="ResponsiveGridLayout">
+			<form:SimpleForm layout="ResponsiveGridLayout" editable="true">
 				<form:content>
 					<Label text="{i18n>nomeDaEmpresa}"/>
 					<Input id="input_nomeDaEmpresa"/>
@@ -42,7 +42,7 @@
 			<Toolbar>
 				<content>
 					<ToolbarSpacer/>
-					<Button type="Emphasized" text="{i18n>btnSalvar}" icon="sap-icon://save" press="onAdicionarFornecedor"/>
+					<Button text="{i18n>btnSalvar}" icon="sap-icon://save" press="onAdicionarFornecedor"/>
 				</content>
 			</Toolbar>
 		</footer>

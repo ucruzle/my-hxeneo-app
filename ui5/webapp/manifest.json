@@ -1,123 +1,165 @@
 {
 	"_version": "1.8.0",
 	"sap.app": {
-	  "id": "hxeneo",
-	  "type": "application",
-	  "i18n": "i18n/i18n.properties",
-	  "title": "{{appTitle}}",
-	  "description": "{{appDescription}}",
-	  "applicationVersion": {
-		"version": "1.0.0"
-	  }
+		"id": "hxeneo",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
 	},
 	"sap.ui": {
-	  "technology": "UI5",
-	  "deviceTypes": {
-		  "desktop": true,
-		  "tablet": true,
-		  "phone": true
-	  }
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
 	},
 	"sap.ui5": {
-	  "rootView": {
-		  "viewName": "hxeneo.view.S0",
-		  "type": "XML"
-	  },
-	  "dependencies": {
-		"minUI5Version": "1.30",
-		"libs": {
-		  "sap.m": {}
-		}
-	  },
-	  "models": {
-		"i18n": {
-		  "type": "sap.ui.model.resource.ResourceModel",
-		  "settings": {
-			"bundleName": "hxeneo.i18n.i18n"
-		  }
-		}
-	  },
-	  "resources": {
-		  "css": []
-	  },
-	  "routing": {
-		  "config": {
-			  "routerClass": "sap.m.routing.Router",
-			  "viewPath": "hxeneo.view",
-			  "controlId": "root",
-			  "controlAggregation": "masterPages",
-			  "clearAggregation": true,
-			  "viewType": "XML",
-			  "bypassed": {
-				  "target": ["categories"]
-			  }
-		  },
-		  "targets": {
-		       	"categories": {
-						"viewName": "S1"
-					},
-					"products": {
-						"viewName": "S2",
-						"controlAggregation": "detailPages"
-					},
-					"createCategory":{
-						"viewName": "S3",
-						"controlAggregation": "detailPages"
-					},
-					"productDetail": {
-						"viewName": "S4",
-						"controlAggregation": "detailPages"
-					},
-					"supplierDetail": {
-						"viewName": "S5",
-						"controlAggregation": "detailPages"
-					},
-					"createProduct":{
-						"viewName": "S6",
-						"controlAggregation": "detailPages"
-					},
-					"createSupplier":{
-						"viewName": "S7",
-						"controlAggregation": "detailPages"
-					},
-					"categoryDetail":{
-						"viewName": "S8",
-						"controlAggregation": "detailPages"
-					}
-		  },
-		  "routes": [{
+		"rootView": {
+			"viewName": "hxeneo.view.S0",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30",
+			"libs": {
+				"sap.m": {}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "hxeneo.i18n.i18n"
+				}
+			},
+			"config": {
+				"type": "sap.ui.model.json.JSONModel"
+			}
+		},
+		"resources": {
+			"css": []
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewPath": "hxeneo.view",
+				"controlId": "root",
+				"controlAggregation": "masterPages",
+				"clearAggregation": true,
+				"viewType": "XML",
+				"bypassed": {
+					"target": [
+						"categories"
+					]
+				}
+			},
+			"targets": {
+				"categories": {
+					"viewName": "S1",
+					"viewLevel": 2
+				},
+				"products": {
+					"viewName": "S2",
+					"controlAggregation": "detailPages",
+					"viewLevel": 3
+				},
+				"createCategory": {
+					"viewName": "S3",
+					"controlAggregation": "detailPages",
+					"viewLevel": 4
+				},
+				"productDetail": {
+					"viewName": "S4",
+					"controlAggregation": "detailPages",
+					"viewLevel": 5
+				},
+				"supplierDetail": {
+					"viewName": "S5",
+					"controlAggregation": "detailPages",
+					"viewLevel": 5
+				},
+				"createProduct": {
+					"viewName": "S6",
+					"controlAggregation": "detailPages",
+					"viewLevel": 5
+				},
+				"createSupplier": {
+					"viewName": "S7",
+					"controlAggregation": "detailPages",
+					"viewLevel": 5
+				},
+				"categoryDetail": {
+					"viewName": "S8",
+					"controlAggregation": "detailPages",
+					"viewLevel": 5
+				}
+			},
+			"routes": [
+				{
 					"name": "default",
 					"pattern": "",
-					"target": ["categories"]
-		  }, {
+					"target": [
+						"categories"
+					]
+				},
+				{
 					"name": "products",
 					"pattern": "category/{category_id}",
-					"target": ["products", "categories"]
-		  }, {
+					"target": [
+						"products",
+						"categories"
+					]
+				},
+				{
 					"name": "createCategory",
 					"pattern": "registerCatalog",
-					"target": ["createCategory"]
-		  }, {
+					"target": [
+						"createCategory"
+					]
+				},
+				{
 					"name": "productDetail",
 					"pattern": "productDetail/{product_id}",
-					"target": ["productDetail", "categories"]
-		  }, {
+					"target": [
+						"productDetail",
+						"categories"
+					]
+				},
+				{
 					"name": "supplierDetail",
 					"pattern": "supplierDetail/{supplier_id}",
-					"target": ["supplierDetail", "categories"]
-		  }, {
-				  "name": "createProduct",
-				  "pattern": "registerProduct",
-				  "target": ["createProduct"]
-			}, {
+					"target": [
+						"supplierDetail",
+						"categories"
+					]
+				},
+				{
+					"name": "createProduct",
+					"pattern": "registerProduct",
+					"target": [
+						"createProduct"
+					]
+				},
+				{
 					"name": "createSupplier",
 					"pattern": "registerSupplier",
-					"target": ["createSupplier"]
-		  }, {
-				"name": "categoryDetail",
-				"pattern": "categoryDetail/{category_id}",
-				"target": ["categoryDetail", "categories"]
-			}]
-	  }
+					"target": [
+						"createSupplier"
+					]
+				},
+				{
+					"name": "categoryDetail",
+					"pattern": "categoryDetail/{category_id}",
+					"target": [
+						"categoryDetail",
+						"categories"
+					]
+				}
+			]
+		}
 	}
-  }
+}

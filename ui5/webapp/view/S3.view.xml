@@ -9,7 +9,7 @@
 	<Page title="{i18n>novaCategoria}" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
 		<content>
 			
-			<form:SimpleForm layout="ResponsiveGridLayout">
+			<form:SimpleForm layout="ResponsiveGridLayout" editable="true" >
 				<form:content>
 					<Label text="{i18n>nomeDaCategoria}"/>
 					<Input id="input_nomeDaCategoria"/>
@@ -24,7 +24,7 @@
 			<Toolbar>
 				<content>
 					<ToolbarSpacer/>
-					<Button type="Emphasized" text="{i18n>btnSalvar}" icon="sap-icon://save" press="onAdicionaCategoria"/>
+					<Button text="{i18n>btnSalvar}" icon="sap-icon://save" press="onAdicionaCategoria"/>
 				</content>
 			</Toolbar>
 		</footer>

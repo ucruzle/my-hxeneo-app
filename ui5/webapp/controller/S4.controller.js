@@ -2,9 +2,10 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/core/UIComponent",
 	"sap/m/MessageBox",
-	"sap/ui/core/routing/History"
+	"sap/ui/core/routing/History",
+	"sap/m/MessageToast",
 
-], function(Controller, UIComponent, MessageBox, History) {
+], function(Controller, UIComponent, MessageBox, History,MessageToast) {
 	"use strict";
 
 	return Controller.extend("hxeneo.controller.S4", {
@@ -16,6 +17,14 @@ sap.ui.define([
 		 */
 			onInit: function() {
 				this._oRouter = UIComponent.getRouterFor(this);
+				this._oRouter.getRoute("productDetail").attachPatternMatched(this._oRouteMatched, this);
+			},
+
+
+			_oRouteMatched: function(oEvent) {
+				this.getView().setModel(this.getOwnerComponent().getModel("catalogo"));
+				this.getView().bindElement({ path: this.getOwnerComponent().getModel("config").getProperty("/produtoSelecionadoPath")});
+			
 			},
 
 			onAlterarProduto: function() {
@@ -30,43 +39,56 @@ sap.ui.define([
 				var oAlteraProduto = {
 					CodigoDoProduto: this.byId("input_codigoDoProduto").getValue(),
 					NomeDoProduto: this.byId("input_nomeDoProduto").getValue(),
-					CodigoDoFornecedor: this.byId("input_codigoDoFornecedor").getValue(),
+					CodigoDoFornecedor: this.byId("select_codigoDoFornecedor").getSelectedKey(),
 					CodigoDaCategoria: this.byId("input_codigoDaCategoria").getValue(),
 					QuantidadePorUnidade: this.byId("input_quantidadePorUnidade").getValue(),
 					PrecoUnitario: this.byId("input_precoUnitario").getValue(),
 					UnidadesEmEstoque: this.byId("input_unidadeEmEstoque").getValue(),
 					UnidadesPedidas: this.byId("input_unidadesPedidas").getValue(),
 					NivelDeReposicao: this.byId("input_nivelDeReposicao").getValue(),
-					Descontinuado: this.byId("input_descontinuado").getValue()
+					Descontinuado: this.byId("input_descontinuado").getState()
 				};
 
+				//console.log(oAlteraProduto)
+				var that = this;
 				var settings = {
 					"async": true,
 					"crossDomain": true,
-					"data": oAlteraProduto,
+					"data": JSON.stringify(oAlteraProduto),
 					"url": url,
 					"method": "PUT",
 					"headers": {
-						"Content-Type": "text/plain"
+						"Content-Type": "application/json"
+					},
+					success: function(msg){
+						MessageToast.show("Salvo com sucesso", {closeOnBrowserNavigation: false});
+						that.getOwnerComponent().getCategorias();
+					},
+					error: function() {
+						var bCompact = !!that.getView().$().closest(".sapUiSizeCompact").length;
+						MessageBox.error(
+							"Erro ao tentar salvar produto", {
+								styleClass: bCompact ? "sapUiSizeCompact" : ""
+							}
+						);
 					}
 				}
 
 				$.ajax(settings).done(function(response) {
-					console.log(response);
-					var oModelCategories = new JSONModel(response.Catalogo);
-					that.getOwnerComponent().setModel(oModelCategories, "catalogo");
+					//console.log(response);
 				});
 
-				this.onBack();
+				
 
 			},
 			
 			onDetalheDoFornecedor: function() {
 
-				var sSupplierId = 1;
+	
+				// var sSupplierId = 1;
 
 				this._oRouter.navTo('supplierDetail', {
-					supplier_id: sSupplierId
+					supplier_id: this.byId("select_codigoDoFornecedor").getSelectedKey()
 				});
 
 			},
@@ -84,15 +106,39 @@ sap.ui.define([
 					"url": url,
 					"method": "DELETE",
 					"headers": {
-						"Content-Type": "text/plain"
+						"Content-Type": "application/json"
+					},
+					success: function(msg){
+						MessageToast.show("Excluído com sucesso", {closeOnBrowserNavigation: false});
+						that.getOwnerComponent().getCategorias();
+					},
+					error: function() {
+						MessageBox.error(
+							"Erro ao tentar excluir produto", {
+								styleClass: bCompact ? "sapUiSizeCompact" : ""
+							}
+						);
 					}
 				}
 
-				$.ajax(settings).done(function (response) {
-					console.log(response);
-				});
+			$.ajax(settings).done(function(response) {
+				//console.log(response);
+			});
+				// var settings = {
+				// 	"async": true,
+				// 	"crossDomain": true,
+				// 	"url": url,
+				// 	"method": "DELETE",
+				// 	"headers": {
+				// 		"Content-Type": "text/plain"
+				// 	}
+				// }
 
-				this.onBack();
+				// $.ajax(settings).done(function (response) {
+				// 	//console.log(response);
+				// });
+
+				// this.onBack();
 								
 			},
 

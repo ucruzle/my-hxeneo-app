@@ -69,7 +69,7 @@ https://www.sap.com/developer/tutorials/hxe-howto-eclipse.html
 Se a máquina virtual não estiver inicializada após a criação do ambiente na nuvem, inicialize-a e deixe ativa para a configuração de acesso. 
 Nota: É recomendado que se o ambiente virtual na nuvem não esteja em utilização deixe-o pausado ou inativo para que não consuma os créditos gratuítos do ambiente por estar ativo sem utilização. Ao utilizá-lo basta ativá-lo novamente em inicializar.
 
-![16-instance-google-cloud-platform-access-by-eclipse](https://user-images.githubusercontent.com/22205133/37316094-e8d9664a-263b-11e8-852a-cb5d6213ae9b.JPG)
+![16-instance-google-cloud-platform-access-by-eclipse](https://user-images.githubusercontent.com/22205133/38170132-3bf0a052-3553-11e8-96b4-9f24a781a282.JPG)
 
 
 

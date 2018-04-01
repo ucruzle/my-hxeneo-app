@@ -2,9 +2,10 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/core/UIComponent",
 	"sap/m/MessageBox",
-	"sap/ui/core/routing/History"
+	"sap/ui/core/routing/History",
+	"sap/m/MessageToast"
 	
-], function(Controller, UIComponent, MessageBox, History) {
+], function(Controller, UIComponent, MessageBox, History,MessageToast) {
 	"use strict";
 	
 	return Controller.extend("hxeneo.controller.S3", {
@@ -55,21 +56,33 @@ sap.ui.define([
 			var settings = {
 				"async": true,
 				"crossDomain": true,
-				"data": oNovaCategoria,
+				"data": JSON.stringify(oNovaCategoria),
 				"url": url,
 				"method": "POST",
 				"headers": {
-					"Content-Type": "text/plain"
+					"Content-Type": "application/json"
+				},
+				success: function(msg){
+					MessageToast.show("Salvo com sucesso", {closeOnBrowserNavigation: false});
+					that.getOwnerComponent().getCategorias();
+				},
+				error: function() {
+					var bCompact = !!that.getView().$().closest(".sapUiSizeCompact").length;
+					MessageBox.error(
+						"Erro ao tentar incluir categoria", {
+							styleClass: bCompact ? "sapUiSizeCompact" : ""
+						}
+					);
 				}
 			}
 
 			$.ajax(settings).done(function(response) {
-				console.log(response);
-				var oModelCategories = new JSONModel(response.Catalogo);
-				that.getOwnerComponent().setModel(oModelCategories, "catalogo");
+				//console.log(response);
+				// var oModelCategories = new JSONModel(response.Catalogo);
+				// that.getOwnerComponent().setModel(oModelCategories, "catalogo");
 			});
 
-			this.onBack();
+			
 		},
 
 		onBack : function() {

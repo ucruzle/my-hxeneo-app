@@ -10,19 +10,20 @@
 		<ObjectHeader intro="{i18n>categoria}" title="{NOMEDACATEGORIA}" />
 		
 		<List id="list_products" items="{Produtos}">
-
-			<headerToolbar>
-				<Toolbar>
-					<ToolbarSpacer />
-					<Button id="btnAddProduct" icon="sap-icon://add-product" text="{i18n>novoProduto}" press="onAddProduct" />
-					<Button id="btnAddSupplier" icon="sap-icon://supplier" text="{i18n>novoFornecedor}" press="onAddSupplier" />
-				</Toolbar>
-			</headerToolbar>
-
 			<items>
 				<StandardListItem title="{NOMEDOPRODUTO}" type="Navigation" press="onListItemProductPress" />
 			</items>
 		</List>
+
+		<footer>
+			<Toolbar>
+				<content>
+					<ToolbarSpacer/>
+					<Button id="btnAddProduct" icon="sap-icon://add-product" text="{i18n>novoProduto}" press="onAddProduct" />
+					<Button id="btnAddSupplier" icon="sap-icon://supplier" text="{i18n>novoFornecedor}" press="onAddSupplier" />
+				</content>
+			</Toolbar>
+		</footer>
 		
 	</Page>
 	

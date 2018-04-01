@@ -18,40 +18,36 @@ sap.ui.define([
 			
 				// @typeof sap.ui.core.routing.Router
 				this._oRouter = UIComponent.getRouterFor(this);
-				
-				// Faz isso quando se faz uma chamada em Callback
-				// Passando o objeto this para o attachRoutePatternMatched
-				// o objeto this que contém a rota corrente em this._ORouter
-				this._oRouter.attachRoutePatternMatched(this._oRouteMatched, this); 
-				
+				this._oRouter.getRoute("products").attachPatternMatched(this._oRouteMatched, this);
 			},
 			
 			_oRouteMatched: function(oEvent) {
 				
-				var oParameters = oEvent.getParameters();
-				var oAguments = oParameters.arguments;
-				var sCategoryId = oAguments.category_id;
+				// var oParameters = oEvent.getParameters();
+				// var oAguments = oParameters.arguments;
+				// var sCategoryId = oAguments.category_id;
 				
 				// para esta concatenação sempre usa (crase) e não (aspas simpres)
-				console.log(this.getOwnerComponent().getModel("catalogo"));
+				//console.log(this.getOwnerComponent().getModel("catalogo"));
 				this.getView().setModel(this.getOwnerComponent().getModel("catalogo"));
-				this.getView().bindElement({ path: "/"+sCategoryId});
+				this.getView().bindElement({ path: this.getOwnerComponent().getModel("config").getProperty("/categoriaSelecionadaPath")});
 			
 			},
 
 			onListItemProductPress: function(oEvent) {
 
 				//Recuperar o link clicado na lista
-				// var oListItem = oEvent.getSource();
-				// var oContext = oListItem.getBindingContext("/Products");
-				// var oProduct = oContext.getObject();
-				// var sProductId = oAguments.ID;
-
-				var sProductId = 1;
-
+				var oListItem = oEvent.getSource();
+				var oContext = oListItem.getBindingContext();
+				var oProduct = oContext.getObject();
+				this.getOwnerComponent().getModel("config").setProperty("/produtoSelecionadoPath",oContext.getPath());
+				//console.log(this.getOwnerComponent().getModel("config"));
+	
 				this._oRouter.navTo('productDetail', {
-					product_id: sProductId
+					product_id: oProduct.CODIGODOPRODUTO
 				});
+
+				
 
 			},
 

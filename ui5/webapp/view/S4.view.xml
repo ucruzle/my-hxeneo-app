@@ -9,28 +9,36 @@
 	<Page title="{i18n>produto}" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
 		<content>
 			
-			<form:SimpleForm layout="ResponsiveGridLayout">
+			<form:SimpleForm layout="ResponsiveGridLayout" editable="true" >
 				<form:content>
 					<Label text="{i18n>codigoDoProduto}"/>
-					<Input id="input_codigoDoProduto"/>
-					<Label text="{i18n>nomeDoProduto}"/>
-					<Input id="input_nomeDoProduto"/>
-					<Label text="{i18n>codigoDoFornecedor}"/>
-					<Input id="input_codigoDoFornecedor"/>
+					<Input id="input_codigoDoProduto" value="{CODIGODOPRODUTO}" editable="false"/>
+					<Label text="{i18n>nomeDoProduto}" />
+					<Input id="input_nomeDoProduto" value="{NOMEDOPRODUTO}"/>
+					<Label text="{i18n>codigoDoFornecedor}" />
+					<Select  id="select_codigoDoFornecedor" 
+						selectedKey="{CODIGODOFORNECEDOR}"
+						showSecondaryValues= "true"
+						items="{
+							path: 'fornecedores>/',
+							sorter: { path: 'NOMEDAEMPRESA' }
+						}">
+						<core:ListItem key="{fornecedores>CODIGODOFORNECEDOR}" text="{fornecedores>NOMEDAEMPRESA}" additionalText= "{fornecedores>CODIGODOFORNECEDOR}"/>
+					</Select>
 					<Label text="{i18n>codigoDaCategoria}"/>
-					<Input id="input_codigoDaCategoria"/>
+					<Input id="input_codigoDaCategoria" value="{CODIGODACATEGORIA}" />
 					<Label text="{i18n>quantidadePorUnidade}"/>
-					<Input id="input_quantidadePorUnidade"/>
+					<Input id="input_quantidadePorUnidade" value="{QUANTIDADEPORUNIDADE}"/>
 					<Label text="{i18n>precoUnitario}"/>
-					<Input id="input_precoUnitario"/>
+					<Input id="input_precoUnitario"  value="{PRECOUNITARIO}"/>
 					<Label text="{i18n>unidadeEmEstoque}"/>
-					<Input id="input_unidadeEmEstoque"/>
+					<StepInput id="input_unidadeEmEstoque"  value="{UNIDADESEMESTOQUE}"/>
 					<Label text="{i18n>unidadesPedidas}"/>
-					<Input id="input_unidadesPedidas"/>
+					<StepInput id="input_unidadesPedidas" value="{UNIDADESPEDIDAS}"/>
 					<Label text="{i18n>nivelDeReposicao}"/>
-					<Input id="input_nivelDeReposicao"/>
+					<StepInput id="input_nivelDeReposicao" value="{NIVELDEREPOSICAO}"/>
 					<Label text="{i18n>descontinuado}"/>
-					<Input id="input_descontinuado"/>
+					<Switch id="input_descontinuado" state="{= ${DESCONTINUADO} === 1 }" customTextOn="Sim" customTextOff="Não"  />
 				</form:content>
 			</form:SimpleForm>
 			
@@ -40,9 +48,9 @@
 			<Toolbar>
 				<content>
 					<ToolbarSpacer/>
-					<Button type="Emphasized" text="{i18n>btnAlterar}" icon="sap-icon://edit" press="onAlterarProduto"/>
-					<Button type="Emphasized" text="{i18n>btnDelete}" icon="sap-icon://delete" press="onExluirProduto"/>
-					<Button type="Emphasized" text="{i18n>detalheDoFornecedor}" icon="sap-icon://supplier" press="onDetalheDoFornecedor"/>
+					<Button text="{i18n>btnAlterar}" icon="sap-icon://edit" press="onAlterarProduto"/>
+					<Button text="{i18n>btnDelete}" icon="sap-icon://delete" press="onExluirProduto"/>
+					<Button text="{i18n>detalheDoFornecedor}" icon="sap-icon://supplier" press="onDetalheDoFornecedor"/>
 				</content>
 			</Toolbar>
 		</footer>

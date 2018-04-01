@@ -2,10 +2,10 @@ var hdb = require('hdb');
 
 var client = hdb.createClient({
 
-    host     : 'HXEHOST',
-    port     : 39013, // 90 = HANA instance
-    user     : 'DBWORK',
-    password : 'DBWdesenv1'
+    host     : '<Host Name>',
+    port     : 99999, // Port Number - 90 = HANA instance
+    user     : '<User Name>',
+    password : '<Password>'
 
 });
 

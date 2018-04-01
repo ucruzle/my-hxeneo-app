@@ -29,6 +29,7 @@ exports.retornaCatalogoDeProdutosPorCategorias = function(callback) {
                         } else {
 
                             var Categoria = {};
+                            catalogo = [];
 
                             for (var i = 0; i < categorias.length; i++) {
 

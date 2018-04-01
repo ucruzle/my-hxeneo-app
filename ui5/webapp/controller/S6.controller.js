@@ -2,9 +2,10 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/core/UIComponent",
 	"sap/m/MessageBox",
-	"sap/ui/core/routing/History"
+	"sap/ui/core/routing/History",
+	"sap/m/MessageToast"
 
-], function(Controller, UIComponent, MessageBox, History) {
+], function(Controller, UIComponent, MessageBox, History,MessageToast) {
 	"use strict";
 
 	return Controller.extend("hxeneo.controller.S6", {
@@ -16,7 +17,14 @@ sap.ui.define([
 		 */
 			onInit: function() {
 				this._oRouter = UIComponent.getRouterFor(this);
+				this._oRouter.getRoute("createProduct").attachPatternMatched(this._oRouteMatched, this);
 			},
+
+			_oRouteMatched: function(oEvent) {
+				this.byId("input_codigoDaCategoria").setValue(this.getOwnerComponent().getModel("config").getProperty("/categoriaSelecionadaId"));
+			},
+
+
 
 			onAdicionarProduto: function() {
 
@@ -30,34 +38,52 @@ sap.ui.define([
 				var oAdicionaProduto = {
 					CodigoDoProduto: 0,
 					NomeDoProduto: this.byId("input_nomeDoProduto").getValue(),
-					CodigoDoFornecedor: this.byId("input_codigoDoFornecedor").getValue(),
+					CodigoDoFornecedor: this.byId("select_codigoDoFornecedor").getSelectedKey(),
 					CodigoDaCategoria: this.byId("input_codigoDaCategoria").getValue(),
 					QuantidadePorUnidade: this.byId("input_quantidadePorUnidade").getValue(),
 					PrecoUnitario: this.byId("input_precoUnitario").getValue(),
 					UnidadesEmEstoque: this.byId("input_unidadeEmEstoque").getValue(),
 					UnidadesPedidas: this.byId("input_unidadesPedidas").getValue(),
 					NivelDeReposicao: this.byId("input_nivelDeReposicao").getValue(),
-					Descontinuado: this.byId("input_descontinuado").getValue()
+					Descontinuado: this.byId("input_descontinuado").getState()
 				};
 
+				//console.log(oAdicionaProduto);
+
+				var that = this;
 				var settings = {
 					"async": true,
 					"crossDomain": true,
-					"data": oAdicionaProduto,
+					"data": JSON.stringify(oAdicionaProduto),
 					"url": url,
 					"method": "POST",
 					"headers": {
-						"Content-Type": "text/plain"
+						"Content-Type": "application/json"
+					},
+					success: function(msg){
+						MessageToast.show("Salvo com sucesso", {closeOnBrowserNavigation: false});
+						that.getOwnerComponent().getCategorias();
+						// that._oRouter.navTo('products', {
+						// 	category_id: that.getOwnerComponent().getModel("config").getProperty("/categoriaSelecionadaId")
+						// });
+	
+						
+						
+					},
+					error: function() {
+						var bCompact = !!that.getView().$().closest(".sapUiSizeCompact").length;
+						MessageBox.error(
+							"Erro ao tentar incluir produto", {
+								styleClass: bCompact ? "sapUiSizeCompact" : ""
+							}
+						);
 					}
 				}
 
 				$.ajax(settings).done(function(response) {
-					console.log(response);
-					var oModelCategories = new JSONModel(response.Catalogo);
-					that.getOwnerComponent().setModel(oModelCategories, "catalogo");
+					//console.log(response);
 				});
 
-				this.onBack();
 
 			},
 			

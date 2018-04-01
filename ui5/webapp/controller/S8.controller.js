@@ -2,9 +2,10 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/core/UIComponent",
 	"sap/m/MessageBox",
-	"sap/ui/core/routing/History"
+	"sap/ui/core/routing/History",
+	"sap/m/MessageToast",
 	
-], function(Controller, UIComponent, MessageBox, History) {
+], function(Controller, UIComponent, MessageBox, History, MessageToast) {
 	"use strict";
 	
 	return Controller.extend("hxeneo.controller.S8", {
@@ -15,6 +16,7 @@ sap.ui.define([
 		 */ 
 		onInit: function() {
 			this._oRouter = UIComponent.getRouterFor(this);
+			this._oRouter.getRoute("categoryDetail").attachPatternMatched(this._oRouteMatched, this);
 		},
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
@@ -39,6 +41,17 @@ sap.ui.define([
 		/**
 		 *@memberOf hxeneo.controller.S3
 		 */
+
+		_oRouteMatched: function(oEvent) {
+			
+			var oParameters = oEvent.getParameters();
+			var oAguments = oParameters.arguments;
+			var sCategoryId = oAguments.category_id;
+			
+			this.getView().setModel(this.getOwnerComponent().getModel("catalogo"));
+			this.getView().bindElement({ path: this.getOwnerComponent().getModel("config").getProperty("/categoriaSelecionadaPath")});
+		
+		},
 		onAlteraCategoria: function() {
 			
 			// @typeof sap.ui.model.odata.v2.ODataModel
@@ -47,36 +60,48 @@ sap.ui.define([
 			var that   = this;
 
 			var  oAlteraCategoria = {
-				CodigoDaCategoria: 0,
+				CodigoDaCategoria: this.byId("input_codigoDaCategoria").getValue(),
 				NomeDaCategoria: this.byId("input_nomeDaCategoria").getValue(),
 				Descricao: this.byId("input_descricao").getValue(),
 			};
 
+			//console.log(oAlteraCategoria);
+
+			var that = this;
 			var settings = {
 				"async": true,
 				"crossDomain": true,
-				"data": oAlteraCategoria,
+				"data": JSON.stringify(oAlteraCategoria),
 				"url": url,
 				"method": "PUT",
 				"headers": {
-					"Content-Type": "text/plain"
+					"Content-Type": "application/json"
+				},
+				success: function(msg){
+					MessageToast.show("Salvo com sucesso", {closeOnBrowserNavigation: false});
+					that.getOwnerComponent().getCategorias();
+				},
+				error: function() {
+					var bCompact = !!that.getView().$().closest(".sapUiSizeCompact").length;
+					MessageBox.error(
+						"Erro ao tentar salvar categoria", {
+							styleClass: bCompact ? "sapUiSizeCompact" : ""
+						}
+					);
 				}
 			}
 
 			$.ajax(settings).done(function(response) {
-				console.log(response);
-				var oModelCategories = new JSONModel(response.Catalogo);
-				that.getOwnerComponent().setModel(oModelCategories, "catalogo");
+				//console.log(response);
 			});
 
-			this.onBack();
 		},
 
 		onExcluiCategoria: function() {
 
 			// @typeof sap.ui.model.odata.v2.ODataModel
 			var oModel = this.getView().getModel();
-			var url    = window.location.origin + "/api/categorias/eliminaCategoria/" + `${this.byId("input_codigoDaCategoria").getValue()}`;
+			var url    = window.location.origin + "/api/categorias/eliminaCategoria/" + this.byId("input_codigoDaCategoria").getValue();
 			var that   = this;
 
 			var settings = {
@@ -85,15 +110,27 @@ sap.ui.define([
 				"url": url,
 				"method": "DELETE",
 				"headers": {
-					"Content-Type": "text/plain"
+					"Content-Type": "application/json"
+				},
+				success: function(msg){
+					MessageToast.show("Excluído com sucesso", {closeOnBrowserNavigation: false});
+					that.getOwnerComponent().getCategorias();
+					that._oRouter.navTo('default');
+				},
+				error: function() {
+					MessageBox.error(
+						"Erro ao tentar excluir categoria", {
+							styleClass: bCompact ? "sapUiSizeCompact" : ""
+						}
+					);
 				}
 			}
 
 			$.ajax(settings).done(function(response) {
-				console.log(response);
+				//console.log(response);
 			});
 
-			this.onBack();
+			//this.onBack();
 			
 		},
 

@@ -9,14 +9,14 @@
 	<Page title="{i18n>categoria}" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
 		<content>
 			
-			<form:SimpleForm layout="ResponsiveGridLayout">
+			<form:SimpleForm layout="ResponsiveGridLayout" editable="true">
 				<form:content>
 					<Label text="{i18n>codigoDaCategoria}"/>
-					<Input id="input_codigoDaCategoria"/>
+					<Input id="input_codigoDaCategoria" value="{CODIGODACATEGORIA}" editable="false"/>
 					<Label text="{i18n>nomeDaCategoria}"/>
-					<Input id="input_nomeDaCategoria"/>
+					<Input id="input_nomeDaCategoria" value="{NOMEDACATEGORIA}"/>
 					<Label text="{i18n>descricao}"/>
-					<Input id="input_descricao"/>
+					<Input id="input_descricao" value="{DESCRICAO}"/>
 				</form:content>
 			</form:SimpleForm>
 			
@@ -26,8 +26,8 @@
 			<Toolbar>
 				<content>
 					<ToolbarSpacer/>
-					<Button type="Emphasized" text="{i18n>btnSalvar}" icon="sap-icon://save" press="onAlteraCategoria"/>
-					<Button type="Emphasized" text="{i18n>btnDelete}" icon="sap-icon://delete" press="onExcluiCategoria"/>
+					<Button text="{i18n>btnSalvar}" icon="sap-icon://save" press="onAlteraCategoria"/>
+					<Button text="{i18n>btnDelete}" icon="sap-icon://delete" press="onExcluiCategoria"/>
 				</content>
 			</Toolbar>
 		</footer>

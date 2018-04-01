@@ -9,32 +9,34 @@
 	<Page title="{i18n>fornecedor}" layout="ResponsiveGridLayout" showNavButton="true" navButtonPress="onBack">
 		<content>
 			
-			<form:SimpleForm layout="ResponsiveGridLayout">
+			<form:SimpleForm layout="ResponsiveGridLayout" editable="true">
 				<form:content>
 					<Label text="{i18n>codigoDoFornecedor}"/>
-					<Input id="input_codigoDoFornecedor"/>
+					<Input id="input_codigoDoFornecedor" value="{CODIGODOFORNECEDOR}" editable="false"/>
+
 					<Label text="{i18n>nomeDaEmpresa}"/>
-					<Input id="input_nomeDaEmpresa"/>
+					<Input id="input_nomeDaEmpresa" value="{NOMEDAEMPRESA}"/>
 					<Label text="{i18n>nomeDoContato}"/>
-					<Input id="input_nomeDoContato"/>
+					<Input id="input_nomeDoContato" value="{NOMEDOCONTATO}"/>
 					<Label text="{i18n>cargoDoContato}"/>
-					<Input id="input_cargoDoContato"/>
+					<Input id="input_cargoDoContato" value="{CARGODOCONTATO}"/>
 					<Label text="{i18n>endereco}"/>
-					<Input id="input_endereco"/>
+					<Input id="input_endereco" value="{ENDERECO}"/>
 					<Label text="{i18n>cidade}"/>
-					<Input id="input_cidade"/>
+					<Input id="input_cidade" value="{CIDADE}"/>
 					<Label text="{i18n>regiao}"/>
-					<Input id="input_regiao"/>
+					<Input id="input_regiao" value="{REGIAO}"/>
 					<Label text="{i18n>cep}"/>
-					<Input id="input_cep"/>
+					<Input id="input_cep" value="{CEP}"/>
 					<Label text="{i18n>pais}"/>
-					<Input id="input_pais"/>
+					<Input id="input_pais" value="{PAIS}"/>
 					<Label text="{i18n>telefone}"/>
-					<Input id="input_telefone"/>
+					<Input id="input_telefone" value="{TELEFONE}"/>
 					<Label text="{i18n>fax}"/>
-					<Input id="input_fax"/>
-					<Label text="{i18n>homePage}"/>
-					<Input id="input_homePage"/>
+					<Input id="input_fax" value="{FAX}"/>
+					<Label text="{i18n>homePage}" />
+					<Input id="input_homePage" value="{HOMEPAGE}"/>
+
 				</form:content>
 			</form:SimpleForm>
 			
@@ -44,8 +46,8 @@
 			<Toolbar>
 				<content>
 					<ToolbarSpacer/>
-					<Button type="Emphasized" text="{i18n>btnAlterar}" icon="sap-icon://save" press="onAlteraFornecedor"/>
-					<Button type="Emphasized" text="{i18n>btnDelete}" icon="sap-icon://delete" press="onExcluiFornecedor"/>
+					<Button text="{i18n>btnAlterar}" icon="sap-icon://save" press="onAlteraFornecedor"/>
+					<Button text="{i18n>btnDelete}" icon="sap-icon://delete" press="onExcluiFornecedor"/>
 				</content>
 			</Toolbar>
 		</footer>
